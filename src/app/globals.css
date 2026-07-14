@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0b1329;
+  --background: #030712;
+  --foreground: #f8fafc;
   
   /* Brand Navy and Electric Blue accents */
   --brand-navy: #0B192C;
   --brand-dark-blue: #1E3E62;
   --brand-electric: #0066FF;
   --brand-cyan: #00D2FF;
-  --brand-slate: #f8fafc;
+  --brand-slate: #030712;
 }
 
 @theme {
@@ -22,7 +22,7 @@
   --color-dark-blue: #1E3E62;
   --color-electric: #0066FF;
   --color-cyan: #00D2FF;
-  --color-slate-bg: #f8fafc;
+  --color-slate-bg: #030712;
 }
 
 body {
@@ -30,6 +30,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Custom premium scrollbar */
@@ -38,57 +39,94 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B192C;
+  background: #030712;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E3E62;
+  background: #1e293b;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0066FF;
+  background: #00d2ff;
 }
 
 /* Background Grid Overlay Utility */
 .bg-grid-pattern {
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(30, 62, 98, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 62, 98, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
 }
 
 .bg-grid-pattern-dark {
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(11, 25, 44, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-panel-dark {
-  background: rgba(11, 25, 44, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* Custom animated gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #0066FF 0%, #00D2FF 100%);
+  background: linear-gradient(135deg, #00d2ff 0%, #0066ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-light {
-  background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Cyber Glow Blobs */
+.cyber-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.07) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  animation: float-slow 15s infinite ease-in-out alternate;
+}
+
+.cyber-glow-blue {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.07) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  animation: float-slow 20s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes float-slow {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, 60px) scale(1.1);
+  }
+  100% {
+    transform: translate(-20px, -40px) scale(0.95);
+  }
 }

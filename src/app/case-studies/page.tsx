@@ -22,7 +22,7 @@ export default async function CaseStudiesPage() {
             Enterprise Client Success Stories
           </h1>
           <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base">
-            Read detailed breakdowns of how Tech Gemora builds scalable custom systems, solves performance challenges, and delivers ROI.
+            Read detailed breakdowns of how Gemora Tech builds scalable custom systems, solves performance challenges, and delivers ROI.
           </p>
         </div>
 

@@ -108,14 +108,14 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: "Tech Gemora built our multi-tenant SaaS platform in record time. Their development process is highly structured and transparent.",
+      quote: "Gemora Tech built our multi-tenant SaaS platform in record time. Their development process is highly structured and transparent.",
       author: "Sarah Jenkins",
       role: "Founder & CTO",
       company: "MedVibe Solutions (USA)",
       stars: 5
     },
     {
-      quote: "We scaled our engineering team by hiring 5 dedicated Next.js developers from Tech Gemora. The developers are fluent in English and write top-tier code.",
+      quote: "We scaled our engineering team by hiring 5 dedicated Next.js developers from Gemora Tech. The developers are fluent in English and write top-tier code.",
       author: "David Miller",
       role: "VP of Engineering",
       company: "PayPulse Gateway (Canada)",
@@ -131,23 +131,32 @@ export default function HomePage() {
   ];
 
   const faqs = [
-    { question: "What is Tech Gemora's corporate relationship?", answer: "Tech Gemora is the global technology division of Gemora Global Private Limited. We were formerly operating under the corporate entity Dexterous Softech Private Limited before restructuring to serve international enterprise clients." },
+    { question: "What is Gemora Tech's corporate relationship?", answer: "Gemora Tech is the global technology division of Gemora Global Private Limited. We were formerly operating under the corporate entity Dexterous Softech Private Limited before restructuring to serve international enterprise clients." },
     { question: "How do you ensure IP rights and code security?", answer: "We sign custom, legally binding Non-Disclosure Agreements (NDAs) and intellectual property contracts before coding starts. 100% of the project's source code IP belongs to our clients upon milestone settlement." },
     { question: "Can we hire dedicated developers on a monthly model?", answer: "Yes. We offer flexible engagement models, including monthly dedicated developer staffing (40 hours/week) and fixed-price milestone projects." },
-    { question: "What countries does Tech Gemora serve?", answer: "We serve startups, mid-market scales, and corporate enterprises across the USA, UK, Canada, Australia, UAE, Europe, India, and globally." },
+    { question: "What countries does Gemora Tech serve?", answer: "We serve startups, mid-market scales, and corporate enterprises across the USA, UK, Canada, Australia, UAE, Europe, India, and globally." },
     { question: "Do you offer post-launch support?", answer: "Yes, every deployment comes with a standard 30-day warranty. We also offer SLA-based monthly maintenance plans for server upkeep, library updates, and hotfixes." }
   ];
 
   return (
-    <div className="w-full bg-white text-navy overflow-hidden">
+    <div className="w-full bg-slate-bg text-slate-200 overflow-hidden relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative bg-navy text-white pt-24 pb-20 md:py-32 bg-grid-pattern-dark">
+      <section className="relative bg-navy text-white pt-24 pb-20 md:py-32 bg-grid-pattern-dark overflow-hidden">
+        {/* Animated Cyber Glows */}
+        <div className="cyber-glow -top-24 -left-20"></div>
+        <div className="cyber-glow-blue top-1/3 -right-20"></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Hero Left Content */}
-            <div className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
               <span className="inline-flex items-center gap-1.5 bg-blue-950/80 border border-blue-800 text-blue-300 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
                 <Zap className="w-3 h-3 text-cyan" />
                 Trusted Digital Transformation Partner
@@ -160,13 +169,13 @@ export default function HomePage() {
               </h1>
               
               <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
-                Tech Gemora helps startups and enterprises build custom software, mobile applications, AI-powered solutions, SaaS platforms, and digital experiences that drive conversions and scale globally.
+                Gemora Tech helps startups and enterprises build custom software, mobile applications, AI-powered solutions, SaaS platforms, and digital experiences that drive conversions and scale globally.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link 
                   href="/contact" 
-                  className="bg-electric text-white text-center font-semibold px-8 py-4 rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                  className="bg-electric text-slate-950 text-center font-bold px-8 py-4 rounded-full hover:bg-cyan transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -193,34 +202,39 @@ export default function HomePage() {
                   Parent: <span className="font-semibold text-slate-300">Gemora Global</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Hero Right Code Illustration Widget */}
-            <div className="relative flex justify-center lg:justify-end">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative flex justify-center lg:justify-end"
+            >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
               
               <div className="w-full max-w-lg bg-[#0c1424] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 font-mono text-xs text-slate-400 relative">
                 {/* Header bar */}
-                <div className="flex items-center justify-between pb-3 border-b border-slate-900">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-905">
                   <div className="flex gap-1.5">
                     <span className="w-3 h-3 bg-red-500 rounded-full"></span>
                     <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
                     <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                   </div>
-                  <span className="text-[10px] text-slate-600">tech-gemora-stack.ts</span>
+                  <span className="text-[10px] text-slate-600">gemora-tech-stack.ts</span>
                 </div>
                 
                 {/* Code body */}
                 <div className="space-y-2 select-none">
                   <p><span className="text-blue-400">const</span> companyInfo = &#123;</p>
-                  <p className="pl-4">name: <span className="text-green-400">"Tech Gemora"</span>,</p>
+                  <p className="pl-4">name: <span className="text-green-400">"Gemora Tech"</span>,</p>
                   <p className="pl-4">formerEntity: <span className="text-green-400">"Dexterous Softech"</span>,</p>
                   <p className="pl-4">parent: <span className="text-green-400">"Gemora Global Pvt Ltd"</span>,</p>
                   <p className="pl-4">capabilities: [<span className="text-yellow-400">"SaaS"</span>, <span className="text-yellow-400">"Next.js"</span>, <span className="text-yellow-400">"AI"</span>, <span className="text-yellow-400">"PostgreSQL"</span>]</p>
                   <p>&#125;;</p>
                   <p></p>
                   <p><span className="text-blue-400">async function</span> <span className="text-cyan font-semibold">deployProject</span>(spec) &#123;</p>
-                  <p className="pl-4 text-slate-500">// Bootstrapping secure VPC tunnels...</p>
+                  <p className="pl-4 text-slate-505">// Bootstrapping secure VPC tunnels...</p>
                   <p className="pl-4"><span className="text-blue-400">const</span> app = <span className="text-blue-400">await</span> NextJS.create(&#123; tailwind: <span className="text-orange-400">true</span> &#125;);</p>
                   <p className="pl-4"><span className="text-blue-400">const</span> connection = <span className="text-blue-400">await</span> PostgreSQL.connect(DATABASE_URL);</p>
                   <p className="pl-4"><span className="text-blue-400">return</span> app.launch(&#123; targetMarket: <span className="text-green-400">"Global"</span> &#125;);</p>
@@ -238,20 +252,20 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
         </div>
       </section>
 
       {/* 2. TRUST / STATS SECTION */}
-      <section className="bg-slate-bg border-y border-slate-100 py-10">
+      <section className="bg-slate-bg border-y border-slate-800/80 py-10 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="space-y-1">
-                <p className="text-3xl sm:text-4xl font-extrabold text-electric">{stat.value}</p>
-                <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-3xl sm:text-4xl font-extrabold text-cyan">{stat.value}</p>
+                <p className="text-xs sm:text-sm font-semibold text-slate-400 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -259,15 +273,15 @@ export default function HomePage() {
       </section>
 
       {/* 3. SERVICES SECTION */}
-      <section className="py-20 bg-white bg-grid-pattern">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Core Capabilities</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Core Capabilities</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white">
               Enterprise Technology Solutions We Provide
             </h3>
-            <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base">
+            <p className="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
               From engineering scalable cloud infrastructures to crafting responsive mobile products, we deliver production-level code.
             </p>
           </div>
@@ -276,31 +290,35 @@ export default function HomePage() {
             {services.map((serv, index) => {
               const Icon = serv.icon;
               return (
-                <div 
+                <motion.div 
                   key={index}
-                  className="bg-white/80 p-6 rounded-2xl border border-slate-200/80 hover:border-blue-200 hover:shadow-lg transition-all group relative flex flex-col justify-between"
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="glass-panel p-6 rounded-2xl border border-slate-800/80 hover:border-cyan/50 hover:shadow-[0_0_25px_rgba(0,210,255,0.1)] transition-all duration-300 group relative flex flex-col justify-between"
                 >
                   <div className="space-y-4">
-                    <div className="p-3 bg-slate-100 rounded-xl w-fit group-hover:bg-blue-50 group-hover:text-electric text-slate-700 transition-colors">
+                    <div className="p-3 bg-slate-900 border border-slate-800 rounded-xl w-fit group-hover:bg-cyan/10 group-hover:text-cyan text-slate-300 transition-colors">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h4 className="text-lg font-bold text-navy group-hover:text-electric transition-colors">
+                    <h4 className="text-lg font-bold text-white group-hover:text-cyan transition-colors">
                       {serv.title}
                     </h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">
+                    <p className="text-slate-400 text-sm leading-relaxed">
                       {serv.desc}
                     </p>
                   </div>
                   <div className="pt-6">
                     <Link 
                       href={`/${serv.slug}`}
-                      className="text-xs font-bold text-electric hover:text-blue-700 flex items-center gap-1 group/link"
+                      className="text-xs font-bold text-cyan hover:text-white flex items-center gap-1 group/link"
                     >
                       Read Services Details
                       <ChevronRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -370,15 +388,15 @@ export default function HomePage() {
       </section>
 
       {/* 5. INDUSTRIES SECTION */}
-      <section className="py-20 bg-slate-bg bg-grid-pattern">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Sectors Served</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Sectors Served</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white">
               Tailored Domain Industry Architectures
             </h3>
-            <p className="text-slate-500 max-w-xl mx-auto text-sm">
+            <p className="text-slate-400 max-w-xl mx-auto text-sm">
               We translate specific industry compliance and user flows into clean functional databases and APIs.
             </p>
           </div>
@@ -387,27 +405,31 @@ export default function HomePage() {
             {industries.map((ind, index) => {
               const Icon = ind.icon;
               return (
-                <div 
+                <motion.div 
                   key={index}
-                  className="bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="glass-panel p-5 rounded-2xl border border-slate-800/80 hover:border-cyan/50 hover:shadow-[0_0_20px_rgba(0,210,255,0.1)] transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div className="space-y-3">
-                    <div className="p-2.5 bg-slate-100 rounded-lg w-fit text-slate-700">
+                    <div className="p-2.5 bg-slate-900 border border-slate-800 rounded-lg w-fit text-slate-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h4 className="font-bold text-navy">{ind.title}</h4>
-                    <p className="text-xs text-slate-500 leading-relaxed">{ind.desc}</p>
+                    <h4 className="font-bold text-white group-hover:text-cyan transition-colors">{ind.title}</h4>
+                    <p className="text-xs text-slate-450 leading-relaxed">{ind.desc}</p>
                   </div>
-                  <div className="pt-4 border-t border-slate-50 mt-4">
+                  <div className="pt-4 border-t border-slate-800/60 mt-4">
                     <Link 
                       href={`/${ind.title.toLowerCase().split(' ')[0]}-software-development`}
-                      className="text-[11px] font-bold text-electric hover:text-blue-700 flex items-center gap-1"
+                      className="text-[11px] font-bold text-cyan hover:text-white flex items-center gap-1"
                     >
                       Explore Industry Solutions
                       <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -416,33 +438,40 @@ export default function HomePage() {
       </section>
 
       {/* 6. DEVELOPMENT PROCESS ROADMAP */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-bg bg-grid-pattern-dark relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">How We Work</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">How We Work</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white">
               Structured Software Development Lifecycle (SDLC)
             </h3>
-            <p className="text-slate-500 max-w-xl mx-auto text-sm">
+            <p className="text-slate-400 max-w-xl mx-auto text-sm">
               Our 7-step process mitigates scope creep, guarantees clear deliverables, and ensures zero-downtime launches.
             </p>
           </div>
 
-          <div className="relative pl-8 border-l border-slate-200 space-y-8 max-w-3xl mx-auto">
+          <div className="relative pl-8 border-l border-slate-800 space-y-8 max-w-3xl mx-auto">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="relative group">
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="relative group"
+              >
                 {/* Bullet */}
-                <div className="absolute -left-12 top-0 bg-white border-2 border-slate-200 group-hover:border-electric text-slate-400 group-hover:text-electric rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors">
+                <div className="absolute -left-12 top-0 bg-slate-900 border-2 border-slate-800 group-hover:border-cyan text-slate-400 group-hover:text-cyan rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors">
                   0{idx + 1}
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-navy group-hover:text-electric transition-colors">
+                  <h4 className="text-base font-bold text-white group-hover:text-cyan transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-500 leading-relaxed mt-1">{step.desc}</p>
+                  <p className="text-xs text-slate-400 leading-relaxed mt-1">{step.desc}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -451,17 +480,17 @@ export default function HomePage() {
 
       {/* 7. PORTFOLIO & CASE STUDIES SHOWCASE */}
       {portfolios.length > 0 && (
-        <section className="py-20 bg-slate-bg border-y border-slate-100">
+        <section className="py-20 bg-slate-bg border-y border-slate-800/80 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
               <div className="space-y-3">
-                <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Our Work</h2>
-                <h3 className="text-3xl font-bold text-navy">Featured Project Portfolio</h3>
+                <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Our Work</h2>
+                <h3 className="text-3xl font-bold text-white">Featured Project Portfolio</h3>
               </div>
               <Link 
                 href="/portfolio" 
-                className="bg-electric text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md flex items-center gap-1 group"
+                className="bg-electric text-slate-950 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-cyan transition-colors shadow-sm hover:shadow-md flex items-center gap-1 group"
               >
                 View Full Portfolio
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -470,38 +499,45 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {portfolios.map((port) => (
-                <div key={port.slug} className="bg-white rounded-2xl border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <motion.div 
+                  key={port.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="glass-panel rounded-2xl border border-slate-800/80 overflow-hidden shadow-sm hover:border-cyan/50 hover:shadow-[0_0_25px_rgba(0,210,255,0.1)] transition-all duration-300 flex flex-col justify-between"
+                >
                   <div className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-electric uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full">
+                      <span className="text-[10px] font-bold text-cyan uppercase tracking-wider bg-blue-900/30 border border-blue-800/30 px-2.5 py-1 rounded-full">
                         {port.industry}
                       </span>
                       <span className="text-xs text-slate-400 font-semibold">{port.clientCountry} Client</span>
                     </div>
-                    <h4 className="text-xl font-bold text-navy">{port.name}</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed">{port.description}</p>
+                    <h4 className="text-xl font-bold text-white">{port.name}</h4>
+                    <p className="text-slate-400 text-xs leading-relaxed">{port.description}</p>
                     
                     <div className="space-y-2 pt-2">
-                      <p className="text-[11px] font-bold text-navy">Technologies Used:</p>
+                      <p className="text-[11px] font-bold text-white">Technologies Used:</p>
                       <div className="flex flex-wrap gap-1.5">
                         {port.technology.map((t) => (
-                          <span key={t} className="text-[10px] bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-md font-semibold border border-slate-200/40">
+                          <span key={t} className="text-[10px] bg-slate-900 text-slate-300 px-2.5 py-0.5 rounded-md font-semibold border border-slate-800">
                             {t}
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="bg-slate-50 p-4 border-t border-slate-100 flex justify-between items-center">
+                  <div className="bg-slate-900/40 p-4 border-t border-slate-800/60 flex justify-between items-center">
                     <Link 
                       href={`/case-studies`} 
-                      className="text-xs font-bold text-electric hover:text-blue-700 flex items-center gap-1"
+                      className="text-xs font-bold text-cyan hover:text-white flex items-center gap-1"
                     >
                       Read Case Study Details
                       <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -510,38 +546,42 @@ export default function HomePage() {
       )}
 
       {/* 8. TESTIMONIALS BOARD */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Testimonials</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-navy">
+            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Testimonials</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white">
               Trusted by International Innovators
             </h3>
-            <p className="text-slate-500 max-w-xl mx-auto text-sm">
+            <p className="text-slate-400 max-w-xl mx-auto text-sm">
               Read how we assist USA, Canada, and UAE scaleups in launching complex database systems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((test, index) => (
-              <div 
+              <motion.div 
                 key={index}
-                className="bg-slate-bg border border-slate-200/60 p-6 rounded-2xl relative space-y-4"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="glass-panel border border-slate-800/80 p-6 rounded-2xl relative space-y-4 hover:border-cyan/40 hover:shadow-[0_0_15px_rgba(0,210,255,0.08)] transition-all duration-300"
               >
                 <div className="flex text-yellow-500 gap-0.5">
                   {Array.from({ length: test.stars }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-yellow-500" />
                   ))}
                 </div>
-                <p className="text-slate-600 text-xs leading-relaxed italic">
+                <p className="text-slate-350 text-xs leading-relaxed italic">
                   "{test.quote}"
                 </p>
-                <div className="pt-4 border-t border-slate-200/40">
-                  <p className="text-xs font-bold text-navy">{test.author}</p>
+                <div className="pt-4 border-t border-slate-800/60">
+                  <p className="text-xs font-bold text-white">{test.author}</p>
                   <p className="text-[10px] text-slate-400 font-medium">{test.role}, {test.company}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -549,26 +589,26 @@ export default function HomePage() {
       </section>
 
       {/* 9. FAQ ACCORDION BOARD */}
-      <section className="py-20 bg-slate-bg border-t border-slate-100">
+      <section className="py-20 bg-slate-bg border-t border-slate-800/80 relative z-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           
           <div className="text-center space-y-3 mb-12">
-            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">FAQ</h2>
-            <h3 className="text-3xl font-bold text-navy">Frequently Asked Questions</h3>
+            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">FAQ</h2>
+            <h3 className="text-3xl font-bold text-white">Frequently Asked Questions</h3>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className="bg-white border border-slate-200/80 rounded-xl overflow-hidden shadow-sm"
+                className="glass-panel border border-slate-800/80 rounded-xl overflow-hidden shadow-sm"
               >
                 <button
                   onClick={() => setFaqOpenIndex(faqOpenIndex === index ? null : index)}
-                  className="flex items-center justify-between w-full p-4 text-left font-bold text-sm text-navy hover:text-electric transition-colors"
+                  className="flex items-center justify-between w-full p-4 text-left font-bold text-sm text-white hover:text-cyan transition-colors"
                 >
                   {faq.question}
-                  {faqOpenIndex === index ? <Minus className="w-4 h-4 shrink-0 text-electric" /> : <Plus className="w-4 h-4 shrink-0" />}
+                  {faqOpenIndex === index ? <Minus className="w-4 h-4 shrink-0 text-cyan" /> : <Plus className="w-4 h-4 shrink-0" />}
                 </button>
 
                 <AnimatePresence initial={false}>
@@ -580,7 +620,7 @@ export default function HomePage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-4 pt-0 border-t border-slate-50 text-xs text-slate-500 leading-relaxed">
+                      <div className="p-4 pt-0 border-t border-slate-800/60 text-xs text-slate-400 leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -594,7 +634,11 @@ export default function HomePage() {
       </section>
 
       {/* 10. FINAL CTA BANNER */}
-      <section className="bg-navy text-white py-20 bg-grid-pattern-dark relative">
+      <section className="bg-navy text-white py-20 bg-grid-pattern-dark relative overflow-hidden z-10">
+        {/* Animated Cyber Glows inside CTA */}
+        <div className="cyber-glow -bottom-24 -left-20"></div>
+        <div className="cyber-glow-blue -top-20 -right-20"></div>
+        
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold">
             Ready to Build Your Digital Product?
@@ -605,7 +649,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
             <Link 
               href="/contact" 
-              className="bg-electric hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-colors shadow-lg flex items-center justify-center gap-2 group"
+              className="bg-electric hover:bg-cyan text-slate-950 font-bold px-8 py-4 rounded-full transition-colors shadow-lg flex items-center justify-center gap-2 group"
             >
               Get Free Project Quote
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

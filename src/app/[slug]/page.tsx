@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!page) {
     return {
-      title: "Page Not Found | Tech Gemora",
+      title: "Page Not Found | Gemora Tech",
       description: "The requested page could not be found."
     };
   }
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.metaDescription,
       url: `/${page.slug}`,
       type: "website",
-      siteName: "Tech Gemora",
+      siteName: "Gemora Tech",
     }
   };
 }
@@ -128,7 +128,7 @@ export default async function DynamicSeoPage({ params }: PageProps) {
           <div className="pt-2">
             <Link 
               href="/contact" 
-              className="bg-electric hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-xs transition-colors shadow-lg inline-flex items-center gap-1.5 group"
+              className="bg-electric hover:bg-cyan text-slate-950 font-bold py-3 px-8 rounded-full text-xs transition-colors shadow-lg inline-flex items-center gap-1.5 group"
             >
               Get Free Project Quote
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -141,17 +141,17 @@ export default async function DynamicSeoPage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-12 grid grid-cols-1 gap-8">
         
         {/* HTML Article Content */}
-        <div className="bg-white border border-slate-200/80 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+        <div className="glass-panel border border-slate-800/80 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
           
           {/* Main rich text copy */}
           <div 
-            className="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6"
+            className="prose prose-invert max-w-none text-slate-350 text-sm leading-relaxed space-y-6"
             dangerouslySetInnerHTML={{ __html: page.content }}
           />
 
           {/* Dynamic FAQ List */}
           {faqsList.length > 0 && (
-            <div className="pt-8 border-t border-slate-100">
+            <div className="pt-8 border-t border-slate-800/60">
               <BlogFaq faqs={faqsList} />
             </div>
           )}
@@ -159,16 +159,16 @@ export default async function DynamicSeoPage({ params }: PageProps) {
         </div>
 
         {/* Lead Capture Banner */}
-        <div className="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="glass-panel border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-2">
-            <h3 className="text-lg font-bold text-navy">Need Custom {page.slug.replace(/-/g, ' ') || 'Development'} Services?</h3>
-            <p className="text-xs text-slate-500 max-w-xl leading-relaxed">
+            <h3 className="text-lg font-bold text-white">Need Custom {page.slug.replace(/-/g, ' ') || 'Development'} Services?</h3>
+            <p className="text-xs text-slate-400 max-w-xl leading-relaxed">
               We sign strict NDAs, build using modern Next.js/PostgreSQL databases, and deploy under dedicated agile engineers.
             </p>
           </div>
           <Link 
             href="/contact"
-            className="bg-navy hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-full text-xs transition-colors shrink-0 flex items-center gap-1.5"
+            className="bg-electric hover:bg-cyan text-slate-950 font-bold py-3 px-6 rounded-full text-xs transition-colors shrink-0 flex items-center gap-1.5"
           >
             Consult Solutions Expert
             <ExternalLink className="w-4 h-4" />

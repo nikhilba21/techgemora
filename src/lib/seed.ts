@@ -12,10 +12,10 @@ function generateRichContent(
   const intro = `
     <section class="prose max-w-none text-slate-300 space-y-6">
       <p class="text-xl leading-relaxed text-slate-200">
-        Welcome to <strong>Tech Gemora</strong>, a premier division of <strong>Gemora Global Private Limited</strong>. Formerly known as <em>Dexterous Softech Private Limited</em>, we have rebranded and evolved to deliver top-tier digital transformation services worldwide. As a leading global software development company, we provide enterprise-class <strong>${title}</strong> designed to help startups, mid-sized firms, and massive corporations scale efficiency, innovate faster, and maintain a competitive edge.
+        Welcome to <strong>Gemora Tech</strong>, a premier division of <strong>Gemora Global Private Limited</strong>. Formerly known as <em>Dexterous Softech Private Limited</em>, we have rebranded and evolved to deliver top-tier digital transformation services worldwide. As a leading global software development company, we provide enterprise-class <strong>${title}</strong> designed to help startups, mid-sized firms, and massive corporations scale efficiency, innovate faster, and maintain a competitive edge.
       </p>
       <p>
-        In today's fast-moving economy, leveraging digital products is no longer optional—it is a critical necessity. At Tech Gemora, we understand the complexities of designing, building, and deploying software. Our dedicated teams work hand-in-hand with clients from the USA, UK, Canada, Australia, UAE, Europe, and India to build digital experiences that deliver high conversions, seamless performance, and ultimate security.
+        In today's fast-moving economy, leveraging digital products is no longer optional—it is a critical necessity. At Gemora Tech, we understand the complexities of designing, building, and deploying software. Our dedicated teams work hand-in-hand with clients from the USA, UK, Canada, Australia, UAE, Europe, and India to build digital experiences that deliver high conversions, seamless performance, and ultimate security.
       </p>
       <p>
         Whether you are looking to build a custom SaaS platform, scale an e-commerce brand, engineer AI-driven analytical modules, or hire a dedicated team of engineers, we provide the technical expertise and management capabilities to bring your vision to life.
@@ -25,7 +25,7 @@ function generateRichContent(
 
   const whyChooseUs = `
     <section class="my-12">
-      <h2 class="text-3xl font-bold text-white mb-6">Why Choose Tech Gemora for ${targetKeyword}?</h2>
+      <h2 class="text-3xl font-bold text-white mb-6">Why Choose Gemora Tech for ${targetKeyword}?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300">
         <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
           <h3 class="text-xl font-semibold text-blue-400 mb-3">Enterprise-Grade Architecture</h3>
@@ -127,7 +127,7 @@ function generateRichContent(
     <section class="my-12 space-y-6">
       <h2 class="text-3xl font-bold text-white">Business Benefits</h2>
       <p class="text-slate-300">
-        Partnering with Tech Gemora (formerly Dexterous Softech) provides significant operational advantages to your organization:
+        Partnering with Gemora Tech (formerly Dexterous Softech) provides significant operational advantages to your organization:
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         ${benefits.map((b, idx) => `
@@ -175,9 +175,9 @@ function generateRichContent(
 
   const conclusion = `
     <section class="my-12 text-slate-300 space-y-6">
-      <h2 class="text-3xl font-bold text-white">Accelerate Your Project with Tech Gemora</h2>
+      <h2 class="text-3xl font-bold text-white">Accelerate Your Project with Gemora Tech</h2>
       <p>
-        At Tech Gemora, we pride ourselves on being more than just an outsourcing vendor. We are a trusted digital technology partner dedicated to your long-term success. From consulting on solution architecture to staffing dedicated developers or deploying complete products, we deliver quality code, secure systems, and dependable support.
+        At Gemora Tech, we pride ourselves on being more than just an outsourcing vendor. We are a trusted digital technology partner dedicated to your long-term success. From consulting on solution architecture to staffing dedicated developers or deploying complete products, we deliver quality code, secure systems, and dependable support.
       </p>
       <p>
         Ready to build your next breakthrough digital product? Get in touch with our solutions specialists today for a free project quote and consulting session.
@@ -204,8 +204,8 @@ const servicePagesData = [
   {
     slug: 'custom-software-development',
     title: 'Custom Software Development Services',
-    metaTitle: 'Custom Software Development Company | Tech Gemora',
-    metaDescription: 'Tech Gemora builds scalable custom software, web applications, and digital systems for global startups and enterprises. Get a free quote today.',
+    metaTitle: 'Custom Software Development Company | Gemora Tech',
+    metaDescription: 'Gemora Tech builds scalable custom software, web applications, and digital systems for global startups and enterprises. Get a free quote today.',
     h1: 'Custom Software Development Built for Scale',
     type: 'service' as const,
     features: ['Bespoke Application Design', 'Enterprise Integrations', 'Legacy Migration', 'API Engineering'],
@@ -213,14 +213,14 @@ const servicePagesData = [
     benefits: ['100% Custom IP Ownership', 'Tailored Business Logic', 'High Technical Scalability'],
     faqs: [
       { question: 'What is custom software development?', answer: 'It is the process of designing, building, and maintaining software tailored to a specific set of users, functions, or organizations.' },
-      { question: 'Why choose Tech Gemora over others?', answer: 'We bring 10+ years of experience, a verified pool of engineers, and secure delivery methodologies.' }
+      { question: 'Why choose Gemora Tech over others?', answer: 'We bring 10+ years of experience, a verified pool of engineers, and secure delivery methodologies.' }
     ]
   },
   {
     slug: 'web-development-company',
     title: 'Enterprise Web Development Services',
-    metaTitle: 'Premium Web Development Company | Tech Gemora',
-    metaDescription: 'Stunning, high-performance web applications built using React, Next.js, and Node.js. Partner with Tech Gemora for your next web project.',
+    metaTitle: 'Premium Web Development Company | Gemora Tech',
+    metaDescription: 'Stunning, high-performance web applications built using React, Next.js, and Node.js. Partner with Gemora Tech for your next web project.',
     h1: 'High-Converting Web Development Solutions',
     type: 'service' as const,
     features: ['Single Page Apps (SPA)', 'Static Site Generation (SSG)', 'E-commerce Integrations', 'Responsive UI Layouts'],
@@ -234,8 +234,8 @@ const servicePagesData = [
   {
     slug: 'mobile-app-development-company',
     title: 'Custom Mobile App Development',
-    metaTitle: 'Mobile App Development Company | Tech Gemora',
-    metaDescription: 'Build native iOS, Android, and cross-platform hybrid mobile apps. Partner with Tech Gemora for premier mobile engineering.',
+    metaTitle: 'Mobile App Development Company | Gemora Tech',
+    metaDescription: 'Build native iOS, Android, and cross-platform hybrid mobile apps. Partner with Gemora Tech for premier mobile engineering.',
     h1: 'Engaging iOS & Android Mobile Applications',
     type: 'service' as const,
     features: ['Native iOS (Swift)', 'Native Android (Kotlin)', 'Cross-Platform (Flutter / React Native)', 'App Store Deployment'],
@@ -249,8 +249,8 @@ const servicePagesData = [
   {
     slug: 'ai-development-company',
     title: 'Custom AI & Machine Learning Solutions',
-    metaTitle: 'AI Development Company | Tech Gemora',
-    metaDescription: 'Leverage artificial intelligence, LLMs, chat agents, and predictive analytics. Tech Gemora is your AI development partner.',
+    metaTitle: 'AI Development Company | Gemora Tech',
+    metaDescription: 'Leverage artificial intelligence, LLMs, chat agents, and predictive analytics. Gemora Tech is your AI development partner.',
     h1: 'AI-Powered Business Automation Solutions',
     type: 'service' as const,
     features: ['Generative AI & LLMs', 'Natural Language Processing', 'Predictive Analysis Models', 'Intelligent AI Agents'],
@@ -264,8 +264,8 @@ const servicePagesData = [
   {
     slug: 'saas-development-company',
     title: 'SaaS Product Development Services',
-    metaTitle: 'SaaS Development Company | Tech Gemora',
-    metaDescription: 'Build multi-tenant SaaS products, user management dashboards, and subscription billing engines with Tech Gemora.',
+    metaTitle: 'SaaS Development Company | Gemora Tech',
+    metaDescription: 'Build multi-tenant SaaS products, user management dashboards, and subscription billing engines with Gemora Tech.',
     h1: 'Scalable SaaS Architectures for Modern Startups',
     type: 'service' as const,
     features: ['Multi-Tenant Database Design', 'Stripe/PayPal Billing Engines', 'RBAC User Management', 'Dynamic Subscription Plans'],
@@ -279,8 +279,8 @@ const servicePagesData = [
   {
     slug: 'game-development-company',
     title: 'Custom Game Development Services',
-    metaTitle: 'Game Development Company | Tech Gemora',
-    metaDescription: 'Create immersive 2D, 3D, and web games. Tech Gemora provides premier game development and design services.',
+    metaTitle: 'Game Development Company | Gemora Tech',
+    metaDescription: 'Create immersive 2D, 3D, and web games. Gemora Tech provides premier game development and design services.',
     h1: 'Immersive 2D, 3D and Web-Based Gaming Experiences',
     type: 'service' as const,
     features: ['HTML5 Web Games', 'Unity 3D Engine Development', 'Mobile Game Engineering', 'Multiplayer Game Servers'],
@@ -294,7 +294,7 @@ const servicePagesData = [
   {
     slug: 'cloud-development-services',
     title: 'Cloud Architecture & Solutions',
-    metaTitle: 'Cloud Development Services | Tech Gemora',
+    metaTitle: 'Cloud Development Services | Gemora Tech',
     metaDescription: 'Serverless architectures, microservices, cloud migrations, and scalable hosting environments with AWS and Azure.',
     h1: 'Scalable and Highly Available Cloud Infrastructure',
     type: 'service' as const,
@@ -309,8 +309,8 @@ const servicePagesData = [
   {
     slug: 'devops-services',
     title: 'DevOps & CI/CD Pipelines implementation',
-    metaTitle: 'DevOps Services & CI/CD Automation | Tech Gemora',
-    metaDescription: 'Automate code deployments, containerize applications, and monitor server environments. Tech Gemora DevOps expertise.',
+    metaTitle: 'DevOps Services & CI/CD Automation | Gemora Tech',
+    metaDescription: 'Automate code deployments, containerize applications, and monitor server environments. Gemora Tech DevOps expertise.',
     h1: 'Continuous Integration & Continuous Delivery Services',
     type: 'service' as const,
     features: ['GitHub Actions Automations', 'Docker Containerization', 'Kubernetes Orchestration', '24/7 Server Monitoring'],
@@ -324,7 +324,7 @@ const servicePagesData = [
   {
     slug: 'software-testing-services',
     title: 'Quality Assurance & Software Testing',
-    metaTitle: 'Software Testing Services | Tech Gemora',
+    metaTitle: 'Software Testing Services | Gemora Tech',
     metaDescription: 'Ensure bug-free, high-performance web and mobile apps with manual, unit, regression, and load testing.',
     h1: 'Rigorous Quality Assurance & Test Automations',
     type: 'service' as const,
@@ -339,8 +339,8 @@ const servicePagesData = [
   {
     slug: 'software-development-company-india',
     title: 'Software Development Company in India',
-    metaTitle: 'Software Development Company in India | Tech Gemora',
-    metaDescription: 'Partner with Tech Gemora, a top software development company in India offering cost-effective, premium software engineering for global brands.',
+    metaTitle: 'Software Development Company in India | Gemora Tech',
+    metaDescription: 'Partner with Gemora Tech, a top software development company in India offering cost-effective, premium software engineering for global brands.',
     h1: 'Premium Software Development Services from India',
     type: 'service' as const,
     features: ['Dedicated Development Teams', 'Highly Cost-Effective Solutions', '24/7 Overlapping Support', 'Fast Scaling Capabilities'],
@@ -450,8 +450,8 @@ export async function seedDatabase() {
     const seoPage: SEOPage = {
       slug: dev.slug,
       title: title,
-      metaTitle: `Hire Dedicated ${dev.name} Developers | Tech Gemora`,
-      metaDescription: `Looking to hire experienced ${dev.name} developers? Access pre-vetted engineers at Tech Gemora. Contract model, flexible billing, immediate starts.`,
+      metaTitle: `Hire Dedicated ${dev.name} Developers | Gemora Tech`,
+      metaDescription: `Looking to hire experienced ${dev.name} developers? Access pre-vetted engineers at Gemora Tech. Contract model, flexible billing, immediate starts.`,
       h1: `Hire Pre-Vetted ${dev.name} Engineers`,
       content: fullContent,
       type: 'developer',
@@ -483,8 +483,8 @@ export async function seedDatabase() {
     const seoPage: SEOPage = {
       slug: loc.slug,
       title: title,
-      metaTitle: `Leading Software Development Company in ${loc.name} | Tech Gemora`,
-      metaDescription: `Tech Gemora provides world-class software development, mobile application builds, and AI custom engineering in ${loc.name}. Contact us for a free quote.`,
+      metaTitle: `Leading Software Development Company in ${loc.name} | Gemora Tech`,
+      metaDescription: `Gemora Tech provides world-class software development, mobile application builds, and AI custom engineering in ${loc.name}. Contact us for a free quote.`,
       h1: `Premium Digital Technology Partner in ${loc.name}`,
       content: fullContent,
       type: 'location',
@@ -516,8 +516,8 @@ export async function seedDatabase() {
     const seoPage: SEOPage = {
       slug: ind.slug,
       title: title,
-      metaTitle: `${ind.name} Software Development Company | Tech Gemora`,
-      metaDescription: `Scale your brand with specialized ${ind.name} software systems, web platforms, and mobile apps engineered by Tech Gemora. Free consultations.`,
+      metaTitle: `${ind.name} Software Development Company | Gemora Tech`,
+      metaDescription: `Scale your brand with specialized ${ind.name} software systems, web platforms, and mobile apps engineered by Gemora Tech. Free consultations.`,
       h1: `Industry-Leading ${ind.name} Software Development`,
       content: fullContent,
       type: 'industry',
@@ -549,8 +549,8 @@ export async function seedDatabase() {
     const seoPage: SEOPage = {
       slug: tech.slug,
       title: title,
-      metaTitle: `Expert ${tech.name} Development Services | Tech Gemora`,
-      metaDescription: `Leverage top-rated ${tech.name} programmers to engineer your web portal, mobile app, or backend architecture. Tech Gemora delivers verified code.`,
+      metaTitle: `Expert ${tech.name} Development Services | Gemora Tech`,
+      metaDescription: `Leverage top-rated ${tech.name} programmers to engineer your web portal, mobile app, or backend architecture. Gemora Tech delivers verified code.`,
       h1: `Premier ${tech.name} Development Services`,
       content: fullContent,
       type: 'technology',
@@ -572,7 +572,7 @@ export async function seedDatabase() {
     {
       slug: 'transforming-enterprise-operations-with-custom-saas',
       title: 'Transforming Enterprise Operations with Custom SaaS Products',
-      metaTitle: 'Custom SaaS Products for Enterprise Operations | Tech Gemora',
+      metaTitle: 'Custom SaaS Products for Enterprise Operations | Gemora Tech',
       metaDescription: 'Learn how custom SaaS applications optimize resource management, streamline client portals, and generate recurring revenue for modern brands.',
       content: `
         <article class="prose max-w-none text-slate-300 space-y-6">
@@ -594,7 +594,7 @@ export async function seedDatabase() {
       `,
       featuredImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop',
       category: 'SaaS',
-      author: 'CEO Tech Gemora',
+      author: 'CEO Gemora Tech',
       faqs: [
         { question: 'What is a SaaS product?', answer: 'Software as a Service is a model where users license application access via recurring subscriptions rather than hosting it themselves.' },
         { question: 'How secure is a multi-tenant setup?', answer: 'We implement Row-Level Security (RLS) in PostgreSQL alongside JWT session tokens to prevent data leaks.' }
@@ -605,7 +605,7 @@ export async function seedDatabase() {
     {
       slug: 'why-nextjs-is-best-for-seo-performance',
       title: 'Why Next.js is the Ultimate Framework for SEO Performance',
-      metaTitle: 'Why Next.js is Best for SEO Performance | Tech Gemora',
+      metaTitle: 'Why Next.js is Best for SEO Performance | Gemora Tech',
       metaDescription: 'Understand how server-side rendering, automatic sitemaps, and optimized image processing make Next.js the absolute best choice for search indexation.',
       content: `
         <article class="prose max-w-none text-slate-300 space-y-6">
@@ -624,7 +624,7 @@ export async function seedDatabase() {
       `,
       featuredImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop',
       category: 'Web Development',
-      author: 'Tech Gemora SEO Team',
+      author: 'Gemora Tech SEO Team',
       faqs: [
         { question: 'Does Next.js support dynamic routing?', answer: 'Yes, using segment routes like [slug]/page.tsx allows you to dynamically fetch database records based on the URL.' },
         { question: 'What is static site generation?', answer: 'SSG builds pages at compile time, leading to near-instant loading speeds since they can be served directly from a CDN.' }

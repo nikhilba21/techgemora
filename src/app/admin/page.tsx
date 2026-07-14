@@ -191,7 +191,7 @@ export default function AdminDashboard() {
       metaDescription: '',
       content: '',
       category: 'Software Development',
-      author: 'Tech Gemora Team',
+      author: 'Gemora Tech Team',
       featuredImage: '',
       published: true
     });
@@ -296,7 +296,7 @@ export default function AdminDashboard() {
               <Lock className="w-6 h-6" />
             </div>
             <h2 className="text-2xl font-bold text-navy">Corporate CMS Login</h2>
-            <p className="text-xs text-slate-400">Tech Gemora / Gemora Global Tech Admin Panel</p>
+            <p className="text-xs text-slate-400">Gemora Tech / Gemora Global Tech Admin Panel</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-4">

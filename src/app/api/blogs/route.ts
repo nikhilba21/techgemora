@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       metaDescription: metaDescription || '',
       content: content || '',
       category: category || 'General',
-      author: author || 'Tech Gemora Team',
+      author: author || 'Gemora Tech Team',
       featuredImage: featuredImage || '',
       faqs: typeof faqs === 'string' ? JSON.parse(faqs || '[]') : (faqs || []),
       createdAt: body.createdAt || new Date().toISOString(),

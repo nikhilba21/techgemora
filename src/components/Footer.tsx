@@ -78,16 +78,21 @@ export default function Footer() {
           
           {/* Corporate Profile Column */}
           <div className="lg:col-span-1 space-y-4">
-            <Link href="/" className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white flex items-center">
-                TECH <span className="text-electric ml-1">GEMORA</span>
-              </span>
-              <span className="text-[9px] font-medium text-slate-400 uppercase tracking-widest leading-none">
-                Gemora Global Tech Div
-              </span>
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="relative w-8 h-8 overflow-hidden rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center">
+                <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-cover scale-[1.7] object-center translate-y-[-1px]" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold tracking-tight text-white flex items-center leading-none">
+                  GEMORA <span className="text-electric ml-1">TECH</span>
+                </span>
+                <span className="text-[8px] font-medium text-slate-450 uppercase tracking-widest leading-none mt-1">
+                  IT Services & Solutions
+                </span>
+              </div>
             </Link>
             <p className="text-slate-400 text-xs leading-relaxed">
-              Tech Gemora is the technology division of <strong>Gemora Global Private Limited</strong>, formerly known as <strong>Dexterous Softech Private Limited</strong>. We build world-class custom software, web portals, mobile apps, and artificial intelligence models for global brands.
+              Gemora Tech is the technology division of <strong>Gemora Global Private Limited</strong>, formerly known as <strong>Dexterous Softech Private Limited</strong>. We build world-class custom software, web portals, mobile apps, and artificial intelligence models for global brands.
             </p>
             <div className="flex space-x-3 pt-2">
               <a href="#" className="p-2 bg-slate-900 rounded-lg hover:bg-electric text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
@@ -213,9 +218,9 @@ export default function Footer() {
         {/* Legal and Disclaimer Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div className="text-center md:text-left">
-            <p>© {currentYear} Tech Gemora. All rights reserved.</p>
+            <p>© {currentYear} Gemora Tech. All rights reserved.</p>
             <p className="text-[10px] text-slate-600 mt-1">
-              Tech Gemora is a registered business division of Gemora Global Private Limited (Formerly Dexterous Softech Private Limited).
+              Gemora Tech is a registered business division of Gemora Global Private Limited (Formerly Dexterous Softech Private Limited).
             </p>
           </div>
           <div className="flex gap-4">

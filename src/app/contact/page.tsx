@@ -217,7 +217,7 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm space-y-4">
-              <h4 className="font-bold text-navy text-sm">Tech Gemora Guarantees:</h4>
+              <h4 className="font-bold text-navy text-sm">Gemora Tech Guarantees:</h4>
               <ul className="space-y-2.5 text-xs text-slate-500">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-electric shrink-0" />
@@ -255,7 +255,7 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-navy">Inquiry Received Successfully!</h3>
                     <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                      Thank you for contacting Tech Gemora. A solutions engineer will review your project parameters and respond within 24 business hours.
+                      Thank you for contacting Gemora Tech. A solutions engineer will review your project parameters and respond within 24 business hours.
                     </p>
                   </div>
                   <button 

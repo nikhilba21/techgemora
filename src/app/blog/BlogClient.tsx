@@ -43,7 +43,7 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
             Resources & Insights
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-navy leading-tight">
-            The Tech Gemora Blog
+            The Gemora Tech Blog
           </h1>
           <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base">
             Read engineering tutorials, SEO best practices, SaaS architecture design patterns, and global tech trends.

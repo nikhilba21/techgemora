@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!blog) {
     return {
-      title: "Article Not Found | Tech Gemora",
+      title: "Article Not Found | Gemora Tech",
       description: "The requested resource could not be found."
     };
   }
 
   return {
-    title: `${blog.title} | Tech Gemora Insights`,
+    title: `${blog.title} | Gemora Tech Insights`,
     description: blog.metaDescription,
     alternates: {
       canonical: `/blog/${blog.slug}`,
@@ -109,7 +109,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Tech Gemora",
+      "name": "Gemora Tech",
       "logo": {
         "@type": "ImageObject",
         "url": "https://dexteroussoftech.com/logo.png"
@@ -228,7 +228,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
           <div className="space-y-2">
             <h3 className="text-lg font-bold">Scaling Your Custom Software Engineering?</h3>
             <p className="text-xs text-slate-300 max-w-lg leading-relaxed">
-              Partner with Tech Gemora. We build high-performance web systems, HIPAA-compliant databases, and secure cross-platform solutions.
+              Partner with Gemora Tech. We build high-performance web systems, HIPAA-compliant databases, and secure cross-platform solutions.
             </p>
           </div>
           <Link 
