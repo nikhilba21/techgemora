@@ -4,12 +4,16 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Cpu, Globe, Server, Settings, ShieldCheck, HeartPulse, CreditCard, ShoppingCart, Home, School, Truck, Factory, Compass, HelpCircle, Users, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Cpu, Globe, Server, Settings, ShieldCheck, HeartPulse, CreditCard, ShoppingCart, Home, School, Truck, Factory, Compass, Users, ArrowRight } from 'lucide-react';
 
 interface NavItem {
   label: string;
   href?: string;
   dropdown?: { label: string; href: string; description?: string; icon?: any }[];
+  megaMenu?: {
+    category: string;
+    items: { label: string; href: string }[];
+  }[];
 }
 
 export default function Navbar() {
@@ -36,25 +40,107 @@ export default function Navbar() {
     { label: 'Home', href: '/' },
     {
       label: 'Services',
-      dropdown: [
-        { label: 'Custom Software', href: '/custom-software-development', description: 'Tailored enterprise software and core systems integration.', icon: Cpu },
-        { label: 'Web Development', href: '/web-development-company', description: 'Premium React & Next.js applications and responsive portals.', icon: Globe },
-        { label: 'Mobile App Dev', href: '/mobile-app-development-company', description: 'Stunning iOS, Android & Flutter cross-platform apps.', icon: Server },
-        { label: 'AI Development', href: '/ai-development-company', description: 'Custom LLMs, chat agents, and intelligent workflow automation.', icon: Settings },
-        { label: 'SaaS Development', href: '/saas-development-company', description: 'Multi-tenant subscription billing systems and MVPs.', icon: ShieldCheck },
-        { label: 'Game Development', href: '/game-development-company', description: 'Immersive 2D/3D web-based and mobile gaming setups.', icon: Globe },
-        { label: 'Cloud Solutions', href: '/cloud-development-services', description: 'Scalable AWS hosting, migrations, and serverless config.', icon: Server },
-        { label: 'DevOps & CI/CD', href: '/devops-services', description: 'Automated software releases and Docker clustering.', icon: Settings },
-        { label: 'Software Testing', href: '/software-testing-services', description: 'Automation QA and complete application auditing.', icon: ShieldCheck },
-        { label: 'Offshore India', href: '/software-development-company-india', description: 'Scale development teams with high cost-efficiency.', icon: Users },
+      megaMenu: [
+        {
+          category: 'Core Development',
+          items: [
+            { label: 'Custom Software', href: '/custom-software-development' },
+            { label: 'Web Development', href: '/web-development-company' },
+            { label: 'Mobile App Dev', href: '/mobile-app-development-company' },
+            { label: 'SaaS Product Dev', href: '/saas-development-company' },
+            { label: 'Offshore India', href: '/software-development-company-india' },
+          ]
+        },
+        {
+          category: 'AI & Big Data',
+          items: [
+            { label: 'AI Solutions', href: '/ai-development-company' },
+            { label: 'RPA Solutions', href: '/rpa-solutions' },
+            { label: 'Big Data Analytics', href: '/big-data-analytics-services' },
+            { label: 'Machine Learning', href: '/machine-learning-solutions' },
+            { label: 'Artificial Intelligence', href: '/artificial-intelligence-solutions' },
+            { label: 'Business Intelligence', href: '/business-intelligence-solutions' },
+            { label: 'TensorFlow Dev', href: '/tensorflow-development-company' },
+          ]
+        },
+        {
+          category: 'Voice Apps',
+          items: [
+            { label: 'Voice App Dev', href: '/voice-app-development' },
+            { label: 'Google Assistant', href: '/google-assistant-development' },
+            { label: 'Alexa Skills Dev', href: '/alexa-skills-development' },
+          ]
+        },
+        {
+          category: 'Cloud & Testing',
+          items: [
+            { label: 'Cloud Architecture', href: '/cloud-development-services' },
+            { label: 'DevOps & CI/CD', href: '/devops-services' },
+            { label: 'Software Testing', href: '/software-testing-services' },
+            { label: 'Cyber Security', href: '/cyber-security-services' },
+          ]
+        }
       ]
     },
     {
-      label: 'Solutions',
-      dropdown: [
-        { label: 'Dedicated Teams', href: '/hire-nextjs-developers', description: 'Hire pre-vetted engineers to scale your delivery capacity.', icon: Users },
-        { label: 'Startup MVP Suite', href: '/saas-development-company', description: 'Accelerated development loops for early-stage funding.', icon: Cpu },
-        { label: 'Enterprise Systems', href: '/custom-software-development', description: 'Robust, compliant and legacy-rebuilt architectures.', icon: Settings },
+      label: 'Game Dev',
+      megaMenu: [
+        {
+          category: 'Core Game Dev',
+          items: [
+            { label: 'Web3 Game Dev', href: '/web3-game-development' },
+            { label: 'HTML5 Game Dev', href: '/html5-game-development' },
+            { label: 'Blockchain Games', href: '/blockchain-game-development' },
+            { label: 'Cross-Platform Games', href: '/cross-platform-game-development' },
+            { label: 'AI Game Development', href: '/ai-game-development' },
+            { label: 'AR Game Development', href: '/ar-game-development' },
+            { label: 'Hyper Casual Games', href: '/hyper-casual-game-development' },
+            { label: 'Video Game Dev', href: '/video-game-development-company' },
+          ]
+        },
+        {
+          category: 'Engines & Metaverse',
+          items: [
+            { label: 'Unity Game Dev', href: '/unity-game-development' },
+            { label: 'Unreal Engine Dev', href: '/unreal-game-development' },
+            { label: 'AAA Game Dev', href: '/aaa-game-development-services' },
+            { label: 'Metaverse Dev', href: '/metaverse-development-company' },
+            { label: 'Metaverse Game Dev', href: '/metaverse-game-development' },
+            { label: 'Metaverse App Dev', href: '/metaverse-app-development' },
+            { label: 'Augmented Reality', href: '/augmented-reality-development' },
+            { label: 'Virtual Reality', href: '/virtual-reality-development' },
+            { label: 'Mixed Reality', href: '/mixed-reality-development' },
+          ]
+        },
+        {
+          category: 'Card & Board',
+          items: [
+            { label: 'Poker Game Dev', href: '/poker-game-development' },
+            { label: 'Baccarat Game Dev', href: '/baccarat-game-development' },
+            { label: 'Blackjack Game Dev', href: '/blackjack-game-development' },
+            { label: 'Card Game Dev', href: '/card-game-development' },
+            { label: 'Teen Patti Dev', href: '/teen-patti-game-development' },
+            { label: 'Rummy Game Dev', href: '/rummy-game-development' },
+            { label: 'Board Game Dev', href: '/board-game-development' },
+            { label: 'Carrom Board Game', href: '/carrom-board-game-development' },
+            { label: 'Ludo Game Dev', href: '/ludo-game-development' },
+            { label: 'Chess Game Dev', href: '/chess-game-development' },
+            { label: 'Bingo Game Dev', href: '/bingo-game-development' },
+          ]
+        },
+        {
+          category: 'Sports & Casino',
+          items: [
+            { label: 'Fantasy Sports Software', href: '/fantasy-sports-software' },
+            { label: 'Fantasy Sports Apps', href: '/fantasy-sports-app-development' },
+            { label: 'Aviator Game Dev', href: '/aviator-game-development' },
+            { label: 'Slot Game Dev', href: '/slot-game-development' },
+            { label: 'Roulette Game Dev', href: '/roulette-game-development' },
+            { label: 'Multigaming Platforms', href: '/multigaming-platform-development' },
+            { label: 'iOS Game Dev', href: '/ios-game-development' },
+            { label: 'Android Game Dev', href: '/android-game-development' },
+          ]
+        }
       ]
     },
     {
@@ -99,7 +185,6 @@ export default function Navbar() {
       ]
     },
     { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' },
     {
       label: 'Company',
@@ -135,8 +220,8 @@ export default function Navbar() {
             {navItems.map((item) => (
               <div 
                 key={item.label} 
-                className="relative"
-                onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
+                className={item.megaMenu ? "" : "relative"}
+                onMouseEnter={() => (item.dropdown || item.megaMenu) && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 {item.href ? (
@@ -155,7 +240,7 @@ export default function Navbar() {
                   </button>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* Standard Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
                     {activeDropdown === item.label && (
@@ -164,7 +249,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.15 }}
-                        className={`absolute left-1/2 -translate-x-1/2 mt-1 w-72 md:w-96 glass-panel border border-slate-800/80 rounded-2xl shadow-xl p-3 z-50 grid gap-1 ${item.dropdown.length > 5 ? 'grid-cols-2 w-[520px] md:w-[600px]' : 'grid-cols-1'}`}
+                        className={`absolute left-1/2 -translate-x-1/2 mt-1 w-72 md:w-96 bg-slate-950/95 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl p-3 z-50 grid gap-1 ${item.dropdown.length > 5 ? 'grid-cols-2 w-[520px] md:w-[600px]' : 'grid-cols-1'}`}
                       >
                         {item.dropdown.map((sub) => {
                           const Icon = sub.icon;
@@ -192,6 +277,38 @@ export default function Navbar() {
                             </Link>
                           );
                         })}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+
+                {/* Mega Dropdown Menu */}
+                {item.megaMenu && (
+                  <AnimatePresence>
+                    {activeDropdown === item.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[95vw] max-w-7xl bg-slate-950/95 backdrop-blur-xl border border-slate-800/80 rounded-3xl shadow-2xl p-8 z-50 grid grid-cols-4 gap-6"
+                      >
+                        {item.megaMenu.map((group) => (
+                          <div key={group.category} className="space-y-3">
+                            <h4 className="text-[11px] font-bold text-electric uppercase tracking-wider border-b border-slate-800/80 pb-2">{group.category}</h4>
+                            <div className="grid gap-1">
+                              {group.items.map((sub) => (
+                                <Link
+                                  key={sub.label}
+                                  href={sub.href}
+                                  className="text-[13px] font-medium text-slate-350 hover:text-electric hover:translate-x-1 transition-all duration-150 py-1"
+                                >
+                                  {sub.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -239,7 +356,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden glass-panel border-t border-slate-800 w-full overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
+            <div className="px-4 py-4 space-y-2 max-h-[85vh] overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.label} className="border-b border-slate-800/40 pb-2 last:border-0 last:pb-0">
                   {item.href ? (
@@ -269,6 +386,27 @@ export default function Navbar() {
                             >
                               {sub.label}
                             </Link>
+                          ))}
+                        </div>
+                      )}
+
+                      {activeDropdown === item.label && item.megaMenu && (
+                        <div className="pl-2 mt-1 space-y-3 bg-slate-900/60 p-3 rounded-xl border border-slate-850">
+                          {item.megaMenu.map((group) => (
+                            <div key={group.category} className="space-y-1">
+                              <h5 className="text-[11px] font-bold text-electric uppercase tracking-wider pl-2">{group.category}</h5>
+                              <div className="pl-2 grid grid-cols-1 gap-1 border-l border-slate-800">
+                                {group.items.map((sub) => (
+                                  <Link
+                                    key={sub.label}
+                                    href={sub.href}
+                                    className="block py-1 text-xs font-semibold text-slate-350 hover:text-electric"
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           ))}
                         </div>
                       )}

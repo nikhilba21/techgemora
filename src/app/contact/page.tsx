@@ -184,7 +184,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Email Us</p>
-                    <p className="text-[11px] text-slate-400">sales@dexteroussoftech.com</p>
+                    <p className="text-[11px] text-slate-400">sales@gemoratech.com</p>
                   </div>
                 </div>
                 

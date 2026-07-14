@@ -32,12 +32,24 @@ export default function Footer() {
     { label: 'Custom Software', href: '/custom-software-development' },
     { label: 'Web Development', href: '/web-development-company' },
     { label: 'Mobile App Dev', href: '/mobile-app-development-company' },
-    { label: 'AI Development', href: '/ai-development-company' },
+    { label: 'AI/ML Technologies', href: '/ai-development-company' },
+    { label: 'Metaverse Platform', href: '/metaverse-development-company' },
+    { label: 'Reality Dev (AR/VR)', href: '/mixed-reality-development' },
     { label: 'SaaS Products', href: '/saas-development-company' },
-    { label: 'Game Development', href: '/game-development-company' },
     { label: 'Cloud Architecture', href: '/cloud-development-services' },
-    { label: 'DevOps Automation', href: '/devops-services' },
-    { label: 'Quality Assurance', href: '/software-testing-services' }
+    { label: 'DevOps & CI/CD', href: '/devops-services' }
+  ];
+
+  const gameDevLinks = [
+    { label: 'Web3 Game Dev', href: '/web3-game-development' },
+    { label: 'HTML5 Game Dev', href: '/html5-game-development' },
+    { label: 'Blockchain Games', href: '/blockchain-game-development' },
+    { label: 'Unity Game Dev', href: '/unity-game-development' },
+    { label: 'Unreal Engine Dev', href: '/unreal-game-development' },
+    { label: 'AAA Game Dev', href: '/aaa-game-development-services' },
+    { label: 'Poker Game Dev', href: '/poker-game-development' },
+    { label: 'Ludo Game Dev', href: '/ludo-game-development' },
+    { label: 'Fantasy Sports', href: '/fantasy-sports-software' }
   ];
 
   const hireDevs = [
@@ -51,23 +63,13 @@ export default function Footer() {
     { label: 'Hire Laravel Devs', href: '/hire-laravel-developers' }
   ];
 
-  const industries = [
-    { label: 'Healthcare', href: '/healthcare-software-development' },
-    { label: 'FinTech', href: '/fintech-software-development' },
-    { label: 'Ecommerce', href: '/ecommerce-development' },
-    { label: 'Real Estate', href: '/real-estate-software-development' },
-    { label: 'Education', href: '/education-software-development' },
-    { label: 'Logistics', href: '/logistics-software-development' },
-    { label: 'Manufacturing', href: '/manufacturing-software-development' }
-  ];
-
   const techLinks = [
-    { label: 'React.js Development', href: '/react-development-company' },
-    { label: 'Next.js Development', href: '/nextjs-development-company' },
-    { label: 'Node.js Development', href: '/nodejs-development-company' },
-    { label: 'Python Development', href: '/python-development-company' },
-    { label: 'Flutter Development', href: '/flutter-development-company' },
-    { label: 'Angular Development', href: '/angular-development-company' },
+    { label: 'React.js Dev', href: '/react-development-company' },
+    { label: 'Next.js Dev', href: '/nextjs-development-company' },
+    { label: 'Node.js Dev', href: '/nodejs-development-company' },
+    { label: 'Python Dev', href: '/python-development-company' },
+    { label: 'Flutter Dev', href: '/flutter-development-company' },
+    { label: 'Angular Dev', href: '/angular-development-company' },
     { label: 'AWS Deployments', href: '/aws-development-services' }
   ];
 
@@ -116,7 +118,7 @@ export default function Footer() {
               Our Services
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              {services.slice(0, 7).map((s) => (
+              {services.map((s) => (
                 <li key={s.label}>
                   <Link href={s.href} className="hover:text-electric transition-colors">
                     {s.label}
@@ -133,13 +135,13 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4 border-l-2 border-electric pl-2">
-              Hire Developers
+              Game Development
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              {hireDevs.map((h) => (
-                <li key={h.label}>
-                  <Link href={h.href} className="hover:text-electric transition-colors">
-                    {h.label}
+              {gameDevLinks.map((g) => (
+                <li key={g.label}>
+                  <Link href={g.href} className="hover:text-electric transition-colors">
+                    {g.label}
                   </Link>
                 </li>
               ))}
@@ -148,10 +150,19 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4 border-l-2 border-electric pl-2">
-              Technologies
+              Hire & Tech
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              {techLinks.map((t) => (
+              <li className="font-semibold text-slate-300 uppercase tracking-wider text-[10px] pt-1 pb-1">Hire Resources</li>
+              {hireDevs.slice(0, 4).map((h) => (
+                <li key={h.label}>
+                  <Link href={h.href} className="hover:text-electric transition-colors">
+                    {h.label}
+                  </Link>
+                </li>
+              ))}
+              <li className="font-semibold text-slate-300 uppercase tracking-wider text-[10px] pt-3 pb-1">Core Tech</li>
+              {techLinks.slice(0, 4).map((t) => (
                 <li key={t.label}>
                   <Link href={t.href} className="hover:text-electric transition-colors">
                     {t.label}
@@ -187,7 +198,7 @@ export default function Footer() {
             <div className="space-y-2.5 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-electric shrink-0" />
-                <span>sales@dexteroussoftech.com</span>
+                <span>sales@gemoratech.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-electric shrink-0" />
