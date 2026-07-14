@@ -117,8 +117,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 overflow-hidden rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center">
-              <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-cover scale-[1.7] object-center translate-y-[-1px]" />
+            <div className="relative w-8 h-8 flex items-center justify-center">
+              <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-white flex items-center leading-none">
