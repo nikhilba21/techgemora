@@ -4953,6 +4953,12 @@
       "solution": "We engineered a hybrid mobile app using React Native, utilizing localized keychain storage for keys and a Node.js webhook cluster for real-time network transaction monitoring.",
       "results": "Successfully processed over $5M in asset swaps within the first 6 months. Rated 4.8 stars on the App Store.",
       "images": [
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop"
       ],
       "clientCountry": "USA",
@@ -4975,6 +4981,12 @@
       "solution": "We implemented WebRTC video sessions with fallback TURN/STUN nodes hosted on AWS. All text records and attachments are encrypted at-rest using AES-256.",
       "results": "Reduced scheduling delays by 60%. Deployed across 15 medical clinics with zero compliance flags.",
       "images": [
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop"
       ],
       "clientCountry": "Canada",
@@ -4996,6 +5008,12 @@
       "solution": "Developed a dual-app ecosystem (Customer & Partner) utilizing Flutter for cross-platform speed, backed by a robust Node.js microservice architecture with Socket.io for real-time tracking.",
       "results": "Onboarded 5,000+ service professionals within 3 months with a 98% booking success rate.",
       "images": [
+        "/images/portfolio/proserve.png",
+        "/images/portfolio/proserve.png",
+        "/images/portfolio/proserve.png",
+        "/images/portfolio/proserve.png",
+        "/images/portfolio/proserve.png",
+        "/images/portfolio/proserve.png",
         "/images/portfolio/proserve.png"
       ],
       "clientCountry": "UAE",
@@ -5017,6 +5035,12 @@
       "solution": "Integrated WebRTC for peer-to-peer real-time communication and Redis for high-speed in-memory wallet balance calculations during active calls.",
       "results": "Achieved over 10,000 daily active users with an average session duration of 15 minutes.",
       "images": [
+        "/images/portfolio/astroconnect.png",
+        "/images/portfolio/astroconnect.png",
+        "/images/portfolio/astroconnect.png",
+        "/images/portfolio/astroconnect.png",
+        "/images/portfolio/astroconnect.png",
+        "/images/portfolio/astroconnect.png",
         "/images/portfolio/astroconnect.png"
       ],
       "clientCountry": "India",
@@ -5038,6 +5062,12 @@
       "solution": "Utilized Google Maps Distance Matrix API integrated with a custom Laravel backend dispatch algorithm to optimize routing and minimize travel time.",
       "results": "Reduced service delivery time by 30% and increased worker daily job capacity.",
       "images": [
+        "/images/portfolio/maidquick.png",
+        "/images/portfolio/maidquick.png",
+        "/images/portfolio/maidquick.png",
+        "/images/portfolio/maidquick.png",
+        "/images/portfolio/maidquick.png",
+        "/images/portfolio/maidquick.png",
         "/images/portfolio/maidquick.png"
       ],
       "clientCountry": "UK",
@@ -5059,6 +5089,12 @@
       "solution": "Deployed a highly scalable Socket.io cluster on AWS, using MongoDB geospatial queries for instant nearby driver lookups.",
       "results": "Scaled to support 50,000+ daily rides with 99.9% uptime during peak hours.",
       "images": [
+        "/images/portfolio/ridewave.png",
+        "/images/portfolio/ridewave.png",
+        "/images/portfolio/ridewave.png",
+        "/images/portfolio/ridewave.png",
+        "/images/portfolio/ridewave.png",
+        "/images/portfolio/ridewave.png",
         "/images/portfolio/ridewave.png"
       ],
       "clientCountry": "USA",
@@ -5080,6 +5116,12 @@
       "solution": "Integrated Stripe Connect to automatically route funds and manage payouts, combined with a robust PostgreSQL relational schema for order states.",
       "results": "Processed over $2M in gross merchandise value (GMV) in the first year of operation.",
       "images": [
+        "/images/portfolio/cravebite.png",
+        "/images/portfolio/cravebite.png",
+        "/images/portfolio/cravebite.png",
+        "/images/portfolio/cravebite.png",
+        "/images/portfolio/cravebite.png",
+        "/images/portfolio/cravebite.png",
         "/images/portfolio/cravebite.png"
       ],
       "clientCountry": "Australia",
@@ -5101,6 +5143,12 @@
       "solution": "Built a headless architecture utilizing Next.js for static generation (SSG) and Algolia for lightning-fast search indexing and discovery.",
       "results": "Increased conversion rates by 45% and reduced bounce rates significantly compared to the legacy platform.",
       "images": [
+        "/images/portfolio/shopsphere.png",
+        "/images/portfolio/shopsphere.png",
+        "/images/portfolio/shopsphere.png",
+        "/images/portfolio/shopsphere.png",
+        "/images/portfolio/shopsphere.png",
+        "/images/portfolio/shopsphere.png",
         "/images/portfolio/shopsphere.png"
       ],
       "clientCountry": "Canada",
@@ -5122,6 +5170,12 @@
       "solution": "Employed Unity Universal Render Pipeline (URP) for graphical optimization and Photon for low-latency state replication.",
       "results": "Reached #5 in the App Store Action category with over 1 million active downloads.",
       "images": [
+        "/images/portfolio/battlearena.png",
+        "/images/portfolio/battlearena.png",
+        "/images/portfolio/battlearena.png",
+        "/images/portfolio/battlearena.png",
+        "/images/portfolio/battlearena.png",
+        "/images/portfolio/battlearena.png",
         "/images/portfolio/battlearena.png"
       ],
       "clientCountry": "USA",
@@ -5143,6 +5197,12 @@
       "solution": "Integrated Sanity as a headless CMS with Next.js App Router, enabling real-time previews and 100/100 Lighthouse performance scores.",
       "results": "Boosted organic traffic by 120% and reduced content publishing bottlenecks entirely.",
       "images": [
+        "/images/portfolio/nexus.png",
+        "/images/portfolio/nexus.png",
+        "/images/portfolio/nexus.png",
+        "/images/portfolio/nexus.png",
+        "/images/portfolio/nexus.png",
+        "/images/portfolio/nexus.png",
         "/images/portfolio/nexus.png"
       ],
       "clientCountry": "UK",
