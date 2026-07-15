@@ -533,15 +533,13 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-slate-50/50 p-4 border-t border-slate-100 flex justify-between items-center">
-                    <Link 
-                      href={`/case-studies`} 
-                      className="text-xs font-bold text-electric hover:text-navy flex items-center gap-1"
-                    >
+                  <div className="bg-slate-50/50 p-4 border-t border-slate-100 flex justify-between items-center group-hover:bg-electric/5 transition-colors">
+                    <span className="text-xs font-bold text-electric flex items-center gap-1">
                       Read Case Study Details
                       <ChevronRight className="w-3.5 h-3.5" />
-                    </Link>
+                    </span>
                   </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
