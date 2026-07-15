@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --foreground: #f8fafc;
+  --background: #ffffff;
+  --foreground: #0f172a;
   
-  /* Brand Navy and Electric Blue accents */
+  /* BR Softech Style Palette: Navy Blue & Vibrant Orange */
   --brand-navy: #0B192C;
   --brand-dark-blue: #1E3E62;
-  --brand-electric: #0066FF;
-  --brand-cyan: #00D2FF;
-  --brand-slate: #030712;
+  --brand-electric: #ff5a00;
+  --brand-cyan: #00a8cc;
+  --brand-slate: #f8fafc;
 }
 
 @theme {
@@ -20,9 +20,9 @@
   
   --color-navy: #0B192C;
   --color-dark-blue: #1E3E62;
-  --color-electric: #0066FF;
-  --color-cyan: #00D2FF;
-  --color-slate-bg: #030712;
+  --color-electric: #ff5a00;
+  --color-cyan: #00a8cc;
+  --color-slate-bg: #f8fafc;
 }
 
 body {
@@ -39,68 +39,66 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00d2ff;
+  background: #ff5a00;
 }
 
 /* Background Grid Overlay Utility */
 .bg-grid-pattern {
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(0, 210, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 168, 204, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 168, 204, 0.05) 1px, transparent 1px);
 }
 
 .bg-grid-pattern-dark {
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Glassmorphism Classes */
+/* Clean cards instead of dark glass panels */
 .glass-panel {
-  background: rgba(11, 25, 44, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
 }
 
 .glass-panel-dark {
-  background: rgba(3, 7, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: #0B192C;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 /* Custom animated gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #00d2ff 0%, #0066ff 100%);
+  background: linear-gradient(135deg, #0B192C 0%, #ff5a00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-light {
-  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #ff7a00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Cyber Glow Blobs */
+/* Orange/Teal Glow Blobs */
 .cyber-glow {
   position: absolute;
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 210, 255, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 90, 0, 0.06) 0%, transparent 70%);
   filter: blur(40px);
   pointer-events: none;
   z-index: 0;
@@ -112,7 +110,7 @@ body {
   width: 550px;
   height: 550px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 102, 255, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 168, 204, 0.06) 0%, transparent 70%);
   filter: blur(50px);
   pointer-events: none;
   z-index: 0;
@@ -130,3 +128,65 @@ body {
     transform: translate(-20px, -40px) scale(0.95);
   }
 }
+
+/* Light theme overrides for dynamic service page HTML content */
+.service-content-light p,
+.service-content-light li,
+.service-content-light span,
+.service-content-light td,
+.service-content-light th {
+  color: #334155 !important; /* slate-700 */
+}
+
+.service-content-light h1,
+.service-content-light h2,
+.service-content-light h3,
+.service-content-light h4,
+.service-content-light h5,
+.service-content-light strong {
+  color: #0b192c !important; /* Brand Navy */
+}
+
+/* Force all dark backgrounds in dynamic HTML to light-slate card panels */
+.service-content-light [class*="bg-slate-"],
+.service-content-light [class*="bg-navy"],
+.service-content-light [class*="bg-blue-"],
+.service-content-light [class*="bg-zinc-"],
+.service-content-light [class*="bg-neutral-"] {
+  background-color: #f1f5f9 !important; /* slate-100 */
+  color: #334155 !important; /* slate-700 */
+}
+
+/* Force all dark text to slate-700 or blue-600 */
+.service-content-light [class*="text-slate-"],
+.service-content-light [class*="text-gray-"],
+.service-content-light [class*="text-zinc-"],
+.service-content-light [class*="text-neutral-"],
+.service-content-light .text-white {
+  color: #334155 !important; /* slate-700 */
+}
+
+.service-content-light [class*="text-blue-"],
+.service-content-light [class*="text-cyan-"],
+.service-content-light [class*="text-electric-"] {
+  color: #2563eb !important; /* blue-600 */
+}
+
+/* Force dark borders to light gray */
+.service-content-light [class*="border-slate-"],
+.service-content-light [class*="border-gray-"],
+.service-content-light [class*="border-zinc-"],
+.service-content-light [class*="border-neutral-"] {
+  border-color: #e2e8f0 !important; /* slate-200 */
+}
+
+.service-content-light table {
+  border-color: #e2e8f0 !important;
+}
+
+.service-content-light th {
+  background-color: #f1f5f9 !important; /* slate-100 */
+  color: #0b192c !important;
+}
+
+

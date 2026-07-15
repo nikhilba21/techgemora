@@ -139,13 +139,16 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="w-full bg-slate-bg text-slate-200 overflow-hidden relative">
+    <div className="w-full bg-white text-slate-800 overflow-hidden relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative bg-navy text-white pt-24 pb-20 md:py-32 bg-grid-pattern-dark overflow-hidden">
+      <section className="relative bg-[#0B192C] text-white pt-24 pb-20 md:py-32 overflow-hidden border-b border-slate-900">
+        {/* Layered background to avoid CSS conflicts */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0B192C] to-slate-900 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern-dark opacity-20 z-0"></div>
         {/* Animated Cyber Glows */}
-        <div className="cyber-glow -top-24 -left-20"></div>
-        <div className="cyber-glow-blue top-1/3 -right-20"></div>
+        <div className="cyber-glow -top-24 -left-20 z-0"></div>
+        <div className="cyber-glow-blue top-1/3 -right-20 z-0"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -157,12 +160,12 @@ export default function HomePage() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              <span className="inline-flex items-center gap-1.5 bg-blue-950/80 border border-blue-800 text-blue-300 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
-                <Zap className="w-3 h-3 text-cyan" />
+              <span className="inline-flex items-center gap-1.5 bg-electric/10 border border-electric/25 text-electric text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                <Zap className="w-3 h-3 text-electric" />
                 Trusted Digital Transformation Partner
               </span>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
                 Build Scalable <br />
                 <span className="gradient-text">Digital Products</span> <br />
                 With A Trusted Partner
@@ -175,21 +178,21 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link 
                   href="/contact" 
-                  className="bg-electric text-slate-950 text-center font-bold px-8 py-4 rounded-full hover:bg-cyan transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                  className="bg-electric text-white text-center font-bold px-8 py-4 rounded-full hover:bg-electric/90 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="bg-slate-900 border border-slate-800 text-slate-200 text-center font-semibold px-8 py-4 rounded-full hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center gap-2"
+                  className="bg-white/10 border border-white/20 text-white text-center font-semibold px-8 py-4 rounded-full hover:bg-white/15 transition-all flex items-center justify-center gap-2"
                 >
                   Book Free Consultation
                 </Link>
               </div>
 
               {/* Badges */}
-              <div className="pt-6 flex flex-wrap items-center gap-6 border-t border-slate-800">
+              <div className="pt-6 flex flex-wrap items-center gap-6 border-t border-slate-700">
                 <div className="flex items-center gap-1.5">
                   <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                   <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
@@ -199,7 +202,7 @@ export default function HomePage() {
                   <span className="text-xs font-semibold text-slate-300 ml-1">5.0 App Rating</span>
                 </div>
                 <div className="text-xs text-slate-400">
-                  Parent: <span className="font-semibold text-slate-300">Gemora Global</span>
+                  Parent: <span className="font-semibold text-white">Gemora Global</span>
                 </div>
               </div>
             </motion.div>
@@ -213,7 +216,7 @@ export default function HomePage() {
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
               
-              <div className="w-full max-w-lg bg-[#0c1424] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 font-mono text-xs text-slate-400 relative">
+              <div className="w-full max-w-lg bg-[#0B192C] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-4 font-mono text-xs text-slate-400 relative">
                 {/* Header bar */}
                 <div className="flex items-center justify-between pb-3 border-b border-slate-905">
                   <div className="flex gap-1.5">
@@ -221,7 +224,7 @@ export default function HomePage() {
                     <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
                     <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                   </div>
-                  <span className="text-[10px] text-slate-600">gemora-tech-stack.ts</span>
+                  <span className="text-[10px] text-slate-500">gemora-tech-stack.ts</span>
                 </div>
                 
                 {/* Code body */}
@@ -242,8 +245,8 @@ export default function HomePage() {
                 </div>
 
                 {/* Floating Widget overlay */}
-                <div className="absolute -bottom-6 -left-6 bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-xl flex items-center gap-3 backdrop-blur-md max-w-[200px]">
-                  <div className="p-2 bg-blue-900/40 rounded-lg text-blue-400">
+                <div className="absolute -bottom-6 -left-6 bg-[#132238] border border-slate-800 rounded-xl p-4 shadow-xl flex items-center gap-3 backdrop-blur-md max-w-[200px]">
+                  <div className="p-2 bg-blue-900/40 rounded-lg text-blue-450">
                     <Database className="w-5 h-5" />
                   </div>
                   <div>
@@ -259,13 +262,13 @@ export default function HomePage() {
       </section>
 
       {/* 2. TRUST / STATS SECTION */}
-      <section className="bg-slate-bg border-y border-slate-800/80 py-10 relative z-10">
+      <section className="bg-slate-bg border-y border-slate-205 py-10 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="space-y-1">
-                <p className="text-3xl sm:text-4xl font-extrabold text-cyan">{stat.value}</p>
-                <p className="text-xs sm:text-sm font-semibold text-slate-400 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-3xl sm:text-4xl font-extrabold text-electric">{stat.value}</p>
+                <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -273,15 +276,15 @@ export default function HomePage() {
       </section>
 
       {/* 3. SERVICES SECTION */}
-      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Core Capabilities</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Core Capabilities</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Enterprise Technology Solutions We Provide
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+            <p className="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
               From engineering scalable cloud infrastructures to crafting responsive mobile products, we deliver production-level code.
             </p>
           </div>
@@ -296,23 +299,23 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="glass-panel p-6 rounded-2xl border border-slate-800/80 hover:border-cyan/50 hover:shadow-[0_0_25px_rgba(0,210,255,0.1)] transition-all duration-300 group relative flex flex-col justify-between"
+                  className="glass-panel p-6 rounded-2xl border border-slate-200 hover:border-electric/50 hover:shadow-lg transition-all duration-300 group relative flex flex-col justify-between"
                 >
                   <div className="space-y-4">
-                    <div className="p-3 bg-slate-900 border border-slate-800 rounded-xl w-fit group-hover:bg-cyan/10 group-hover:text-cyan text-slate-300 transition-colors">
+                    <div className="p-3 bg-slate-50 border border-slate-100 rounded-xl w-fit group-hover:bg-electric/15 group-hover:text-electric text-slate-600 transition-colors">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h4 className="text-lg font-bold text-white group-hover:text-cyan transition-colors">
+                    <h4 className="text-lg font-bold text-navy group-hover:text-electric transition-colors">
                       {serv.title}
                     </h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">
+                    <p className="text-slate-650 text-sm leading-relaxed">
                       {serv.desc}
                     </p>
                   </div>
                   <div className="pt-6">
                     <Link 
                       href={`/${serv.slug}`}
-                      className="text-xs font-bold text-cyan hover:text-white flex items-center gap-1 group/link"
+                      className="text-xs font-bold text-electric hover:text-navy flex items-center gap-1 group/link"
                     >
                       Read Services Details
                       <ChevronRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
@@ -327,27 +330,28 @@ export default function HomePage() {
       </section>
 
       {/* 4. TECHNOLOGY STACK SECTION */}
-      <section className="py-20 bg-navy text-white bg-grid-pattern-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white text-slate-900 relative border-y border-slate-100">
+        <div className="absolute inset-0 bg-grid-pattern opacity-30 z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Our Technology Expertise</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Our Technology Expertise</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Bespoke Enterprise Stacks
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto text-sm">
+            <p className="text-slate-600 max-w-xl mx-auto text-sm">
               We leverage modern frameworks and robust database engines to build clean, maintainable systems.
             </p>
           </div>
 
           {/* Tabs header */}
-          <div className="flex justify-center border-b border-slate-800 mb-12 overflow-x-auto">
+          <div className="flex justify-center border-b border-slate-200 mb-12 overflow-x-auto">
             <div className="flex space-x-6 pb-px">
               {(['frontend', 'backend', 'mobile', 'cloud'] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTechTab(tab)}
-                  className={`py-3 px-4 text-sm font-semibold capitalize border-b-2 transition-all shrink-0 ${activeTechTab === tab ? 'border-cyan text-cyan' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
+                  className={`py-3 px-4 text-sm font-semibold capitalize border-b-2 transition-all shrink-0 ${activeTechTab === tab ? 'border-electric text-electric font-bold' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
                 >
                   {tab}
                 </button>
@@ -360,21 +364,21 @@ export default function HomePage() {
             {technologies[activeTechTab].map((tech, index) => (
               <div 
                 key={index}
-                className="bg-slate-900/60 border border-slate-800 p-5 rounded-xl hover:border-slate-700 transition-all flex flex-col justify-between"
+                className="bg-slate-50 border border-slate-200 p-5 rounded-xl hover:border-electric/50 transition-all flex flex-col justify-between hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <p className="text-base font-bold text-white">{tech.name}</p>
-                    <span className="text-[10px] font-semibold bg-blue-900/30 text-blue-300 px-2 py-0.5 rounded-full border border-blue-800/40">
+                    <p className="text-base font-bold text-navy">{tech.name}</p>
+                    <span className="text-[10px] font-semibold bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full border border-blue-200">
                       {tech.level}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">{tech.desc}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">{tech.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-slate-900">
+                <div className="mt-4 pt-3 border-t border-slate-250/60">
                   <Link 
                     href={`/hire-${tech.name.toLowerCase().replace(/\.js/g, 'js').replace(/\s+/g, '-')}-developers`}
-                    className="text-[11px] font-bold text-cyan hover:text-white flex items-center gap-1.5"
+                    className="text-[11px] font-bold text-electric hover:text-navy flex items-center gap-1.5"
                   >
                     Hire {tech.name} Squad
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -388,15 +392,15 @@ export default function HomePage() {
       </section>
 
       {/* 5. INDUSTRIES SECTION */}
-      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Sectors Served</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Sectors Served</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Tailored Domain Industry Architectures
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto text-sm">
+            <p className="text-slate-600 max-w-xl mx-auto text-sm">
               We translate specific industry compliance and user flows into clean functional databases and APIs.
             </p>
           </div>
@@ -411,19 +415,19 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="glass-panel p-5 rounded-2xl border border-slate-800/80 hover:border-cyan/50 hover:shadow-[0_0_20px_rgba(0,210,255,0.1)] transition-all duration-300 flex flex-col justify-between group"
+                  className="glass-panel p-5 rounded-2xl border border-slate-200 hover:border-electric/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div className="space-y-3">
-                    <div className="p-2.5 bg-slate-900 border border-slate-800 rounded-lg w-fit text-slate-300">
+                    <div className="p-2.5 bg-slate-50 border border-slate-100 rounded-lg w-fit text-slate-605 group-hover:bg-electric/15 group-hover:text-electric transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h4 className="font-bold text-white group-hover:text-cyan transition-colors">{ind.title}</h4>
-                    <p className="text-xs text-slate-450 leading-relaxed">{ind.desc}</p>
+                    <h4 className="font-bold text-navy group-hover:text-electric transition-colors">{ind.title}</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">{ind.desc}</p>
                   </div>
-                  <div className="pt-4 border-t border-slate-800/60 mt-4">
+                  <div className="pt-4 border-t border-slate-100 mt-4">
                     <Link 
                       href={`/${ind.title.toLowerCase().split(' ')[0]}-software-development`}
-                      className="text-[11px] font-bold text-cyan hover:text-white flex items-center gap-1"
+                      className="text-[11px] font-bold text-electric hover:text-navy flex items-center gap-1"
                     >
                       Explore Industry Solutions
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -438,20 +442,20 @@ export default function HomePage() {
       </section>
 
       {/* 6. DEVELOPMENT PROCESS ROADMAP */}
-      <section className="py-20 bg-slate-bg bg-grid-pattern-dark relative z-10">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">How We Work</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">How We Work</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Structured Software Development Lifecycle (SDLC)
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto text-sm">
+            <p className="text-slate-600 max-w-xl mx-auto text-sm">
               Our 7-step process mitigates scope creep, guarantees clear deliverables, and ensures zero-downtime launches.
             </p>
           </div>
 
-          <div className="relative pl-8 border-l border-slate-800 space-y-8 max-w-3xl mx-auto">
+          <div className="relative pl-8 border-l border-slate-200 space-y-8 max-w-3xl mx-auto">
             {processSteps.map((step, idx) => (
               <motion.div 
                 key={idx}
@@ -462,14 +466,14 @@ export default function HomePage() {
                 className="relative group"
               >
                 {/* Bullet */}
-                <div className="absolute -left-12 top-0 bg-slate-900 border-2 border-slate-800 group-hover:border-cyan text-slate-400 group-hover:text-cyan rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors">
+                <div className="absolute -left-12 top-0 bg-white border-2 border-slate-200 group-hover:border-electric text-slate-500 group-hover:text-electric shadow-sm rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors">
                   0{idx + 1}
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-white group-hover:text-cyan transition-colors">
+                  <h4 className="text-base font-bold text-navy group-hover:text-electric transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed mt-1">{step.desc}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed mt-1">{step.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -480,17 +484,17 @@ export default function HomePage() {
 
       {/* 7. PORTFOLIO & CASE STUDIES SHOWCASE */}
       {portfolios.length > 0 && (
-        <section className="py-20 bg-slate-bg border-y border-slate-800/80 relative z-10">
+        <section className="py-20 bg-slate-bg border-y border-slate-200 relative z-10 text-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
               <div className="space-y-3">
-                <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Our Work</h2>
-                <h3 className="text-3xl font-bold text-white">Featured Project Portfolio</h3>
+                <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Our Work</h2>
+                <h3 className="text-3xl font-extrabold text-navy">Featured Project Portfolio</h3>
               </div>
               <Link 
                 href="/portfolio" 
-                className="bg-electric text-slate-950 text-xs font-bold px-5 py-2.5 rounded-full hover:bg-cyan transition-colors shadow-sm hover:shadow-md flex items-center gap-1 group"
+                className="bg-electric text-white text-xs font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1 group"
               >
                 View Full Portfolio
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -505,33 +509,33 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="glass-panel rounded-2xl border border-slate-800/80 overflow-hidden shadow-sm hover:border-cyan/50 hover:shadow-[0_0_25px_rgba(0,210,255,0.1)] transition-all duration-300 flex flex-col justify-between"
+                  className="glass-panel rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-electric/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                 >
                   <div className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-cyan uppercase tracking-wider bg-blue-900/30 border border-blue-800/30 px-2.5 py-1 rounded-full">
+                      <span className="text-[10px] font-bold text-electric uppercase tracking-wider bg-electric/10 border border-electric/20 px-2.5 py-1 rounded-full">
                         {port.industry}
                       </span>
-                      <span className="text-xs text-slate-400 font-semibold">{port.clientCountry} Client</span>
+                      <span className="text-xs text-slate-500 font-semibold">{port.clientCountry} Client</span>
                     </div>
-                    <h4 className="text-xl font-bold text-white">{port.name}</h4>
-                    <p className="text-slate-400 text-xs leading-relaxed">{port.description}</p>
+                    <h4 className="text-xl font-bold text-navy">{port.name}</h4>
+                    <p className="text-slate-600 text-xs leading-relaxed">{port.description}</p>
                     
                     <div className="space-y-2 pt-2">
-                      <p className="text-[11px] font-bold text-white">Technologies Used:</p>
+                      <p className="text-[11px] font-bold text-navy">Technologies Used:</p>
                       <div className="flex flex-wrap gap-1.5">
                         {port.technology.map((t) => (
-                          <span key={t} className="text-[10px] bg-slate-900 text-slate-300 px-2.5 py-0.5 rounded-md font-semibold border border-slate-800">
+                          <span key={t} className="text-[10px] bg-slate-50 text-slate-600 px-2.5 py-0.5 rounded-md font-semibold border border-slate-200">
                             {t}
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="bg-slate-900/40 p-4 border-t border-slate-800/60 flex justify-between items-center">
+                  <div className="bg-slate-50/50 p-4 border-t border-slate-100 flex justify-between items-center">
                     <Link 
                       href={`/case-studies`} 
-                      className="text-xs font-bold text-cyan hover:text-white flex items-center gap-1"
+                      className="text-xs font-bold text-electric hover:text-navy flex items-center gap-1"
                     >
                       Read Case Study Details
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -546,15 +550,15 @@ export default function HomePage() {
       )}
 
       {/* 8. TESTIMONIALS BOARD */}
-      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10">
+      <section className="py-20 bg-slate-bg bg-grid-pattern relative z-10 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">Testimonials</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Testimonials</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
               Trusted by International Innovators
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto text-sm">
+            <p className="text-slate-655 max-w-xl mx-auto text-sm">
               Read how we assist USA, Canada, and UAE scaleups in launching complex database systems.
             </p>
           </div>
@@ -567,19 +571,19 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="glass-panel border border-slate-800/80 p-6 rounded-2xl relative space-y-4 hover:border-cyan/40 hover:shadow-[0_0_15px_rgba(0,210,255,0.08)] transition-all duration-300"
+                className="glass-panel border border-slate-200 p-6 rounded-2xl relative space-y-4 hover:border-electric/40 hover:shadow-md transition-all duration-300"
               >
                 <div className="flex text-yellow-500 gap-0.5">
                   {Array.from({ length: test.stars }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-yellow-500" />
                   ))}
                 </div>
-                <p className="text-slate-350 text-xs leading-relaxed italic">
+                <p className="text-slate-600 text-xs leading-relaxed italic">
                   "{test.quote}"
                 </p>
-                <div className="pt-4 border-t border-slate-800/60">
-                  <p className="text-xs font-bold text-white">{test.author}</p>
-                  <p className="text-[10px] text-slate-400 font-medium">{test.role}, {test.company}</p>
+                <div className="pt-4 border-t border-slate-100">
+                  <p className="text-xs font-bold text-navy">{test.author}</p>
+                  <p className="text-[10px] text-slate-500 font-medium">{test.role}, {test.company}</p>
                 </div>
               </motion.div>
             ))}
@@ -589,26 +593,26 @@ export default function HomePage() {
       </section>
 
       {/* 9. FAQ ACCORDION BOARD */}
-      <section className="py-20 bg-slate-bg border-t border-slate-800/80 relative z-10">
+      <section className="py-20 bg-slate-bg border-t border-slate-200 relative z-10 text-slate-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           
           <div className="text-center space-y-3 mb-12">
-            <h2 className="text-xs font-bold text-cyan uppercase tracking-widest">FAQ</h2>
-            <h3 className="text-3xl font-bold text-white">Frequently Asked Questions</h3>
+            <h2 className="text-xs font-bold text-electric uppercase tracking-widest">FAQ</h2>
+            <h3 className="text-3xl font-extrabold text-navy">Frequently Asked Questions</h3>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className="glass-panel border border-slate-800/80 rounded-xl overflow-hidden shadow-sm"
+                className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm"
               >
                 <button
                   onClick={() => setFaqOpenIndex(faqOpenIndex === index ? null : index)}
-                  className="flex items-center justify-between w-full p-4 text-left font-bold text-sm text-white hover:text-cyan transition-colors"
+                  className="flex items-center justify-between w-full p-4 text-left font-bold text-sm text-navy hover:text-electric transition-colors"
                 >
                   {faq.question}
-                  {faqOpenIndex === index ? <Minus className="w-4 h-4 shrink-0 text-cyan" /> : <Plus className="w-4 h-4 shrink-0" />}
+                  {faqOpenIndex === index ? <Minus className="w-4 h-4 shrink-0 text-electric" /> : <Plus className="w-4 h-4 shrink-0" />}
                 </button>
 
                 <AnimatePresence initial={false}>
@@ -620,7 +624,7 @@ export default function HomePage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-4 pt-0 border-t border-slate-800/60 text-xs text-slate-400 leading-relaxed">
+                      <div className="p-4 pt-0 border-t border-slate-150 text-xs text-slate-600 leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -634,30 +638,33 @@ export default function HomePage() {
       </section>
 
       {/* 10. FINAL CTA BANNER */}
-      <section className="bg-navy text-white py-20 bg-grid-pattern-dark relative overflow-hidden z-10">
-        {/* Animated Cyber Glows inside CTA */}
-        <div className="cyber-glow -bottom-24 -left-20"></div>
-        <div className="cyber-glow-blue -top-20 -right-20"></div>
+      <section className="bg-slate-950 text-white py-20 relative overflow-hidden z-10">
+        {/* Layered background to avoid CSS conflicts */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0B192C] to-slate-900 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern-dark opacity-25 z-0"></div>
+        {/* Animated Cyber Glows */}
+        <div className="cyber-glow -bottom-24 -left-20 z-0"></div>
+        <div className="cyber-glow-blue -top-20 -right-20 z-0"></div>
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold">
             Ready to Build Your Digital Product?
           </h2>
-          <p className="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-350 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
             Get a free consult, full estimation, and architectural mapping for your software project within 48 hours. Let's build something great together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
             <Link 
               href="/contact" 
-              className="bg-electric hover:bg-cyan text-slate-950 font-bold px-8 py-4 rounded-full transition-colors shadow-lg flex items-center justify-center gap-2 group"
+              className="bg-electric hover:bg-[#e04f00] text-white font-bold px-8 py-4 rounded-full transition-colors shadow-lg flex items-center justify-center gap-2 group"
             >
               Get Free Project Quote
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="https://wa.me/919999999999" // Mock WhatsApp integration link
+              href="https://wa.me/919999999999"
               target="_blank"
-              className="bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-full transition-colors flex items-center justify-center gap-2"
+              className="bg-white/10 border border-white/20 hover:bg-white/15 text-white font-semibold px-8 py-4 rounded-full transition-colors flex items-center justify-center gap-2"
             >
               Chat on WhatsApp
             </Link>

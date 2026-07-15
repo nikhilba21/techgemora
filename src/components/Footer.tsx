@@ -189,7 +189,7 @@ export default function Footer() {
               />
               <button 
                 type="submit" 
-                className="bg-electric hover:bg-blue-700 text-white rounded-lg px-3 py-2 transition-colors flex items-center justify-center"
+                className="bg-electric hover:bg-[#e04f00] text-white rounded-lg px-3 py-2 transition-colors flex items-center justify-center"
                 aria-label="Subscribe"
               >
                 <Send className="w-3.5 h-3.5" />

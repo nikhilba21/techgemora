@@ -197,7 +197,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-panel shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white border-b border-slate-200 shadow-sm py-3' : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -206,10 +206,10 @@ export default function Navbar() {
               <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight text-white flex items-center leading-none">
+              <span className="text-lg font-bold tracking-tight text-navy flex items-center leading-none">
                 GEMORA <span className="text-electric ml-1">TECH</span>
               </span>
-              <span className="text-[8px] font-medium text-slate-400 uppercase tracking-widest leading-none mt-1">
+              <span className="text-[8px] font-medium text-slate-500 uppercase tracking-widest leading-none mt-1">
                 IT Services & Solutions
               </span>
             </div>
@@ -227,13 +227,13 @@ export default function Navbar() {
                 {item.href ? (
                   <Link 
                     href={item.href}
-                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-800/60 hover:text-electric flex items-center ${pathname === item.href ? 'text-electric' : 'text-slate-350'}`}
+                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center ${pathname === item.href ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <button
-                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-800/60 hover:text-electric flex items-center gap-1 ${activeDropdown === item.label ? 'text-electric bg-slate-800/60' : 'text-slate-350'}`}
+                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center gap-1 ${activeDropdown === item.label ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
@@ -249,7 +249,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.15 }}
-                        className={`absolute left-1/2 -translate-x-1/2 mt-1 w-72 md:w-96 bg-slate-950/95 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl p-3 z-50 grid gap-1 ${item.dropdown.length > 5 ? 'grid-cols-2 w-[520px] md:w-[600px]' : 'grid-cols-1'}`}
+                        className={`absolute left-1/2 -translate-x-1/2 mt-1 w-72 md:w-96 bg-white border border-slate-200 rounded-2xl shadow-xl p-3 z-50 grid gap-1 ${item.dropdown.length > 5 ? 'grid-cols-2 w-[520px] md:w-[600px]' : 'grid-cols-1'}`}
                       >
                         {item.dropdown.map((sub) => {
                           const Icon = sub.icon;
@@ -257,19 +257,19 @@ export default function Navbar() {
                             <Link
                               key={sub.label}
                               href={sub.href}
-                              className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-800/50 group transition-colors"
+                              className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 group transition-colors"
                             >
                               {Icon && (
-                                <div className="p-1.5 bg-slate-800/60 rounded-lg group-hover:bg-cyan/20 group-hover:text-electric text-slate-400 transition-colors">
+                                <div className="p-1.5 bg-slate-55 rounded-lg group-hover:bg-electric/10 group-hover:text-electric text-slate-500 transition-colors">
                                   <Icon className="w-4 h-4" />
                                 </div>
                               )}
                               <div className="flex-1">
-                                <p className="text-[13px] font-semibold text-slate-200 group-hover:text-electric transition-colors">
+                                <p className="text-[13px] font-semibold text-slate-800 group-hover:text-electric transition-colors">
                                   {sub.label}
                                 </p>
                                 {sub.description && (
-                                  <p className="text-[11px] text-slate-400 line-clamp-1 mt-0.5">
+                                  <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
                                     {sub.description}
                                   </p>
                                 )}
@@ -291,17 +291,17 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[95vw] max-w-7xl bg-slate-950/95 backdrop-blur-xl border border-slate-800/80 rounded-3xl shadow-2xl p-8 z-50 grid grid-cols-4 gap-6"
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[95vw] max-w-7xl bg-white border border-slate-200 rounded-3xl shadow-xl p-8 z-50 grid grid-cols-4 gap-6"
                       >
                         {item.megaMenu.map((group) => (
                           <div key={group.category} className="space-y-3">
-                            <h4 className="text-[11px] font-bold text-electric uppercase tracking-wider border-b border-slate-800/80 pb-2">{group.category}</h4>
+                            <h4 className="text-[11px] font-bold text-navy uppercase tracking-wider border-b border-slate-150 pb-2">{group.category}</h4>
                             <div className="grid gap-1">
                               {group.items.map((sub) => (
                                 <Link
                                   key={sub.label}
                                   href={sub.href}
-                                  className="text-[13px] font-medium text-slate-350 hover:text-electric hover:translate-x-1 transition-all duration-150 py-1"
+                                  className="text-[13px] font-medium text-slate-600 hover:text-electric hover:translate-x-1 transition-all duration-150 py-1"
                                 >
                                   {sub.label}
                                 </Link>
@@ -321,7 +321,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link 
               href="/contact" 
-              className="bg-electric text-slate-950 text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-cyan transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group"
+              className="bg-electric text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group"
             >
               Start Project
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -332,13 +332,13 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-3">
             <Link 
               href="/contact" 
-              className="bg-electric text-slate-950 text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-cyan transition-colors"
+              className="bg-electric text-white text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-electric/90 transition-colors"
             >
               Quote
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-1.5 text-slate-350 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors"
+              className="p-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -354,15 +354,15 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-panel border-t border-slate-800 w-full overflow-hidden"
+            className="lg:hidden bg-white border-t border-slate-200 w-full overflow-hidden shadow-lg"
           >
             <div className="px-4 py-4 space-y-2 max-h-[85vh] overflow-y-auto">
               {navItems.map((item) => (
-                <div key={item.label} className="border-b border-slate-800/40 pb-2 last:border-0 last:pb-0">
+                <div key={item.label} className="border-b border-slate-100 pb-2 last:border-0 last:pb-0">
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className="block py-2 text-sm font-semibold text-slate-200 hover:text-electric"
+                      className="block py-2 text-sm font-semibold text-slate-700 hover:text-electric"
                     >
                       {item.label}
                     </Link>
@@ -370,19 +370,19 @@ export default function Navbar() {
                     <div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                        className="flex items-center justify-between w-full py-2 text-sm font-semibold text-slate-200 hover:text-electric"
+                        className="flex items-center justify-between w-full py-2 text-sm font-semibold text-slate-700 hover:text-electric"
                       >
                         {item.label}
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                       </button>
 
                       {activeDropdown === item.label && item.dropdown && (
-                        <div className="pl-4 mt-1 grid grid-cols-1 gap-1 bg-slate-900/60 p-2 rounded-xl border border-slate-850">
+                        <div className="pl-4 mt-1 grid grid-cols-1 gap-1 bg-slate-50 p-2 rounded-xl border border-slate-150">
                           {item.dropdown.map((sub) => (
                             <Link
                               key={sub.label}
                               href={sub.href}
-                              className="block py-1.5 text-xs font-semibold text-slate-350 hover:text-electric"
+                              className="block py-1.5 text-xs font-semibold text-slate-605 hover:text-electric"
                             >
                               {sub.label}
                             </Link>
@@ -391,16 +391,16 @@ export default function Navbar() {
                       )}
 
                       {activeDropdown === item.label && item.megaMenu && (
-                        <div className="pl-2 mt-1 space-y-3 bg-slate-900/60 p-3 rounded-xl border border-slate-850">
+                        <div className="pl-2 mt-1 space-y-3 bg-slate-50 p-3 rounded-xl border border-slate-150">
                           {item.megaMenu.map((group) => (
                             <div key={group.category} className="space-y-1">
-                              <h5 className="text-[11px] font-bold text-electric uppercase tracking-wider pl-2">{group.category}</h5>
-                              <div className="pl-2 grid grid-cols-1 gap-1 border-l border-slate-800">
+                              <h5 className="text-[11px] font-bold text-navy uppercase tracking-wider pl-2">{group.category}</h5>
+                              <div className="pl-2 grid grid-cols-1 gap-1 border-l border-slate-200">
                                 {group.items.map((sub) => (
                                   <Link
                                     key={sub.label}
                                     href={sub.href}
-                                    className="block py-1 text-xs font-semibold text-slate-350 hover:text-electric"
+                                    className="block py-1 text-xs font-semibold text-slate-600 hover:text-electric"
                                   >
                                     {sub.label}
                                   </Link>
@@ -417,7 +417,7 @@ export default function Navbar() {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-electric text-slate-950 py-2.5 rounded-xl font-bold text-sm hover:bg-cyan"
+                  className="block w-full text-center bg-electric text-white py-2.5 rounded-xl font-bold text-sm hover:bg-electric/90"
                 >
                   Book Free Consultation
                 </Link>

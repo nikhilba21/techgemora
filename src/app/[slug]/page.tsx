@@ -2,9 +2,10 @@ import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronRight, ArrowRight, ExternalLink, ShieldCheck, Mail, Smartphone } from 'lucide-react';
-import { getPage } from '@/lib/db';
+import { ChevronRight, ArrowRight, ShieldCheck } from 'lucide-react';
+import { getPage, getPages } from '@/lib/db';
 import BlogFaq from '@/components/BlogFaq';
+import QuickConsultationForm from '@/components/QuickConsultationForm';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -53,6 +54,17 @@ export default async function DynamicSeoPage({ params }: PageProps) {
     console.error("Error parsing SEO page FAQs:", e);
   }
 
+  // Fetch related pages in the same category for index linking silos
+  let relatedPages: any[] = [];
+  try {
+    const allPages = await getPages();
+    relatedPages = allPages
+      .filter(p => p.type === page.type && p.slug !== page.slug && p.published)
+      .slice(0, 6);
+  } catch (e) {
+    console.error("Failed to fetch related pages:", e);
+  }
+
   // Define Schema Markup
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -87,7 +99,7 @@ export default async function DynamicSeoPage({ params }: PageProps) {
   } : null;
 
   return (
-    <div className="w-full min-h-screen bg-slate-bg pb-16">
+    <div className="w-full min-h-screen bg-slate-50 pb-16">
       
       {/* Schema Injection */}
       <script
@@ -102,79 +114,141 @@ export default async function DynamicSeoPage({ params }: PageProps) {
       )}
 
       {/* Hero Header Space */}
-      <section className="bg-navy text-white pt-20 pb-16 bg-grid-pattern-dark relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
+      <section className="bg-slate-950 text-white pt-28 pb-20 relative border-b border-slate-800 overflow-hidden">
+        {/* Layered Background Elements to avoid CSS conflicts */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0B192C] to-slate-900 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern-dark opacity-35 z-0"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-600/10 blur-[80px] rounded-full pointer-events-none z-0"></div>
         
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-4 text-center">
-          {/* Breadcrumbs Navigation */}
-          <nav className="text-xs font-semibold text-slate-400 flex items-center justify-center gap-1.5" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-slate-200">{page.h1}</span>
-          </nav>
-
-          <span className="inline-block bg-blue-950/80 border border-blue-800 text-blue-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-            Category: {page.type}
-          </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight">
-            {page.h1}
-          </h1>
-          
-          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            {page.metaDescription}
-          </p>
+          <div className="lg:col-span-2 space-y-4 text-left">
+            {/* Breadcrumbs Navigation */}
+            <nav className="text-xs font-semibold text-slate-400 flex items-center gap-1.5" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-white">Home</Link>
+              <ChevronRight className="w-3.5 h-3.5" />
+              <span className="text-slate-200">{page.h1}</span>
+            </nav>
 
-          <div className="pt-2">
-            <Link 
-              href="/contact" 
-              className="bg-electric hover:bg-cyan text-slate-950 font-bold py-3 px-8 rounded-full text-xs transition-colors shadow-lg inline-flex items-center gap-1.5 group"
-            >
-              Get Free Project Quote
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-            </Link>
+            <span className="inline-block bg-electric/10 border border-electric/25 text-electric text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Category: {page.type}
+            </span>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+              {page.h1}
+            </h1>
+            
+            <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+              {page.metaDescription}
+            </p>
+
+            <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-xs text-slate-350">
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-electric" />
+                <span>NDA Protected</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-electric" />
+                <span>Dedicated Agile Squads</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-electric" />
+                <span>100% IP Ownership</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-1">
+            <QuickConsultationForm />
           </div>
         </div>
       </section>
 
-      {/* Main Body Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-12 grid grid-cols-1 gap-8">
-        
-        {/* HTML Article Content */}
-        <div className="glass-panel border border-slate-800/80 rounded-2xl shadow-sm p-6 md:p-10 space-y-8">
+      {/* 2-Column Body Content Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
-          {/* Main rich text copy */}
-          <div 
-            className="prose prose-invert max-w-none text-slate-350 text-sm leading-relaxed space-y-6"
-            dangerouslySetInnerHTML={{ __html: page.content }}
-          />
-
-          {/* Dynamic FAQ List */}
-          {faqsList.length > 0 && (
-            <div className="pt-8 border-t border-slate-800/60">
-              <BlogFaq faqs={faqsList} />
+          {/* Left Column: Article Content & FAQs */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-100/50 p-6 md:p-10">
+              <div 
+                className="service-content-light prose max-w-none text-slate-700 text-sm leading-relaxed space-y-6"
+                dangerouslySetInnerHTML={{ __html: page.content }}
+              />
             </div>
-          )}
 
-        </div>
-
-        {/* Lead Capture Banner */}
-        <div className="glass-panel border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="space-y-2">
-            <h3 className="text-lg font-bold text-white">Need Custom {page.slug.replace(/-/g, ' ') || 'Development'} Services?</h3>
-            <p className="text-xs text-slate-400 max-w-xl leading-relaxed">
-              We sign strict NDAs, build using modern Next.js/PostgreSQL databases, and deploy under dedicated agile engineers.
-            </p>
+            {/* FAQs Block */}
+            {faqsList.length > 0 && (
+              <div className="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-100/50 p-6 md:p-10">
+                <BlogFaq faqs={faqsList} />
+              </div>
+            )}
           </div>
-          <Link 
-            href="/contact"
-            className="bg-electric hover:bg-cyan text-slate-950 font-bold py-3 px-6 rounded-full text-xs transition-colors shrink-0 flex items-center gap-1.5"
-          >
-            Consult Solutions Expert
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </div>
 
+          {/* Right Column: Sticky Sidebar */}
+          <div className="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
+            
+            {/* Related Services */}
+            {relatedPages.length > 0 && (
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-md shadow-slate-100/50">
+                <h4 className="text-sm font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-4 bg-electric rounded-full"></span>
+                  Related Services
+                </h4>
+                <div className="grid gap-2.5">
+                  {relatedPages.map((rp) => (
+                    <Link
+                      key={rp.slug}
+                      href={`/${rp.slug}`}
+                      className="group flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-150 transition-all text-xs"
+                    >
+                      <span className="font-semibold text-slate-700 group-hover:text-electric transition-colors line-clamp-1">{rp.h1}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-electric group-hover:translate-x-0.5 transition-all shrink-0" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Trust Stats Widget */}
+            <div className="bg-slate-950 text-white border border-slate-800 rounded-2xl p-6 shadow-md relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-[#0B192C] z-0"></div>
+              <div className="absolute inset-0 bg-grid-pattern-dark opacity-20 z-0"></div>
+              <div className="relative z-10">
+                <h4 className="text-sm font-bold border-b border-slate-800 pb-3 mb-4">Why Choose Gemora Tech?</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <p className="text-lg font-extrabold text-electric">10+ Years</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Experience</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-lg font-extrabold text-electric">100+</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Projects Built</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-lg font-extrabold text-electric">24/7</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Global Support</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-lg font-extrabold text-electric">99.8%</p>
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">SLA Uptime</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Direct Contact Callout */}
+            <div className="bg-orange-50/50 border border-orange-100/50 rounded-2xl p-5 text-center space-y-3">
+              <p className="text-xs text-slate-650">Want to discuss your project right now?</p>
+              <div className="space-y-1.5 text-xs font-bold text-slate-800">
+                <p>Email: sales@gemoratech.com</p>
+                <p>Skype: gemora.sales</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
     </div>
