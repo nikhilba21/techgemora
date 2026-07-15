@@ -3,11 +3,49 @@ const path = require('path');
 
 const DB_PATH = path.join(__dirname, '..', 'data', 'db.json');
 
+function getUniqueDescription(featureName) {
+  const name = featureName.toLowerCase();
+  if (name.includes('bespoke') || name.includes('custom') || name.includes('tailored') || name.includes('application') || name.includes('software')) {
+    return 'Custom-architected solutions to align perfectly with your unique business workflows.';
+  }
+  if (name.includes('enterprise') || name.includes('integration') || name.includes('system') || name.includes('database') || name.includes('db')) {
+    return 'Seamless system integrations to enable real-time data sync and unify operations.';
+  }
+  if (name.includes('performance') || name.includes('speed') || name.includes('scale') || name.includes('optim') || name.includes('fast')) {
+    return 'Engineered with latency optimizations and auto-scaling support for peak workloads.';
+  }
+  if (name.includes('security') || name.includes('compliance') || name.includes('protect') || name.includes('secure') || name.includes('shield')) {
+    return 'Enforced with multi-factor authentication, SSL encryption, and strict data privacy.';
+  }
+  if (name.includes('qa') || name.includes('testing') || name.includes('quality') || name.includes('bug')) {
+    return 'Rigorous testing loops and automated unit specs to ensure regression-free releases.';
+  }
+  if (name.includes('mobile') || name.includes('responsive') || name.includes('design') || name.includes('ui') || name.includes('ux')) {
+    return 'Beautiful, responsive UI layout that scales perfectly across devices and screen sizes.';
+  }
+  if (name.includes('api') || name.includes('sync') || name.includes('webhook') || name.includes('service')) {
+    return 'Highly documented RESTful/GraphQL endpoints built for scalability and client consumes.';
+  }
+  if (name.includes('agile') || name.includes('sprint') || name.includes('manage') || name.includes('project') || name.includes('board')) {
+    return 'Managed through weekly agile sprints to ensure clear timelines and status reports.';
+  }
+  if (name.includes('devops') || name.includes('cloud') || name.includes('host') || name.includes('aws') || name.includes('cloudflare')) {
+    return 'Cloud-native infrastructure optimized for minimal server downtime and fast CDN responses.';
+  }
+  if (name.includes('game') || name.includes('multiplayer') || name.includes('unity') || name.includes('unreal')) {
+    return 'Immersive interactive mechanics matching high frame rate outputs and low latency loops.';
+  }
+  if (name.includes('ai') || name.includes('ml') || name.includes('data') || name.includes('model') || name.includes('pinecone')) {
+    return 'State of the art vector databases and neural net interfaces for advanced predictive models.';
+  }
+  return 'Engineered to deliver exceptional user experience, performance, and robustness.';
+}
+
 function generateRichContent(title, targetKeyword, features, technologies, benefits) {
   const intro = `
     <section class="prose max-w-none text-slate-300 space-y-6">
       <p class="text-xl leading-relaxed text-slate-200">
-        Welcome to <strong>Gemora Tech</strong>, a premier division of <strong>Gemora Global Private Limited</strong>. Formerly known as <em>Dexterous Softech Private Limited</em>, we have rebranded and evolved to deliver top-tier digital transformation services worldwide. As a leading global software development company, we provide enterprise-class <strong>${title}</strong> designed to help startups, mid-sized firms, and massive corporations scale efficiency, innovate faster, and maintain a competitive edge.
+        Welcome to <strong>Gemora Tech</strong>, a premier division of <strong>Gemora Global Private Limited</strong>. As a leading global software development company, we provide enterprise-class <strong>${title}</strong> designed to help startups, mid-sized firms, and massive corporations scale efficiency, innovate faster, and maintain a competitive edge.
       </p>
       <p>
         In today's fast-moving economy, leveraging digital products is no longer optional—it is a critical necessity. At Gemora Tech, we understand the complexities of designing, building, and deploying software. Our dedicated teams work hand-in-hand with clients from the USA, UK, Canada, Australia, UAE, Europe, and India to build digital experiences that deliver high conversions, seamless performance, and ultimate security.
@@ -95,7 +133,7 @@ function generateRichContent(title, targetKeyword, features, technologies, benef
         ${features.map(f => `
           <li class="flex items-start space-x-3">
             <span class="text-blue-500 mt-1">✔</span>
-            <span><strong>${f}</strong>: Engineered for speed, efficiency, and robustness.</span>
+            <span><strong>${f}</strong>: ${getUniqueDescription(f)}</span>
           </li>
         `).join('')}
       </ul>

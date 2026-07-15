@@ -94,7 +94,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-slate-400 text-xs leading-relaxed">
-              Gemora Tech is the technology division of <strong>Gemora Global Private Limited</strong>, formerly known as <strong>Dexterous Softech Private Limited</strong>. We build world-class custom software, web portals, mobile apps, and artificial intelligence models for global brands.
+              Gemora Tech is the technology division of <strong>Gemora Global Private Limited</strong>. We build world-class custom software, web portals, mobile apps, and artificial intelligence models for global brands.
             </p>
             <div className="flex space-x-3 pt-2">
               <a href="#" className="p-2 bg-slate-900 rounded-lg hover:bg-electric text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">

@@ -4,7 +4,7 @@ import { getPages, getBlogs, getPortfolios } from '@/lib/db';
 export const revalidate = 3600; // Cache sitemap for 1 hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://dexteroussoftech.com';
+  const baseUrl = 'https://www.dexteroussoftech.com';
 
   // Base static pages
   const staticRoutes = [
