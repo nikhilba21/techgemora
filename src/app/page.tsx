@@ -637,6 +637,209 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 8.5. PRICING MODELS SECTION */}
+      <section className="py-20 bg-white text-slate-800 relative z-10 border-t border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center space-y-3 mb-16">
+            <span className="text-xs font-bold text-electric uppercase tracking-widest bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+              Pricing Options
+            </span>
+            <h2 className="text-3xl font-extrabold text-navy">Transparent B2B Pricing Models</h2>
+            <p className="text-xs text-slate-500 max-w-lg mx-auto">
+              Choose the engagement model that best aligns with your budget parameters, delivery sprints, and technical scoping requirements.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Model 1 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <h4 className="font-bold text-base text-navy">Time & Materials</h4>
+                  <p className="text-[11px] text-slate-500">Ideal for scaling startups and dynamic project specifications.</p>
+                </div>
+                <div className="text-2xl font-extrabold text-electric">$25 – $45 <span className="text-xs text-slate-400 font-medium">/ Hour</span></div>
+                <ul className="space-y-2.5 text-xs text-slate-600 border-t border-slate-200/60 pt-4">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Flexible backlog sprints</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Weekly developer sync loops</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Pay-as-you-go hourly invoice</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Direct Jira & Slack boards</span>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/contact" className="block text-center bg-navy hover:bg-slate-800 text-white text-xs font-bold py-2.5 rounded-xl transition-all mt-4">
+                Choose Model
+              </Link>
+            </div>
+
+            {/* Model 2 */}
+            <div className="bg-slate-50 border border-electric rounded-2xl p-6 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative shadow-sm">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-electric text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                Most Popular
+              </span>
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <h4 className="font-bold text-base text-navy">Fixed Price Sprints</h4>
+                  <p className="text-[11px] text-slate-500">Perfect for locked scope specs and product launches.</p>
+                </div>
+                <div className="text-2xl font-extrabold text-electric">Scope Based <span className="text-xs text-slate-400 font-medium">/ Milestone</span></div>
+                <ul className="space-y-2.5 text-xs text-slate-600 border-t border-slate-200/60 pt-4">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Guaranteed SLA delivery</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Milestone-based release checks</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>30-Day post-launch warranty</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Full dedicated QA round</span>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/contact" className="block text-center bg-electric hover:bg-[#e04f00] text-white text-xs font-bold py-2.5 rounded-xl transition-all mt-4">
+                Get Scope Estimate
+              </Link>
+            </div>
+
+            {/* Model 3 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <h4 className="font-bold text-base text-navy">Dedicated Squads</h4>
+                  <p className="text-[11px] text-slate-500">For ongoing product engineering and code expansions.</p>
+                </div>
+                <div className="text-2xl font-extrabold text-electric">$3.2k – $5.5k <span className="text-xs text-slate-400 font-medium">/ Month</span></div>
+                <ul className="space-y-2.5 text-xs text-slate-600 border-t border-slate-200/60 pt-4">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>40 Hours/week per engineer</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Daily commits to private Github</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>100% IP & source code ownership</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-electric shrink-0" />
+                    <span>Direct Tech Lead syncs daily</span>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/contact" className="block text-center bg-navy hover:bg-slate-800 text-white text-xs font-bold py-2.5 rounded-xl transition-all mt-4">
+                Hire Squad
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 8.6. FEATURED BLOGS SECTION */}
+      <section className="py-20 bg-slate-bg text-slate-800 relative z-10 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
+            <div className="space-y-3">
+              <span className="text-xs font-bold text-electric uppercase tracking-widest bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+                Knowledge Center
+              </span>
+              <h2 className="text-3xl font-extrabold text-navy">Latest Insights & Industry Guides</h2>
+              <p className="text-xs text-slate-500 max-w-md">
+                Read the latest articles on software scalability, prompt engineering workflows, and system optimization.
+              </p>
+            </div>
+            <Link 
+              href="/blog" 
+              className="text-xs font-bold text-electric hover:text-navy transition-colors flex items-center gap-1 shrink-0"
+            >
+              View All Articles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {blogs.length > 0 ? (
+              blogs.map((b) => (
+                <div 
+                  key={b.slug}
+                  className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div className="p-5 space-y-3">
+                    <span className="text-[10px] font-bold text-blue-600 uppercase bg-blue-50 px-2 py-0.5 rounded">
+                      {b.category || 'Technology'}
+                    </span>
+                    <h4 className="font-bold text-sm text-navy line-clamp-2 hover:text-electric transition-colors">
+                      <Link href={`/blog/${b.slug}`}>{b.title}</Link>
+                    </h4>
+                    <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">
+                      {b.excerpt || 'Read this dynamic technical guide from our leading solutions architect.'}
+                    </p>
+                  </div>
+                  <div className="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>{new Date(b.createdAt).toLocaleDateString()}</span>
+                    <Link href={`/blog/${b.slug}`} className="font-bold text-electric flex items-center gap-0.5 hover:underline">
+                      Read Guide <ArrowUpRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              ))
+            ) : (
+              /* Fallback static placeholders */
+              [
+                { title: 'Scaling Next.js 15 Applications for Global Enterprise Workloads', slug: 'scaling-nextjs-applications', cat: 'Software Development', date: 'Jul 12, 2026' },
+                { title: 'Choosing the Right Game Engine: Unity 3D vs Unreal Engine 5', slug: 'choosing-right-game-engine', cat: 'Game Development', date: 'Jul 08, 2026' },
+                { title: 'LLM Fine-Tuning & Vector DB Retrials in Production Systems', slug: 'llm-finetuning-pipelines', cat: 'AI & Data', date: 'Jul 02, 2026' }
+              ].map((fallback, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div className="p-5 space-y-3">
+                    <span className="text-[10px] font-bold text-blue-600 uppercase bg-blue-50 px-2 py-0.5 rounded">
+                      {fallback.cat}
+                    </span>
+                    <h4 className="font-bold text-sm text-navy line-clamp-2 hover:text-electric transition-colors">
+                      <Link href="/blog">{fallback.title}</Link>
+                    </h4>
+                    <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">
+                      Discover standard practices to secure APIs, partition multi-tenant relational schemas, and scale developer pipelines.
+                    </p>
+                  </div>
+                  <div className="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>{fallback.date}</span>
+                    <Link href="/blog" className="font-bold text-electric flex items-center gap-0.5 hover:underline">
+                      Read Guide <ArrowUpRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+
+        </div>
+      </section>
+
       {/* 10. FINAL CTA BANNER */}
       <section className="bg-slate-950 text-white py-20 relative overflow-hidden z-10">
         {/* Layered background to avoid CSS conflicts */}

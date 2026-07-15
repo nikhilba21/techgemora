@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronRight, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronRight, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { getPage, getPages } from '@/lib/db';
 import BlogFaq from '@/components/BlogFaq';
 import QuickConsultationForm from '@/components/QuickConsultationForm';
@@ -75,12 +75,12 @@ export default async function DynamicSeoPage({ params }: PageProps) {
   // Map slug properties to high-quality banner graphics
   let bannerImage = "/images/software-dev-banner.png";
   const lowerSlug = page.slug.toLowerCase();
-  if (lowerSlug.includes('game')) {
-    bannerImage = "/images/game-dev-banner.png";
+  if (lowerSlug.includes('game') || lowerSlug.includes('slots') || lowerSlug.includes('poker') || lowerSlug.includes('blackjack') || lowerSlug.includes('rummy')) {
+    bannerImage = "/images/gaming-banner.png";
   } else if (lowerSlug.includes('mobile') || lowerSlug.includes('app') || lowerSlug.includes('ios') || lowerSlug.includes('android')) {
     bannerImage = "/images/mobile-app-banner.png";
   } else if (lowerSlug.includes('ai') || lowerSlug.includes('machine') || lowerSlug.includes('big-data') || lowerSlug.includes('voice') || lowerSlug.includes('metaverse') || lowerSlug.includes('reality')) {
-    bannerImage = "/images/ai-bigdata-banner.png";
+    bannerImage = "/images/ai-banner.png";
   }
 
   // Define Schema Markup
@@ -92,15 +92,28 @@ export default async function DynamicSeoPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dexteroussoftech.com"
+        "item": "https://www.dexteroussoftech.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": page.h1,
-        "item": `https://dexteroussoftech.com/${page.slug}`
+        "item": `https://www.dexteroussoftech.com/${page.slug}`
       }
     ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": page.h1,
+    "provider": {
+      "@type": "Organization",
+      "name": "Gemora Tech",
+      "url": "https://www.dexteroussoftech.com"
+    },
+    "description": page.metaDescription,
+    "areaServed": ["US", "GB", "CA", "AU", "AE", "IN"]
   };
 
   const faqSchema = faqsList.length > 0 ? {
@@ -117,12 +130,16 @@ export default async function DynamicSeoPage({ params }: PageProps) {
   } : null;
 
   return (
-    <div className="w-full min-h-screen bg-slate-50 pb-16">
+    <div className="w-full bg-slate-50 pb-20">
       
       {/* Schema Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       {faqSchema && (
         <script
@@ -131,8 +148,8 @@ export default async function DynamicSeoPage({ params }: PageProps) {
         />
       )}
 
-      {/* Hero Header Space */}
-      <section className="bg-slate-950 text-white pt-28 pb-20 relative border-b border-slate-800 overflow-hidden">
+      {/* Service Page Hero banner */}
+      <section className="bg-slate-950 text-white pt-24 pb-16 relative border-b border-slate-800 overflow-hidden">
         {/* Layered Background Elements to avoid CSS conflicts */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0B192C] to-slate-900 z-0"></div>
         <div className="absolute inset-0 bg-grid-pattern-dark opacity-35 z-0"></div>
@@ -178,6 +195,26 @@ export default async function DynamicSeoPage({ params }: PageProps) {
 
           <div className="lg:col-span-1">
             <QuickConsultationForm />
+          </div>
+        </div>
+      </section>
+
+      {/* AI-First Direct Q&A Summary Card */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-150/75 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row gap-6 items-start md:items-center">
+          <div className="bg-blue-600 text-white p-3.5 rounded-xl shrink-0">
+            <Sparkles className="w-6 h-6" />
+          </div>
+          <div className="space-y-2">
+            <h4 className="font-bold text-xs uppercase tracking-wider text-blue-600 flex items-center gap-1.5">
+              <span>AI Search Direct Answer</span>
+            </h4>
+            <p className="font-bold text-sm text-navy leading-normal">
+              Q: What is the core focus of {page.h1}?
+            </p>
+            <p className="text-xs text-slate-600 leading-relaxed max-w-3xl">
+              A: {page.metaDescription} Our digital transformation solutions deliver enterprise-grade software architectures, customized modular API integrations, and 100% intellectual property ownership backed by secure NDA guidelines and daily scrum updates.
+            </p>
           </div>
         </div>
       </section>
