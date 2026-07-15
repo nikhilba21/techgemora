@@ -23,7 +23,7 @@ export default function HomePage() {
         const portsRes = await fetch('/api/portfolios');
         if (portsRes.ok) {
           const ports = await portsRes.json();
-          setPortfolios(Array.isArray(ports) ? ports.slice(0, 3) : []);
+          setPortfolios(Array.isArray(ports) ? ports.slice(0, 8) : []);
         }
         
         const postsRes = await fetch('/api/blogs');
@@ -509,8 +509,9 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="glass-panel rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-electric/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                  className="glass-panel rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-electric/50 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group cursor-pointer"
                 >
+                  <Link href={`/portfolio/${port.slug}`} className="block h-full">
                   <div className="p-6 space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] font-bold text-electric uppercase tracking-wider bg-electric/10 border border-electric/20 px-2.5 py-1 rounded-full">
