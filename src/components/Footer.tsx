@@ -214,19 +214,23 @@ export default function Footer() {
 
         {/* Global Locations List */}
         <div className="border-t border-slate-800 pt-6 pb-6 text-center text-xs text-slate-500">
-          <p className="font-semibold text-slate-400 mb-2">Target Markets Served:</p>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-            <Link href="/software-development-company-usa" className="hover:text-electric">United States (USA)</Link>
-            <span>•</span>
-            <Link href="/software-development-company-uk" className="hover:text-electric">United Kingdom (UK)</Link>
-            <span>•</span>
-            <Link href="/software-development-company-canada" className="hover:text-electric">Canada</Link>
-            <span>•</span>
-            <Link href="/software-development-company-australia" className="hover:text-electric">Australia</Link>
-            <span>•</span>
-            <Link href="/software-development-company-dubai" className="hover:text-electric">United Arab Emirates (UAE - Dubai)</Link>
-            <span>•</span>
-            <Link href="/software-development-company-india" className="hover:text-electric">India (Jaipur)</Link>
+          <p className="font-semibold text-slate-400 mb-3 uppercase tracking-widest text-[10px]">Global Reach & Targeted Markets</p>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 max-w-5xl mx-auto">
+            <Link href="/software-development-company-usa" className="hover:text-electric transition-colors">USA Software Dev</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/web-development-company-usa" className="hover:text-electric transition-colors">USA Web Dev</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/mobile-app-development-company-usa" className="hover:text-electric transition-colors">USA App Dev</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/software-development-company-uk" className="hover:text-electric transition-colors">United Kingdom (UK)</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/software-development-company-canada" className="hover:text-electric transition-colors">Canada</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/software-development-company-australia" className="hover:text-electric transition-colors">Australia</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/software-development-company-dubai" className="hover:text-electric transition-colors">Dubai (UAE)</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/software-development-company-india" className="hover:text-electric transition-colors">India (Offshore)</Link>
           </div>
         </div>
 

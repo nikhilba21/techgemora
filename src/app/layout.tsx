@@ -47,6 +47,45 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Gemora Tech",
+              "url": "https://www.dexteroussoftech.com",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "areaServed": ["US", "GB", "AU", "AE", "CA", "IN"],
+                "availableLanguage": ["English"]
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Gemora Tech",
+              "@id": "https://www.dexteroussoftech.com",
+              "url": "https://www.dexteroussoftech.com",
+              "priceRange": "$$$",
+              "areaServed": [
+                { "@type": "Country", "name": "United States" },
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "Australia" },
+                { "@type": "Country", "name": "United Arab Emirates" },
+                { "@type": "Country", "name": "Canada" }
+              ]
+            })
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {/* Tawk.to Live Chat Script */}
         <Script id="tawk-to-integration" strategy="afterInteractive">

@@ -1,56 +1,53 @@
 import { MetadataRoute } from 'next';
 import { getPages, getBlogs, getPortfolios } from '@/lib/db';
 
-export const revalidate = 3600; // Cache sitemap for 1 hour
+const baseUrl = 'https://www.dexteroussoftech.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.dexteroussoftech.com';
+  // Fetch all dynamic pages
+  const pages = await getPages();
+  const blogs = await getBlogs();
+  const portfolios = await getPortfolios();
 
-  // Base static pages
-  const staticRoutes = [
+  // Core static routes
+  const routes = [
     '',
+    '/about',
     '/portfolio',
-    '/case-studies',
     '/blog',
     '/contact',
     '/ai-cost-estimator',
-  ].map(route => ({
+    '/hire-developers',
+  ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
-    changeFrequency: 'daily' as const,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
     priority: route === '' ? 1.0 : 0.8,
   }));
 
-  try {
-    const [pages, blogs, portfolios] = await Promise.all([
-      getPages(),
-      getBlogs(),
-      getPortfolios()
-    ]);
+  // Dynamic SEO pages (e.g., /software-development-company-usa)
+  const pageRoutes = pages.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: page.updatedAt ? new Date(page.updatedAt) : new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
 
-    // Service, Location, Industry, and Hire developer pages
-    const dynamicPages = pages
-      .filter(p => p.published)
-      .map(p => ({
-        url: `${baseUrl}/${p.slug}`,
-        lastModified: new Date().toISOString().split('T')[0],
-        changeFrequency: 'weekly' as const,
-        priority: 0.7,
-      }));
+  // Blog pages
+  const blogRoutes = blogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: blog.createdAt ? new Date(blog.createdAt) : new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 
-    // B2B Blog posts
-    const blogPosts = blogs
-      .filter(b => b.published)
-      .map(b => ({
-        url: `${baseUrl}/blog/${b.slug}`,
-        lastModified: new Date(b.createdAt).toISOString().split('T')[0],
-        changeFrequency: 'weekly' as const,
-        priority: 0.6,
-      }));
+  // Portfolio pages
+  const portfolioRoutes = portfolios.map((port) => ({
+    url: `${baseUrl}/portfolio/${port.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
 
-    return [...staticRoutes, ...dynamicPages, ...blogPosts];
-  } catch (err) {
-    console.error("Sitemap generation error:", err);
-    return staticRoutes;
-  }
+  return [...routes, ...pageRoutes, ...blogRoutes, ...portfolioRoutes];
 }
