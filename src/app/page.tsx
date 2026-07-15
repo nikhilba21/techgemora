@@ -131,7 +131,7 @@ export default function HomePage() {
   ];
 
   const faqs = [
-    { question: "What is Gemora Tech's corporate relationship?", answer: "Gemora Tech is the global technology division of Gemora Global Private Limited. We were formerly operating under the corporate entity Dexterous Softech Private Limited before restructuring to serve international enterprise clients." },
+    { question: "What is Gemora Tech's corporate relationship?", answer: "Gemora Tech is the global technology division of Gemora Global Private Limited. Our leadership team has been delivering technical solutions since 2015 under the legacy brand Dexterous Softech Private Limited, before restructuring in 2023 to serve international enterprise clients as Gemora Tech. This continuity ensures over 10+ years of collective engineering experience." },
     { question: "How do you ensure IP rights and code security?", answer: "We sign custom, legally binding Non-Disclosure Agreements (NDAs) and intellectual property contracts before coding starts. 100% of the project's source code IP belongs to our clients upon milestone settlement." },
     { question: "Can we hire dedicated developers on a monthly model?", answer: "Yes. We offer flexible engagement models, including monthly dedicated developer staffing (40 hours/week) and fixed-price milestone projects." },
     { question: "What countries does Gemora Tech serve?", answer: "We serve startups, mid-market scales, and corporate enterprises across the USA, UK, Canada, Australia, UAE, Europe, India, and globally." },

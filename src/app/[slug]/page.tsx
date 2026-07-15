@@ -22,14 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const alignedTitle = page.h1 ? `${page.h1} | Gemora Tech` : page.title;
+
   return {
-    title: page.title,
+    title: alignedTitle,
     description: page.metaDescription,
     alternates: {
       canonical: `/${page.slug}`,
     },
     openGraph: {
-      title: page.title,
+      title: alignedTitle,
       description: page.metaDescription,
       url: `/${page.slug}`,
       type: "website",
@@ -37,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: page.title,
+      title: alignedTitle,
       description: page.metaDescription,
     }
   };
