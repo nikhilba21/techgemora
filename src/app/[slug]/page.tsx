@@ -263,8 +263,8 @@ export default async function DynamicSeoPage({ params }: PageProps) {
             <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center space-y-3">
               <p className="text-xs text-slate-600">Want to discuss your project right now?</p>
               <div className="space-y-1.5 text-xs font-bold text-slate-800">
-                <p>Email: sales@gemoratech.com</p>
-                <p>Skype: gemora.sales</p>
+                <p>Email: <a href="mailto:nikhil@dexteroussoftech.com" className="hover:text-blue-600 transition-colors">nikhil@dexteroussoftech.com</a></p>
+                <p>Call: <a href="tel:+919928714867" className="hover:text-blue-600 transition-colors">+91 9928714867</a></p>
               </div>
             </div>
 

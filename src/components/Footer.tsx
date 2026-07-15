@@ -198,7 +198,11 @@ export default function Footer() {
             <div className="space-y-2.5 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-electric shrink-0" />
-                <span>sales@gemoratech.com</span>
+                <a href="mailto:nikhil@dexteroussoftech.com" className="hover:text-electric transition-colors">nikhil@dexteroussoftech.com</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-electric shrink-0" />
+                <a href="tel:+919928714867" className="hover:text-electric transition-colors">+91 9928714867</a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-electric shrink-0" />

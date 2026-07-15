@@ -662,7 +662,7 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919928714867"
               target="_blank"
               className="bg-white/10 border border-white/20 hover:bg-white/15 text-white font-semibold px-8 py-4 rounded-full transition-colors flex items-center justify-center gap-2"
             >

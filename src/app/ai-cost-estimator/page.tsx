@@ -523,7 +523,7 @@ export default function AICostEstimatorPage() {
                     </div>
 
                     <div className="bg-blue-50 border border-blue-100 p-3.5 rounded-xl text-center space-y-2">
-                      <p className="font-semibold text-slate-800">Proposal Sent to sales@gemoratech.com</p>
+                      <p className="font-semibold text-slate-800">Proposal Sent to nikhil@dexteroussoftech.com</p>
                       <p className="text-[10px] text-slate-500">
                         An account executive has been assigned to your requirement. We will schedule a direct Zoom/Google Meet video call within 1-2 business hours.
                       </p>

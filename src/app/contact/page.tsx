@@ -184,7 +184,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Email Us</p>
-                    <p className="text-[11px] text-slate-400">sales@gemoratech.com</p>
+                    <p className="text-[11px] text-slate-400">nikhil@dexteroussoftech.com</p>
                   </div>
                 </div>
                 
@@ -192,7 +192,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-white">Call Global Sales</p>
-                    <p className="text-[11px] text-slate-400">+91 141 999999 (Jaipur Hub)</p>
+                    <p className="text-[11px] text-slate-400">+91 9928714867</p>
                   </div>
                 </div>
 
@@ -207,7 +207,7 @@ export default function ContactPage() {
 
               <div className="pt-4 border-t border-slate-800">
                 <a 
-                  href="https://wa.me/919999999999" 
+                  href="https://wa.me/919928714867" 
                   target="_blank"
                   className="bg-[#25D366] hover:bg-[#20ba59] text-white text-center font-bold py-2.5 rounded-xl text-xs block transition-all shadow-sm"
                 >
