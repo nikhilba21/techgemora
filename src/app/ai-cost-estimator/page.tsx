@@ -132,7 +132,7 @@ export default function AICostEstimatorPage() {
     };
   };
 
-  const estimate = AICostEstimatorPage ? calculateEstimate() : { hours: 0, minCost: 0, maxCost: 0, weeks: 0, developers: 0 };
+  const estimate = calculateEstimate();
 
   // AI Chat Assistant responses logic
   const handleChatSubmit = (e: React.FormEvent) => {
