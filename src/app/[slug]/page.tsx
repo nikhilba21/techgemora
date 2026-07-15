@@ -65,6 +65,17 @@ export default async function DynamicSeoPage({ params }: PageProps) {
     console.error("Failed to fetch related pages:", e);
   }
 
+  // Map slug properties to high-quality banner graphics
+  let bannerImage = "/images/software-dev-banner.png";
+  const lowerSlug = page.slug.toLowerCase();
+  if (lowerSlug.includes('game')) {
+    bannerImage = "/images/game-dev-banner.png";
+  } else if (lowerSlug.includes('mobile') || lowerSlug.includes('app') || lowerSlug.includes('ios') || lowerSlug.includes('android')) {
+    bannerImage = "/images/mobile-app-banner.png";
+  } else if (lowerSlug.includes('ai') || lowerSlug.includes('machine') || lowerSlug.includes('big-data') || lowerSlug.includes('voice') || lowerSlug.includes('metaverse') || lowerSlug.includes('reality')) {
+    bannerImage = "/images/ai-bigdata-banner.png";
+  }
+
   // Define Schema Markup
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -130,7 +141,7 @@ export default async function DynamicSeoPage({ params }: PageProps) {
               <span className="text-slate-200">{page.h1}</span>
             </nav>
 
-            <span className="inline-block bg-electric/10 border border-electric/25 text-electric text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            <span className="inline-block bg-blue-950/80 border border-blue-800 text-blue-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
               Category: {page.type}
             </span>
             
@@ -138,21 +149,21 @@ export default async function DynamicSeoPage({ params }: PageProps) {
               {page.h1}
             </h1>
             
-            <p className="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+            <p className="text-slate-350 text-sm md:text-base max-w-2xl leading-relaxed">
               {page.metaDescription}
             </p>
 
-            <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-xs text-slate-350">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-xs text-slate-300">
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-electric" />
+                <ShieldCheck className="w-4 h-4 text-cyan" />
                 <span>NDA Protected</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-electric" />
+                <ShieldCheck className="w-4 h-4 text-cyan" />
                 <span>Dedicated Agile Squads</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-electric" />
+                <ShieldCheck className="w-4 h-4 text-cyan" />
                 <span>100% IP Ownership</span>
               </div>
             </div>
@@ -170,11 +181,22 @@ export default async function DynamicSeoPage({ params }: PageProps) {
           
           {/* Left Column: Article Content & FAQs */}
           <div className="lg:col-span-2 space-y-8">
-            <div className="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-100/50 p-6 md:p-10">
-              <div 
-                className="service-content-light prose max-w-none text-slate-700 text-sm leading-relaxed space-y-6"
-                dangerouslySetInnerHTML={{ __html: page.content }}
-              />
+            <div className="bg-white border border-slate-200/80 rounded-2xl shadow-xl shadow-slate-100/50 overflow-hidden">
+              {/* Graphic Banner */}
+              <div className="relative w-full h-52 sm:h-64 md:h-80 bg-slate-900 border-b border-slate-100">
+                <img 
+                  src={bannerImage} 
+                  alt={`${page.h1} illustration`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="p-6 md:p-10">
+                <div 
+                  className="service-content-light prose max-w-none text-slate-700 text-sm leading-relaxed space-y-6"
+                  dangerouslySetInnerHTML={{ __html: page.content }}
+                />
+              </div>
             </div>
 
             {/* FAQs Block */}
@@ -192,7 +214,7 @@ export default async function DynamicSeoPage({ params }: PageProps) {
             {relatedPages.length > 0 && (
               <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-md shadow-slate-100/50">
                 <h4 className="text-sm font-bold text-slate-900 border-b border-slate-100 pb-3 mb-4 flex items-center gap-2">
-                  <span className="w-1.5 h-4 bg-electric rounded-full"></span>
+                  <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
                   Related Services
                 </h4>
                 <div className="grid gap-2.5">
@@ -200,10 +222,10 @@ export default async function DynamicSeoPage({ params }: PageProps) {
                     <Link
                       key={rp.slug}
                       href={`/${rp.slug}`}
-                      className="group flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-150 transition-all text-xs"
+                      className="group flex items-center justify-between p-2.5 rounded-xl hover:bg-blue-50/50 border border-transparent hover:border-blue-100 transition-all text-xs"
                     >
-                      <span className="font-semibold text-slate-700 group-hover:text-electric transition-colors line-clamp-1">{rp.h1}</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-electric group-hover:translate-x-0.5 transition-all shrink-0" />
+                      <span className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors line-clamp-1">{rp.h1}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all shrink-0" />
                     </Link>
                   ))}
                 </div>
@@ -218,19 +240,19 @@ export default async function DynamicSeoPage({ params }: PageProps) {
                 <h4 className="text-sm font-bold border-b border-slate-800 pb-3 mb-4">Why Choose Gemora Tech?</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <p className="text-lg font-extrabold text-electric">10+ Years</p>
+                    <p className="text-lg font-extrabold text-cyan">10+ Years</p>
                     <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Experience</p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-lg font-extrabold text-electric">100+</p>
+                    <p className="text-lg font-extrabold text-cyan">100+</p>
                     <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Projects Built</p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-lg font-extrabold text-electric">24/7</p>
+                    <p className="text-lg font-extrabold text-cyan">24/7</p>
                     <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Global Support</p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-lg font-extrabold text-electric">99.8%</p>
+                    <p className="text-lg font-extrabold text-cyan">99.8%</p>
                     <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">SLA Uptime</p>
                   </div>
                 </div>
@@ -238,8 +260,8 @@ export default async function DynamicSeoPage({ params }: PageProps) {
             </div>
 
             {/* Direct Contact Callout */}
-            <div className="bg-orange-50/50 border border-orange-100/50 rounded-2xl p-5 text-center space-y-3">
-              <p className="text-xs text-slate-650">Want to discuss your project right now?</p>
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center space-y-3">
+              <p className="text-xs text-slate-600">Want to discuss your project right now?</p>
               <div className="space-y-1.5 text-xs font-bold text-slate-800">
                 <p>Email: sales@gemoratech.com</p>
                 <p>Skype: gemora.sales</p>
