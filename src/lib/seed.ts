@@ -816,3 +816,8 @@ export async function seedDatabase() {
 
   console.log("DB Seeding completed successfully!");
 }
+
+// Execute if run directly
+if (typeof require !== 'undefined' && require.main === module) {
+  seedDatabase().catch(console.error);
+}
