@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const portfolios = await getPortfolios();
-  const portfolio = portfolios.find(p => p.slug === params.slug);
+  const portfolio = portfolios.find(p => p.slug === slug);
   if (!portfolio) return { title: 'Portfolio Not Found' };
   
   return {
@@ -16,9 +17,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function PortfolioCaseStudy({ params }: { params: { slug: string } }) {
+export default async function PortfolioCaseStudy({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const portfolios = await getPortfolios();
-  const portfolio = portfolios.find(p => p.slug === params.slug);
+  const portfolio = portfolios.find(p => p.slug === slug);
 
   if (!portfolio) {
     notFound();
