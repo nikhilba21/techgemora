@@ -793,7 +793,7 @@ export default function HomePage() {
                       <Link href={`/blog/${b.slug}`}>{b.title}</Link>
                     </h4>
                     <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">
-                      {b.excerpt || 'Read this dynamic technical guide from our leading solutions architect.'}
+                      {b.metaDescription || 'Read this dynamic technical guide from our leading solutions architect.'}
                     </p>
                   </div>
                   <div className="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
