@@ -140,7 +140,10 @@ export default function AICostEstimatorPage() {
     if (!chatInput.trim()) return;
 
     const userText = chatInput;
-    const newMessages = [...chatMessages, { sender: 'user', text: userText }];
+    const newMessages: Array<{ sender: 'user' | 'ai'; text: string }> = [
+      ...chatMessages,
+      { sender: 'user', text: userText }
+    ];
     setChatMessages(newMessages);
     setChatInput('');
 
@@ -166,7 +169,11 @@ export default function AICostEstimatorPage() {
         aiResponse = "Yes! Gemora Tech signs legally binding Non-Disclosure Agreements (NDAs) before design maps start. You maintain 100% intellectual property (IP) and source code ownership.";
       }
 
-      setChatMessages([...newMessages, { sender: 'ai', text: aiResponse }]);
+      const finalMessages: Array<{ sender: 'user' | 'ai'; text: string }> = [
+        ...newMessages,
+        { sender: 'ai', text: aiResponse }
+      ];
+      setChatMessages(finalMessages);
     }, 800);
   };
 
