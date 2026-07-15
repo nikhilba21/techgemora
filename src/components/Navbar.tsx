@@ -319,11 +319,11 @@ export default function Navbar() {
 
           {/* Contact / CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link 
-              href="/contact" 
+             <Link 
+              href="/ai-cost-estimator" 
               className="bg-electric text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group"
             >
-              Start Project
+              AI Cost Estimator
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
@@ -331,10 +331,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-3">
             <Link 
-              href="/contact" 
+              href="/ai-cost-estimator" 
               className="bg-electric text-white text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-electric/90 transition-colors"
             >
-              Quote
+              AI Estimator
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -416,10 +416,10 @@ export default function Navbar() {
               ))}
               <div className="pt-4">
                 <Link
-                  href="/contact"
+                  href="/ai-cost-estimator"
                   className="block w-full text-center bg-electric text-white py-2.5 rounded-xl font-bold text-sm hover:bg-electric/90"
                 >
-                  Book Free Consultation
+                  AI Project Estimator
                 </Link>
               </div>
             </div>
