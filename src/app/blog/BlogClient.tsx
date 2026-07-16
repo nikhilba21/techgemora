@@ -13,6 +13,8 @@ interface BlogClientProps {
 export default function BlogClient({ initialBlogs }: BlogClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const blogsPerPage = 4;
 
   const categories = [
     'All', 
@@ -34,6 +36,9 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
                           blog.metaDescription.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch && blog.published;
   });
+
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+  const currentBlogs = filteredBlogs.slice((currentPage - 1) * blogsPerPage, currentPage * blogsPerPage);
 
   const recentBlogs = [...initialBlogs].filter(b => b.published).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 4);
 
@@ -60,7 +65,7 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
           <div className="w-full lg:w-2/3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <AnimatePresence mode="popLayout">
-                {filteredBlogs.map((blog) => (
+                {currentBlogs.map((blog) => (
                   <motion.div
                     key={blog.slug}
                     layout
@@ -119,6 +124,37 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
               </AnimatePresence>
             </div>
 
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 mt-12">
+                <button 
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 bg-white border border-slate-200 rounded-lg disabled:opacity-50 text-navy font-semibold hover:bg-slate-50 transition-colors text-sm"
+                >
+                  Previous
+                </button>
+                <div className="flex gap-1 flex-wrap justify-center">
+                  {Array.from({ length: totalPages }).map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrentPage(i + 1)}
+                      className={`w-10 h-10 rounded-lg font-bold transition-all text-sm ${currentPage === i + 1 ? 'bg-electric text-white shadow-md' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+                <button 
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 bg-white border border-slate-200 rounded-lg disabled:opacity-50 text-navy font-semibold hover:bg-slate-50 transition-colors text-sm"
+                >
+                  Next
+                </button>
+              </div>
+            )}
+
             {filteredBlogs.length === 0 && (
               <div className="text-center py-20 bg-white border border-slate-200/80 rounded-2xl shadow-sm mt-8">
                 <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
@@ -140,7 +176,7 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
                   className="bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm text-slate-700 focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric w-full transition-all"
                 />
               </div>
@@ -160,7 +196,7 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
                   return (
                     <li key={cat}>
                       <button
-                        onClick={() => setSelectedCategory(cat)}
+                        onClick={() => { setSelectedCategory(cat); setCurrentPage(1); }}
                         className={`w-full text-left flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
                           selectedCategory === cat 
                             ? 'bg-blue-50 text-electric border border-blue-100' 
