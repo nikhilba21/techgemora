@@ -1,61 +1,49 @@
 import { NextResponse } from 'next/server';
-import { saveLead, getLeads, deleteLead, Lead } from '@/lib/db';
+import fs from 'fs';
+import path from 'path';
 
-export async function GET() {
+export async function POST(req: Request) {
   try {
-    const leads = await getLeads();
-    return NextResponse.json(leads, { status: 200 });
-  } catch (err) {
-    console.error('API GET Leads Error:', err);
-    return NextResponse.json({ error: 'Failed to fetch leads.' }, { status: 500 });
-  }
-}
+    const body = await req.json();
+    const { email, name, message, source } = body;
 
-export async function POST(request: Request) {
-  try {
-    const body = await request.json();
-    const { name, email, phone, company, country, projectType, budget, timeline, message } = body;
-
-    if (!name || !email) {
-      return NextResponse.json({ error: 'Name and email are required fields.' }, { status: 400 });
+    if (!email) {
+      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
 
-    const lead: Lead = {
-      id: `lead_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
-      name,
+    // Prepare new lead object
+    const newLead = {
+      id: Date.now().toString(),
       email,
-      phone: phone || '',
-      company: company || '',
-      country: country || '',
-      projectType: projectType || '',
-      budget: budget || '',
-      timeline: timeline || '',
+      name: name || 'Unknown',
       message: message || '',
+      source: source || 'Direct',
       createdAt: new Date().toISOString()
     };
 
-    await saveLead(lead);
-
-    return NextResponse.json({ success: true, leadId: lead.id }, { status: 200 });
-  } catch (err) {
-    console.error('API Leads Error:', err);
-    return NextResponse.json({ error: 'Failed to process lead submission.' }, { status: 500 });
-  }
-}
-
-export async function DELETE(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
-
-    if (!id) {
-      return NextResponse.json({ error: 'Lead ID is required.' }, { status: 400 });
+    // Path to local JSON database
+    const dbPath = path.join(process.cwd(), 'src', 'data', 'leads.json');
+    
+    // Read existing leads
+    let leads = [];
+    if (fs.existsSync(dbPath)) {
+      const fileData = fs.readFileSync(dbPath, 'utf8');
+      if (fileData) {
+        leads = JSON.parse(fileData);
+      }
     }
 
-    await deleteLead(id);
-    return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
-    console.error('API DELETE Lead Error:', err);
-    return NextResponse.json({ error: 'Failed to delete lead.' }, { status: 500 });
+    // Append and save
+    leads.push(newLead);
+    fs.writeFileSync(dbPath, JSON.stringify(leads, null, 2));
+
+    // In a real app, you might also trigger an email via Resend/SendGrid here
+    console.log(`New Lead Captured: ${email}`);
+
+    return NextResponse.json({ success: true, leadId: newLead.id }, { status: 201 });
+
+  } catch (error) {
+    console.error('Lead Capture Error:', error);
+    return NextResponse.json({ error: 'Failed to process lead' }, { status: 500 });
   }
 }

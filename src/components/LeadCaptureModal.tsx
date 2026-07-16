@@ -8,6 +8,9 @@ import Link from 'next/link';
 export default function LeadCaptureModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
     // Check if user has already seen it this session
@@ -39,6 +42,26 @@ export default function LeadCaptureModal() {
       clearTimeout(timer);
     };
   }, [hasTriggered]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'Exit-Intent Modal' })
+      });
+      if (res.ok) {
+        setIsSuccess(true);
+        setTimeout(() => setIsOpen(false), 3000);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -80,22 +103,33 @@ export default function LeadCaptureModal() {
               </p>
             </div>
 
-            <form className="mt-8 space-y-4" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
-              <div className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Enter your work email..." 
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-slate-700 focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-all"
-                  required
-                />
-              </div>
-              <button 
-                type="submit"
-                className="w-full bg-electric hover:bg-cyan text-white text-sm font-bold px-6 py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(33,147,176,0.3)] hover:shadow-[0_0_30px_rgba(33,147,176,0.5)]"
-              >
-                Claim My Free Strategy Session
-                <Send className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-              </button>
+            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+              {isSuccess ? (
+                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-4 rounded-xl text-center text-sm font-bold animate-pulse">
+                  Success! A Senior Architect will email you shortly.
+                </div>
+              ) : (
+                <>
+                  <div className="space-y-3">
+                    <input 
+                      type="email" 
+                      placeholder="Enter your work email..." 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-slate-700 focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-all"
+                      required
+                    />
+                  </div>
+                  <button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-electric hover:bg-cyan text-white text-sm font-bold px-6 py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(33,147,176,0.3)] hover:shadow-[0_0_30px_rgba(33,147,176,0.5)] disabled:opacity-70"
+                  >
+                    {isSubmitting ? 'Securing Session...' : 'Claim My Free Strategy Session'}
+                    <Send className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </>
+              )}
               <p className="text-center text-[10px] text-slate-400 mt-4 uppercase tracking-wider">
                 100% Confidential. NDA Protected.
               </p>
