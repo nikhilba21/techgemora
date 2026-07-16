@@ -75,19 +75,22 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
                     transition={{ duration: 0.3 }}
                     className="bg-white border border-slate-200/85 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col h-full"
                   >
-                    {/* Large Featured Image */}
-                    <div className="h-48 sm:h-56 w-full overflow-hidden relative bg-slate-900 block shrink-0">
+                    {/* Premium Featured Image */}
+                    <div className="aspect-[16/9] w-full overflow-hidden relative bg-slate-900 block shrink-0">
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent z-10 pointer-events-none"></div>
                       <Link href={`/blog/${blog.slug}`}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                           src={blog.featuredImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop'} 
                           alt={blog.title} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                          className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out cursor-pointer relative z-0"
                         />
                       </Link>
-                      <span className="absolute top-4 left-4 bg-navy/95 text-cyan text-xs font-bold px-3 py-1.5 rounded border border-slate-800 shadow-lg backdrop-blur-md">
-                        {blog.category}
-                      </span>
+                      <div className="absolute top-4 left-4 z-20">
+                        <span className="bg-white/95 text-navy text-[10px] font-black px-3 py-1.5 rounded-md shadow-xl backdrop-blur-md uppercase tracking-widest border border-white/20">
+                          {blog.category}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Content Area */}
