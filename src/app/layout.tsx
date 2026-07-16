@@ -36,11 +36,20 @@ export const metadata: Metadata = {
     siteName: "Gemora Tech",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Gemora Tech - Enterprise Software Development",
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Software Development Company | AI, Web & Mobile Apps | Gemora Tech",
     description: "Gemora Tech is a global software development company specializing in custom software, AI models, web & mobile apps, SaaS, and dedicated developer teams.",
+    images: ["/images/hero-bg.jpg"],
   }
 };
 

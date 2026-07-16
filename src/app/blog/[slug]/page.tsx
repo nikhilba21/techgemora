@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Calendar, User, ChevronRight, ArrowLeft, Mail, Phone, ExternalLink } from 'lucide-react';
 import { getBlog, getBlogs } from '@/lib/db';
 import BlogFaq from '@/components/BlogFaq';
+import AuthorBio from '@/components/AuthorBio';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -221,6 +222,8 @@ export default async function BlogDetailPage({ params }: PageProps) {
             </div>
           )}
 
+          {/* E-E-A-T Author Profile */}
+          <AuthorBio />
         </article>
 
         {/* Lead Capture Banner */}
