@@ -8,7 +8,7 @@ export default function WhatsAppWidget() {
       href="https://wa.me/919928714867"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center group"
+      className="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center group"
       aria-label="Chat on WhatsApp"
     >
       {/* Glow pulse ring */}
@@ -20,7 +20,7 @@ export default function WhatsAppWidget() {
       </svg>
       
       {/* Hover tooltip */}
-      <span className="absolute right-14 bg-slate-900 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all shadow-md pointer-events-none whitespace-nowrap">
+      <span className="absolute left-14 bg-slate-900 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all shadow-md pointer-events-none whitespace-nowrap">
         Message us on WhatsApp
       </span>
     </a>
