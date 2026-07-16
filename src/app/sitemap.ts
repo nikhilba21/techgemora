@@ -1,6 +1,10 @@
 import { MetadataRoute } from 'next';
 import { getPages, getBlogs, getPortfolios } from '@/lib/db';
 import locationsData from '@/data/locations.json';
+import techData from '@/data/tech.json';
+import industryData from '@/data/industry.json';
+import costData from '@/data/cost.json';
+import compareData from '@/data/compare.json';
 
 const baseUrl = 'https://www.dexteroussoftech.com';
 
@@ -58,5 +62,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...routes, ...pageRoutes, ...locationRoutes, ...blogRoutes, ...portfolioRoutes];
+  // pSEO Pages
+  const techRoutes = techData.map((t: any) => ({ url: `${baseUrl}/tech/${t.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
+  const industryRoutes = industryData.map((i: any) => ({ url: `${baseUrl}/industry/${i.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
+  const costRoutes = costData.map((c: any) => ({ url: `${baseUrl}/cost/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
+  const compareRoutes = compareData.map((c: any) => ({ url: `${baseUrl}/compare/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
+
+  return [
+    ...routes, ...pageRoutes, ...locationRoutes, ...blogRoutes, ...portfolioRoutes,
+    ...techRoutes, ...industryRoutes, ...costRoutes, ...compareRoutes
+  ];
 }

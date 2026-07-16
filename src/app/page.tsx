@@ -166,13 +166,13 @@ export default function HomePage() {
               </span>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
-                Build Scalable <br />
-                <span className="gradient-text">Digital Products</span> <br />
-                With A Trusted Partner
+                Global Custom <br />
+                <span className="gradient-text">Software Development</span> <br />
+                Company
               </h1>
               
               <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
-                Gemora Tech helps startups and enterprises build custom software, mobile applications, AI-powered solutions, SaaS platforms, and digital experiences that drive conversions and scale globally.
+                Gemora Tech is a premier IT consulting company delivering enterprise software product development, AI automation, cross-platform mobile apps, SaaS, and Web3 game development services globally.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -282,10 +282,10 @@ export default function HomePage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-xs font-bold text-electric uppercase tracking-widest">Core Capabilities</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold text-navy">
-              Enterprise Technology Solutions We Provide
+              Enterprise Software Outsourcing Services
             </h3>
             <p className="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
-              From engineering scalable cloud infrastructures to crafting responsive mobile products, we deliver production-level code.
+              From engineering scalable cloud infrastructures and MVP SaaS products to crafting bespoke healthcare and blockchain game development.
             </p>
           </div>
 
