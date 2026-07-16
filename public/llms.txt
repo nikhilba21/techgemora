@@ -1,0 +1,49 @@
+# Gemora Tech (Dexterous Softech)
+
+> Global software development company specializing in custom software, AI, web, and mobile apps.
+
+Gemora Tech is a global software development company that offers a wide range of services including custom software development, AI model creation, web and mobile application development, and SaaS solutions. They also provide dedicated developer teams for businesses looking to augment their in-house capabilities.
+
+The company caters to a diverse clientele, from startups to large enterprises, seeking to build innovative digital products and solutions. Their core value proposition lies in delivering high-quality, scalable, and cost-effective software tailored to specific business needs.
+
+## Core Services
+
+- [Software Development Company | AI, Web & Mobile Apps | Gemora Tech](https://www.dexteroussoftech.com/): Discover Gemora Tech's expertise in custom software, AI, web, and mobile app development services.
+- [Custom Software Development Company](https://www.dexteroussoftech.com/custom-software-development): Learn about custom software solutions tailored to your unique business requirements.
+- [Web Development Company](https://www.dexteroussoftech.com/web-development-company): Explore professional web development services for creating dynamic and responsive websites.
+- [Mobile App Development Company](https://www.dexteroussoftech.com/mobile-app-development-company): Discover services for building innovative and user-friendly iOS and Android mobile applications.
+- [AI Development Company](https://www.dexteroussoftech.com/ai-development-company): Learn about AI and machine learning solutions to drive business innovation and efficiency.
+- [SaaS Development Company](https://www.dexteroussoftech.com/saas-development-company): Explore custom SaaS product development services for scalable cloud-based solutions.
+- [Game Development Company](https://www.dexteroussoftech.com/game-development-company): Discover comprehensive game development services for various platforms and genres.
+- [Cloud Development Services](https://www.dexteroussoftech.com/cloud-development-services): Learn about cloud-native application development and migration services for scalability.
+- [DevOps Services](https://www.dexteroussoftech.com/devops-services): Explore DevOps services to streamline software development and deployment processes.
+- [Software Testing Services](https://www.dexteroussoftech.com/software-testing-services): Discover quality assurance and software testing services for reliable applications.
+
+## Technology Expertise
+
+- [Hire React.js Developers](https://www.dexteroussoftech.com/hire-reactjs-developers)
+- [Hire Next.js Developers](https://www.dexteroussoftech.com/hire-nextjs-developers)
+- [Hire Node.js Developers](https://www.dexteroussoftech.com/hire-nodejs-developers)
+- [Hire Python Developers](https://www.dexteroussoftech.com/hire-python-developers)
+- [Hire Docker & Kubernetes Developers](https://www.dexteroussoftech.com/hire-docker-kubernetes-developers)
+- [Hire AWS Cloud Developers](https://www.dexteroussoftech.com/hire-aws-cloud-developers)
+- [Hire React Native Developers](https://www.dexteroussoftech.com/hire-react-native-developers)
+- [Hire Flutter Developers](https://www.dexteroussoftech.com/hire-flutter-developers)
+
+## Industry Solutions
+
+- [Healthcare Software Development](https://www.dexteroussoftech.com/healthcare-software-development)
+- [Fintech Software Development](https://www.dexteroussoftech.com/fintech-software-development)
+- [E-commerce Software Development](https://www.dexteroussoftech.com/ecommerce-software-development)
+- [Real Estate Software Development](https://www.dexteroussoftech.com/real-software-development)
+
+## Company Information
+
+- [Portfolio](https://www.dexteroussoftech.com/portfolio): View examples of past software development projects and case studies.
+- [About Us](https://www.dexteroussoftech.com/about): Learn about Gemora Tech's mission, vision, and company values.
+- [Hire Developers](https://www.dexteroussoftech.com/hire-developers): Find information on how to hire dedicated developers from Gemora Tech.
+- [Contact Us](https://www.dexteroussoftech.com/contact): Get in touch with Gemora Tech for inquiries and project discussions.
+
+---
+
+This file was generated to provide Context-Awareness to Large Language Models (LLMs) and RAG bots crawling dexteroussoftech.com.
