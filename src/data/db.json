@@ -5222,6 +5222,51 @@
       ],
       "published": true,
       "createdAt": "2026-07-14T08:04:21.101Z"
+    },
+    {
+      "slug": "kubernetes-architecture-deep-dive",
+      "title": "Deep Dive into Kubernetes Architecture: Building Resilient Microservices",
+      "metaTitle": "Kubernetes Architecture Deep Dive | Gemora Tech Blog",
+      "metaDescription": "Explore the inner workings of Kubernetes architecture. Learn how to build, deploy, and scale resilient microservices using K8s clusters and pods.",
+      "image": "/images/blog/kubernetes.jpg",
+      "author": "Tech Team",
+      "date": "2026-07-16",
+      "tags": [
+        "Kubernetes",
+        "DevOps",
+        "Cloud Native"
+      ],
+      "content": "<h2>Understanding the Control Plane and Worker Nodes</h2><p>Kubernetes operates on a highly distributed architecture that abstracts the underlying infrastructure from the applications running on it. At its core, a Kubernetes cluster consists of two main components: the Control Plane and Worker Nodes.</p><h3>The Control Plane</h3><p>The Control Plane acts as the brain of the cluster. It makes global decisions about the cluster, detecting and responding to cluster events. Key components include:</p><ul><li><strong>kube-apiserver:</strong> The front end of the Kubernetes control plane. It exposes the Kubernetes API.</li><li><strong>etcd:</strong> A consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.</li><li><strong>kube-scheduler:</strong> Watches for newly created Pods with no assigned node, and selects a node for them to run on.</li><li><strong>kube-controller-manager:</strong> Runs controller processes, including the Node controller, Job controller, and Endpoints controller.</li></ul><h3>Worker Nodes</h3><p>Worker nodes host the Pods that are the components of the application workload. They run the container runtime (like Docker or containerd), the kubelet (an agent that communicates with the Control Plane), and kube-proxy (maintains network rules).</p><h2>Scaling and Resilience</h2><p>By leveraging ReplicaSets and Deployments, Kubernetes ensures that a specified number of pod replicas are always running. If a node fails, the control plane automatically schedules the pods on healthy nodes, ensuring high availability.</p>"
+    },
+    {
+      "slug": "nextjs-app-router-architecture",
+      "title": "Mastering Next.js App Router: Advanced Architecture for Web Apps",
+      "metaTitle": "Next.js App Router Architecture | Gemora Tech Blog",
+      "metaDescription": "A comprehensive guide to the Next.js App Router. Discover advanced fetching, caching, and server components for high-performance web applications.",
+      "image": "/images/blog/nextjs.jpg",
+      "author": "Tech Team",
+      "date": "2026-07-16",
+      "tags": [
+        "Next.js",
+        "React",
+        "Frontend"
+      ],
+      "content": "<h2>The Paradigm Shift: Server Components</h2><p>The introduction of React Server Components (RSC) in Next.js has fundamentally changed how we build React applications. Unlike traditional components, Server Components render exclusively on the server, significantly reducing the amount of JavaScript sent to the client.</p><h3>Benefits of Server Components</h3><ul><li><strong>Performance:</strong> Zero client-side JavaScript for server-rendered UI.</li><li><strong>Direct Backend Access:</strong> Query databases directly from your components without creating intermediate API routes.</li><li><strong>Security:</strong> Keep sensitive tokens and logic on the server.</li></ul><h2>Data Fetching and Caching</h2><p>Next.js completely overhauls data fetching. You can now use native <code>fetch</code> inside Server Components. Next.js extends <code>fetch</code> to provide advanced caching and revalidation features.</p><h3>Time-Based Revalidation</h3><p>Using <code>fetch('https://...', { next: { revalidate: 3600 } })</code>, you can instruct Next.js to regenerate the page in the background at most every hour, combining the speed of static site generation with the freshness of server-side rendering.</p><h2>Routing and Layouts</h2><p>The App Router introduces a nested routing system based on file-system hierarchy. The <code>layout.tsx</code> file allows you to create UI that is shared between multiple routes and preserves state across navigations.</p>"
+    },
+    {
+      "slug": "ai-integrations-enterprise-software",
+      "title": "Seamless AI Integrations: Empowering Enterprise Software Systems",
+      "metaTitle": "AI Integrations in Enterprise Software | Gemora Tech Blog",
+      "metaDescription": "Learn how to architect and implement robust AI integrations within enterprise software to automate workflows, analyze data, and enhance user experiences.",
+      "image": "/images/blog/ai.jpg",
+      "author": "Tech Team",
+      "date": "2026-07-16",
+      "tags": [
+        "AI",
+        "Enterprise",
+        "Architecture"
+      ],
+      "content": "<h2>Moving Beyond Chatbots</h2><p>While conversational agents are popular, the true value of AI in the enterprise lies in deep workflow integrations. From predictive analytics to automated data extraction, AI can transform legacy operations into hyper-efficient processes.</p><h3>Retrieval-Augmented Generation (RAG)</h3><p>One of the most powerful patterns in modern AI integration is RAG. Large Language Models (LLMs) often lack context about private company data. RAG solves this by retrieving relevant documents from a vector database and injecting them into the LLM's prompt.</p><ul><li><strong>Vector Databases:</strong> Tools like Pinecone or pgvector allow for semantic searching across massive text corpuses.</li><li><strong>Embedding Models:</strong> Convert text into numerical vectors that capture meaning and intent.</li></ul><h2>Architecting AI-Ready Systems</h2><p>Integrating AI requires a decoupled architecture. Your core application should communicate with AI services via asynchronous queues or event-driven patterns to prevent long-running inference tasks from blocking user requests.</p><h3>Security and Compliance</h3><p>When sending data to external APIs (like OpenAI or Anthropic), enterprises must ensure PII and sensitive data are scrubbed. Using self-hosted open-source models (like Llama 3) via an internal API gateway is increasingly becoming the standard for highly regulated industries.</p>"
     }
   ],
   "portfolios": [
@@ -5494,6 +5539,87 @@
         "/images/portfolio/nexus.png"
       ],
       "clientCountry": "UK",
+      "published": true
+    },
+    {
+      "slug": "enterprise-fintech-ledger",
+      "name": "LedgerCore Distributed Finance Platform",
+      "industry": "FinTech",
+      "description": "An enterprise-grade, immutable distributed ledger system designed for high-frequency trading and cross-border B2B institutional settlements.",
+      "technology": [
+        "Go",
+        "Rust",
+        "Hyperledger Fabric",
+        "Apache Kafka",
+        "Kubernetes"
+      ],
+      "challenge": "The client needed a system capable of processing 10,000+ transactions per second (TPS) while guaranteeing zero data loss, strict consistency, and regulatory compliance across three distinct jurisdictions.",
+      "solution": "We architected a high-throughput microservices backend in Go and Rust, coupled with Hyperledger Fabric for immutable record-keeping and Apache Kafka for event-driven async processing.",
+      "results": "Achieved 12,500 TPS with 99.999% uptime, reducing cross-border settlement times from 3 days to under 5 seconds.",
+      "images": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+      ],
+      "clientCountry": "Switzerland",
+      "published": true
+    },
+    {
+      "slug": "hipaa-compliant-health-platform",
+      "name": "MediVault Cloud Infrastructure",
+      "industry": "Healthcare",
+      "description": "A deeply secure, SOC2 and HIPAA-compliant health data orchestration platform integrating Electronic Health Records (EHR) from multiple regional hospitals.",
+      "technology": [
+        "Python",
+        "Django",
+        "React",
+        "AWS (HIPAA Eligible Services)",
+        "Terraform"
+      ],
+      "challenge": "Consolidating fragmented patient data across 5 distinct legacy EHR systems into a unified portal without violating stringent HIPAA data privacy rules.",
+      "solution": "We deployed a Zero-Trust architecture utilizing AWS Key Management Service (KMS) for envelope encryption and Terraform for immutable, compliant infrastructure provisioning. Role-Based Access Control (RBAC) was strictly enforced.",
+      "results": "Successfully migrated 2.5 million patient records with zero security breaches, passing independent HIPAA and SOC2 Type II audits flawlessly.",
+      "images": [
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1576091160550-2173ff9e594b?q=80&w=600&auto=format&fit=crop"
+      ],
+      "clientCountry": "USA",
+      "published": true
+    },
+    {
+      "slug": "web3-metaverse-gaming-platform",
+      "name": "Aetheria Web3 Game Ecosystem",
+      "industry": "Gaming / Web3",
+      "description": "A decentralized, play-to-earn metaverse gaming platform featuring verifiable NFT asset ownership, tokenomics integration, and an in-game decentralized exchange (DEX).",
+      "technology": [
+        "Solidity",
+        "Unreal Engine 5",
+        "Node.js",
+        "Ethereum (L2 Rollup)",
+        "IPFS"
+      ],
+      "challenge": "Integrating complex blockchain wallet interactions and smart contract executions seamlessly into a high-fidelity 3D gaming environment without disrupting the player experience.",
+      "solution": "We developed a custom SDK bridging Unreal Engine 5 with a Layer 2 Ethereum rollup to ensure gasless, instant in-game transactions while storing asset metadata immutably on IPFS.",
+      "results": "Attracted over 250,000 active players in the first month and facilitated $10M+ in player-to-player secondary market NFT trades.",
+      "images": [
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=600&auto=format&fit=crop"
+      ],
+      "clientCountry": "Singapore",
       "published": true
     }
   ],
