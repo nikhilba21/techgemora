@@ -9,6 +9,7 @@ import {
   Code, Zap, Layers, Users, Database, Smartphone 
 } from 'lucide-react';
 import type { SEOPage, Portfolio, Blog } from '@/lib/db';
+import TrustBadges from '@/components/TrustBadges';
 
 export default function HomePage() {
   const [activeTechTab, setActiveTechTab] = useState<'frontend' | 'backend' | 'mobile' | 'cloud'>('frontend');
@@ -112,21 +113,24 @@ export default function HomePage() {
       author: "Sarah Jenkins",
       role: "Founder & CTO",
       company: "MedVibe Solutions (USA)",
-      stars: 5
+      stars: 5,
+      linkedIn: "https://linkedin.com"
     },
     {
       quote: "We scaled our engineering team by hiring 5 dedicated Next.js developers from Gemora Tech. The developers are fluent in English and write top-tier code.",
       author: "David Miller",
       role: "VP of Engineering",
       company: "PayPulse Gateway (Canada)",
-      stars: 5
+      stars: 5,
+      linkedIn: "https://linkedin.com"
     },
     {
       quote: "Their technical expertise in AI integration helped us automate our inventory workflows, resulting in a 40% reduction in overhead costs.",
       author: "Marcus Al-Mansoor",
       role: "Managing Director",
       company: "Gulf Logistics Group (Dubai, UAE)",
-      stars: 5
+      stars: 5,
+      linkedIn: "https://linkedin.com"
     }
   ];
 
@@ -172,7 +176,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
-                Gemora Tech is a premier IT consulting company delivering enterprise software product development, AI automation, cross-platform mobile apps, SaaS, and Web3 game development services globally.
+                Gemora Tech (formerly Dexterous Softech) is a premier IT consulting company delivering enterprise software product development, AI automation, cross-platform mobile apps, SaaS, and hyper-targeted game development services globally.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -260,6 +264,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 1.5. TRUST BADGES SECTION */}
+      <TrustBadges />
 
       {/* 2. TRUST / STATS SECTION */}
       <section className="bg-slate-bg border-y border-slate-205 py-10 relative z-10">
@@ -581,7 +588,14 @@ export default function HomePage() {
                   "{test.quote}"
                 </p>
                 <div className="pt-4 border-t border-slate-100">
-                  <p className="text-xs font-bold text-navy">{test.author}</p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-xs font-bold text-navy">{test.author}</p>
+                    <a href={test.linkedIn} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" title="Verified LinkedIn Profile">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                  </div>
                   <p className="text-[10px] text-slate-500 font-medium">{test.role}, {test.company}</p>
                 </div>
               </motion.div>

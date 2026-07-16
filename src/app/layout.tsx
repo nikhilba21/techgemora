@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Software Development Company | AI, Web & Mobile Apps | Gemora Tech",
+  title: "Enterprise Custom Software & Game Development Company | Gemora Tech",
   description: "Gemora Tech is a global software development company specializing in custom software, AI models, web & mobile apps, SaaS, and dedicated developer teams.",
   metadataBase: new URL("https://www.dexteroussoftech.com"),
   alternates: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Software Development Company | AI, Web & Mobile Apps | Gemora Tech",
+    title: "Enterprise Custom Software & Game Development Company | Gemora Tech",
     description: "Gemora Tech is a global software development company specializing in custom software, AI models, web & mobile apps, SaaS, and dedicated developer teams.",
     url: "/",
     siteName: "Gemora Tech",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Software Development Company | AI, Web & Mobile Apps | Gemora Tech",
+    title: "Enterprise Custom Software & Game Development Company | Gemora Tech",
     description: "Gemora Tech is a global software development company specializing in custom software, AI models, web & mobile apps, SaaS, and dedicated developer teams.",
     images: ["/images/hero-bg.jpg"],
   }

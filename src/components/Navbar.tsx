@@ -201,18 +201,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 flex items-center justify-center">
-              <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-contain" />
+          <Link href="/" className="flex flex-col justify-center group">
+            <div className="relative h-14 flex items-center justify-start">
+              <img src="/logo.png" alt="Gemora Tech Logo" className="h-full w-auto object-contain" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight text-navy flex items-center leading-none">
-                GEMORA <span className="text-electric ml-1">TECH</span>
-              </span>
-              <span className="text-[8px] font-medium text-slate-500 uppercase tracking-widest leading-none mt-1">
-                IT Services & Solutions
-              </span>
-            </div>
+            <span className="text-[9px] font-semibold text-slate-500 tracking-wider leading-none pl-1 mt-1">
+              (formerly Dexterous Softech)
+            </span>
           </Link>
 
           {/* Desktop Nav Items */}

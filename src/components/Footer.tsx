@@ -80,18 +80,13 @@ export default function Footer() {
           
           {/* Corporate Profile Column */}
           <div className="lg:col-span-1 space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <img src="/logo.png" alt="Gemora Tech Logo" className="w-full h-full object-contain" />
+            <Link href="/" className="flex flex-col justify-center group mb-4">
+              <div className="relative h-14 flex items-center justify-start">
+                <img src="/logo.png" alt="Gemora Tech Logo" className="h-full w-auto object-contain" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-white flex items-center leading-none">
-                  GEMORA <span className="text-electric ml-1">TECH</span>
-                </span>
-                <span className="text-[8px] font-medium text-slate-450 uppercase tracking-widest leading-none mt-1">
-                  IT Services & Solutions
-                </span>
-              </div>
+              <span className="text-[9px] font-semibold text-slate-450 tracking-wider leading-none pl-1 mt-1">
+                (formerly Dexterous Softech)
+              </span>
             </Link>
             <p className="text-slate-400 text-xs leading-relaxed">
               Gemora Tech is the technology division of <strong>Gemora Global Private Limited</strong>. We build world-class custom software, web portals, mobile apps, and artificial intelligence models for global brands.
@@ -204,9 +199,14 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-electric shrink-0" />
                 <a href="tel:+919928714867" className="hover:text-electric transition-colors">+91 9928714867</a>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-electric shrink-0" />
-                <span>Global HQ: Jaipur, Rajasthan, India</span>
+              <div className="flex items-start gap-2 pt-2">
+                <MapPin className="w-4 h-4 text-electric shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1.5">
+                  <span><strong>USA:</strong> 120 E 34th St, New York</span>
+                  <span><strong>UK:</strong> 124 City Rd, London</span>
+                  <span><strong>UAE:</strong> Silicon Oasis, Dubai</span>
+                  <span><strong>India:</strong> Jaipur, Rajasthan</span>
+                </div>
               </div>
             </div>
           </div>

@@ -199,7 +199,31 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">Regional Office</p>
+                    <p className="font-semibold text-white">USA Office</p>
+                    <p className="text-[11px] text-slate-400">120 E 34th St, New York, NY 10016, USA</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">UK Office</p>
+                    <p className="text-[11px] text-slate-400">124 City Rd, London EC1V 2NX, UK</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">UAE Office</p>
+                    <p className="text-[11px] text-slate-400">Dubai Silicon Oasis, Dubai, UAE</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">India (Offshore HQ)</p>
                     <p className="text-[11px] text-slate-400">Jaipur, Rajasthan, India</p>
                   </div>
                 </div>
