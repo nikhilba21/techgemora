@@ -1,2 +1,0 @@
-To https://github.com/nikhilba21/techgemora.git
-   7e68f7d..e4595e0  main -> main
