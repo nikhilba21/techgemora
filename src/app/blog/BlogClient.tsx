@@ -57,72 +57,70 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
         <div className="flex flex-col lg:flex-row gap-10">
           
           {/* Main Content Area (Left Column) */}
-          <div className="w-full lg:w-2/3 space-y-10">
-            <AnimatePresence mode="popLayout">
-              {filteredBlogs.map((blog) => (
-                <motion.div
-                  key={blog.slug}
-                  layout
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white border border-slate-200/85 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col"
-                >
-                  {/* Large Featured Image */}
-                  <div className="h-64 sm:h-80 w-full overflow-hidden relative bg-slate-900 block">
-                    <Link href={`/blog/${blog.slug}`}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img 
-                        src={blog.featuredImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop'} 
-                        alt={blog.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      />
-                    </Link>
-                    <span className="absolute top-4 left-4 bg-navy/95 text-cyan text-xs font-bold px-3 py-1.5 rounded border border-slate-800 shadow-lg backdrop-blur-md">
-                      {blog.category}
-                    </span>
-                  </div>
-
-                  {/* Content Area */}
-                  <div className="p-6 sm:p-8 flex flex-col gap-4">
-                    <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-500 font-semibold">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="w-4 h-4 text-electric" />
-                        <span>{new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <User className="w-4 h-4 text-electric" />
-                        <span>{blog.author}</span>
-                      </div>
-                    </div>
-
-                    <Link href={`/blog/${blog.slug}`}>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-navy group-hover:text-electric transition-colors leading-snug">
-                        {blog.title}
-                      </h2>
-                    </Link>
-
-                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed line-clamp-3">
-                      {blog.metaDescription}
-                    </p>
-
-                    <div className="pt-4 border-t border-slate-100 mt-2">
-                      <Link 
-                        href={`/blog/${blog.slug}`}
-                        className="inline-flex items-center gap-2 bg-navy hover:bg-electric text-white text-sm font-bold px-6 py-2.5 rounded-lg transition-colors group/btn w-fit"
-                      >
-                        Read Full Article
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <AnimatePresence mode="popLayout">
+                {filteredBlogs.map((blog) => (
+                  <motion.div
+                    key={blog.slug}
+                    layout
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-white border border-slate-200/85 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col h-full"
+                  >
+                    {/* Large Featured Image */}
+                    <div className="h-48 sm:h-56 w-full overflow-hidden relative bg-slate-900 block shrink-0">
+                      <Link href={`/blog/${blog.slug}`}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img 
+                          src={blog.featuredImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop'} 
+                          alt={blog.title} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                        />
                       </Link>
+                      <span className="absolute top-4 left-4 bg-navy/95 text-cyan text-xs font-bold px-3 py-1.5 rounded border border-slate-800 shadow-lg backdrop-blur-md">
+                        {blog.category}
+                      </span>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+
+                    {/* Content Area */}
+                    <div className="p-6 flex flex-col flex-grow gap-4">
+                      <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 font-semibold">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-4 h-4 text-electric" />
+                          <span>{new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                        </div>
+                      </div>
+
+                      <Link href={`/blog/${blog.slug}`}>
+                        <h2 className="text-xl font-extrabold text-navy group-hover:text-electric transition-colors leading-snug line-clamp-3">
+                          {blog.title}
+                        </h2>
+                      </Link>
+
+                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 flex-grow">
+                        {blog.metaDescription}
+                      </p>
+
+                      <div className="pt-4 border-t border-slate-100 mt-auto">
+                        <Link 
+                          href={`/blog/${blog.slug}`}
+                          className="inline-flex items-center gap-2 bg-slate-50 hover:bg-electric text-navy hover:text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors group/btn w-full justify-center"
+                        >
+                          Read Article
+                          <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
 
             {filteredBlogs.length === 0 && (
-              <div className="text-center py-20 bg-white border border-slate-200/80 rounded-2xl shadow-sm">
+              <div className="text-center py-20 bg-white border border-slate-200/80 rounded-2xl shadow-sm mt-8">
                 <Search className="w-12 h-12 text-slate-300 mx-auto mb-4" />
                 <h3 className="text-lg font-bold text-navy">No articles found</h3>
                 <p className="text-slate-500 mt-2">Try adjusting your search or selecting a different category.</p>
