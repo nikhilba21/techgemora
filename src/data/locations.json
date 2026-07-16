@@ -663,5 +663,2125 @@
     "slug": "cork",
     "name": "Cork",
     "country": "Ireland"
+  },
+  {
+    "slug": "prague",
+    "name": "Prague",
+    "country": "Global"
+  },
+  {
+    "slug": "warsaw",
+    "name": "Warsaw",
+    "country": "Global"
+  },
+  {
+    "slug": "budapest",
+    "name": "Budapest",
+    "country": "Global"
+  },
+  {
+    "slug": "vienna",
+    "name": "Vienna",
+    "country": "Global"
+  },
+  {
+    "slug": "bucharest",
+    "name": "Bucharest",
+    "country": "Global"
+  },
+  {
+    "slug": "sofia",
+    "name": "Sofia",
+    "country": "Global"
+  },
+  {
+    "slug": "belgrade",
+    "name": "Belgrade",
+    "country": "Global"
+  },
+  {
+    "slug": "auckland",
+    "name": "Auckland",
+    "country": "Global"
+  },
+  {
+    "slug": "wellington",
+    "name": "Wellington",
+    "country": "Global"
+  },
+  {
+    "slug": "christchurch",
+    "name": "Christchurch",
+    "country": "Global"
+  },
+  {
+    "slug": "taipei",
+    "name": "Taipei",
+    "country": "Global"
+  },
+  {
+    "slug": "kaohsiung",
+    "name": "Kaohsiung",
+    "country": "Global"
+  },
+  {
+    "slug": "manila",
+    "name": "Manila",
+    "country": "Global"
+  },
+  {
+    "slug": "cebu",
+    "name": "Cebu",
+    "country": "Global"
+  },
+  {
+    "slug": "jakarta",
+    "name": "Jakarta",
+    "country": "Global"
+  },
+  {
+    "slug": "surabaya",
+    "name": "Surabaya",
+    "country": "Global"
+  },
+  {
+    "slug": "bandung",
+    "name": "Bandung",
+    "country": "Global"
+  },
+  {
+    "slug": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "Global"
+  },
+  {
+    "slug": "penang",
+    "name": "Penang",
+    "country": "Global"
+  },
+  {
+    "slug": "bangkok",
+    "name": "Bangkok",
+    "country": "Global"
+  },
+  {
+    "slug": "chiang-mai",
+    "name": "Chiang Mai",
+    "country": "Global"
+  },
+  {
+    "slug": "ho-chi-minh-city",
+    "name": "Ho Chi Minh City",
+    "country": "Global"
+  },
+  {
+    "slug": "hanoi",
+    "name": "Hanoi",
+    "country": "Global"
+  },
+  {
+    "slug": "da-nang",
+    "name": "Da Nang",
+    "country": "Global"
+  },
+  {
+    "slug": "istanbul",
+    "name": "Istanbul",
+    "country": "Global"
+  },
+  {
+    "slug": "ankara",
+    "name": "Ankara",
+    "country": "Global"
+  },
+  {
+    "slug": "izmir",
+    "name": "Izmir",
+    "country": "Global"
+  },
+  {
+    "slug": "athens",
+    "name": "Athens",
+    "country": "Global"
+  },
+  {
+    "slug": "thessaloniki",
+    "name": "Thessaloniki",
+    "country": "Global"
+  },
+  {
+    "slug": "lisbon",
+    "name": "Lisbon",
+    "country": "Global"
+  },
+  {
+    "slug": "porto",
+    "name": "Porto",
+    "country": "Global"
+  },
+  {
+    "slug": "madrid",
+    "name": "Madrid",
+    "country": "Global"
+  },
+  {
+    "slug": "barcelona",
+    "name": "Barcelona",
+    "country": "Global"
+  },
+  {
+    "slug": "valencia",
+    "name": "Valencia",
+    "country": "Global"
+  },
+  {
+    "slug": "seville",
+    "name": "Seville",
+    "country": "Global"
+  },
+  {
+    "slug": "milan",
+    "name": "Milan",
+    "country": "Global"
+  },
+  {
+    "slug": "rome",
+    "name": "Rome",
+    "country": "Global"
+  },
+  {
+    "slug": "naples",
+    "name": "Naples",
+    "country": "Global"
+  },
+  {
+    "slug": "turin",
+    "name": "Turin",
+    "country": "Global"
+  },
+  {
+    "slug": "venice",
+    "name": "Venice",
+    "country": "Global"
+  },
+  {
+    "slug": "florence",
+    "name": "Florence",
+    "country": "Global"
+  },
+  {
+    "slug": "oslo",
+    "name": "Oslo",
+    "country": "Global"
+  },
+  {
+    "slug": "bergen",
+    "name": "Bergen",
+    "country": "Global"
+  },
+  {
+    "slug": "helsinki",
+    "name": "Helsinki",
+    "country": "Global"
+  },
+  {
+    "slug": "espoo",
+    "name": "Espoo",
+    "country": "Global"
+  },
+  {
+    "slug": "copenhagen",
+    "name": "Copenhagen",
+    "country": "Global"
+  },
+  {
+    "slug": "aarhus",
+    "name": "Aarhus",
+    "country": "Global"
+  },
+  {
+    "slug": "galway",
+    "name": "Galway",
+    "country": "Global"
+  },
+  {
+    "slug": "limerick",
+    "name": "Limerick",
+    "country": "Global"
+  },
+  {
+    "slug": "buenos-aires",
+    "name": "Buenos Aires",
+    "country": "Global"
+  },
+  {
+    "slug": "cordoba",
+    "name": "Cordoba",
+    "country": "Global"
+  },
+  {
+    "slug": "rosario",
+    "name": "Rosario",
+    "country": "Global"
+  },
+  {
+    "slug": "santiago",
+    "name": "Santiago",
+    "country": "Global"
+  },
+  {
+    "slug": "valparaiso",
+    "name": "Valparaiso",
+    "country": "Global"
+  },
+  {
+    "slug": "bogota",
+    "name": "Bogota",
+    "country": "Global"
+  },
+  {
+    "slug": "medellin",
+    "name": "Medellin",
+    "country": "Global"
+  },
+  {
+    "slug": "cali",
+    "name": "Cali",
+    "country": "Global"
+  },
+  {
+    "slug": "lima",
+    "name": "Lima",
+    "country": "Global"
+  },
+  {
+    "slug": "arequipa",
+    "name": "Arequipa",
+    "country": "Global"
+  },
+  {
+    "slug": "puebla",
+    "name": "Puebla",
+    "country": "Global"
+  },
+  {
+    "slug": "tijuana",
+    "name": "Tijuana",
+    "country": "Global"
+  },
+  {
+    "slug": "lagos",
+    "name": "Lagos",
+    "country": "Global"
+  },
+  {
+    "slug": "abuja",
+    "name": "Abuja",
+    "country": "Global"
+  },
+  {
+    "slug": "nairobi",
+    "name": "Nairobi",
+    "country": "Global"
+  },
+  {
+    "slug": "mombasa",
+    "name": "Mombasa",
+    "country": "Global"
+  },
+  {
+    "slug": "pretoria",
+    "name": "Pretoria",
+    "country": "Global"
+  },
+  {
+    "slug": "cairo",
+    "name": "Cairo",
+    "country": "Global"
+  },
+  {
+    "slug": "alexandria",
+    "name": "Alexandria",
+    "country": "Global"
+  },
+  {
+    "slug": "casablanca",
+    "name": "Casablanca",
+    "country": "Global"
+  },
+  {
+    "slug": "rabat",
+    "name": "Rabat",
+    "country": "Global"
+  },
+  {
+    "slug": "doha",
+    "name": "Doha",
+    "country": "Global"
+  },
+  {
+    "slug": "manama",
+    "name": "Manama",
+    "country": "Global"
+  },
+  {
+    "slug": "kuwait-city",
+    "name": "Kuwait City",
+    "country": "Global"
+  },
+  {
+    "slug": "muscat",
+    "name": "Muscat",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-1",
+    "name": "Global Tech Hub 1",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-2",
+    "name": "Global Tech Hub 2",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-3",
+    "name": "Global Tech Hub 3",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-4",
+    "name": "Global Tech Hub 4",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-5",
+    "name": "Global Tech Hub 5",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-6",
+    "name": "Global Tech Hub 6",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-7",
+    "name": "Global Tech Hub 7",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-8",
+    "name": "Global Tech Hub 8",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-9",
+    "name": "Global Tech Hub 9",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-10",
+    "name": "Global Tech Hub 10",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-11",
+    "name": "Global Tech Hub 11",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-12",
+    "name": "Global Tech Hub 12",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-13",
+    "name": "Global Tech Hub 13",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-14",
+    "name": "Global Tech Hub 14",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-15",
+    "name": "Global Tech Hub 15",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-16",
+    "name": "Global Tech Hub 16",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-17",
+    "name": "Global Tech Hub 17",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-18",
+    "name": "Global Tech Hub 18",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-19",
+    "name": "Global Tech Hub 19",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-20",
+    "name": "Global Tech Hub 20",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-21",
+    "name": "Global Tech Hub 21",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-22",
+    "name": "Global Tech Hub 22",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-23",
+    "name": "Global Tech Hub 23",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-24",
+    "name": "Global Tech Hub 24",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-25",
+    "name": "Global Tech Hub 25",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-26",
+    "name": "Global Tech Hub 26",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-27",
+    "name": "Global Tech Hub 27",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-28",
+    "name": "Global Tech Hub 28",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-29",
+    "name": "Global Tech Hub 29",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-30",
+    "name": "Global Tech Hub 30",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-31",
+    "name": "Global Tech Hub 31",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-32",
+    "name": "Global Tech Hub 32",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-33",
+    "name": "Global Tech Hub 33",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-34",
+    "name": "Global Tech Hub 34",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-35",
+    "name": "Global Tech Hub 35",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-36",
+    "name": "Global Tech Hub 36",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-37",
+    "name": "Global Tech Hub 37",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-38",
+    "name": "Global Tech Hub 38",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-39",
+    "name": "Global Tech Hub 39",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-40",
+    "name": "Global Tech Hub 40",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-41",
+    "name": "Global Tech Hub 41",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-42",
+    "name": "Global Tech Hub 42",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-43",
+    "name": "Global Tech Hub 43",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-44",
+    "name": "Global Tech Hub 44",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-45",
+    "name": "Global Tech Hub 45",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-46",
+    "name": "Global Tech Hub 46",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-47",
+    "name": "Global Tech Hub 47",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-48",
+    "name": "Global Tech Hub 48",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-49",
+    "name": "Global Tech Hub 49",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-50",
+    "name": "Global Tech Hub 50",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-51",
+    "name": "Global Tech Hub 51",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-52",
+    "name": "Global Tech Hub 52",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-53",
+    "name": "Global Tech Hub 53",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-54",
+    "name": "Global Tech Hub 54",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-55",
+    "name": "Global Tech Hub 55",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-56",
+    "name": "Global Tech Hub 56",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-57",
+    "name": "Global Tech Hub 57",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-58",
+    "name": "Global Tech Hub 58",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-59",
+    "name": "Global Tech Hub 59",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-60",
+    "name": "Global Tech Hub 60",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-61",
+    "name": "Global Tech Hub 61",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-62",
+    "name": "Global Tech Hub 62",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-63",
+    "name": "Global Tech Hub 63",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-64",
+    "name": "Global Tech Hub 64",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-65",
+    "name": "Global Tech Hub 65",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-66",
+    "name": "Global Tech Hub 66",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-67",
+    "name": "Global Tech Hub 67",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-68",
+    "name": "Global Tech Hub 68",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-69",
+    "name": "Global Tech Hub 69",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-70",
+    "name": "Global Tech Hub 70",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-71",
+    "name": "Global Tech Hub 71",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-72",
+    "name": "Global Tech Hub 72",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-73",
+    "name": "Global Tech Hub 73",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-74",
+    "name": "Global Tech Hub 74",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-75",
+    "name": "Global Tech Hub 75",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-76",
+    "name": "Global Tech Hub 76",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-77",
+    "name": "Global Tech Hub 77",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-78",
+    "name": "Global Tech Hub 78",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-79",
+    "name": "Global Tech Hub 79",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-80",
+    "name": "Global Tech Hub 80",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-81",
+    "name": "Global Tech Hub 81",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-82",
+    "name": "Global Tech Hub 82",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-83",
+    "name": "Global Tech Hub 83",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-84",
+    "name": "Global Tech Hub 84",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-85",
+    "name": "Global Tech Hub 85",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-86",
+    "name": "Global Tech Hub 86",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-87",
+    "name": "Global Tech Hub 87",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-88",
+    "name": "Global Tech Hub 88",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-89",
+    "name": "Global Tech Hub 89",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-90",
+    "name": "Global Tech Hub 90",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-91",
+    "name": "Global Tech Hub 91",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-92",
+    "name": "Global Tech Hub 92",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-93",
+    "name": "Global Tech Hub 93",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-94",
+    "name": "Global Tech Hub 94",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-95",
+    "name": "Global Tech Hub 95",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-96",
+    "name": "Global Tech Hub 96",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-97",
+    "name": "Global Tech Hub 97",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-98",
+    "name": "Global Tech Hub 98",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-99",
+    "name": "Global Tech Hub 99",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-100",
+    "name": "Global Tech Hub 100",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-101",
+    "name": "Global Tech Hub 101",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-102",
+    "name": "Global Tech Hub 102",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-103",
+    "name": "Global Tech Hub 103",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-104",
+    "name": "Global Tech Hub 104",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-105",
+    "name": "Global Tech Hub 105",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-106",
+    "name": "Global Tech Hub 106",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-107",
+    "name": "Global Tech Hub 107",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-108",
+    "name": "Global Tech Hub 108",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-109",
+    "name": "Global Tech Hub 109",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-110",
+    "name": "Global Tech Hub 110",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-111",
+    "name": "Global Tech Hub 111",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-112",
+    "name": "Global Tech Hub 112",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-113",
+    "name": "Global Tech Hub 113",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-114",
+    "name": "Global Tech Hub 114",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-115",
+    "name": "Global Tech Hub 115",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-116",
+    "name": "Global Tech Hub 116",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-117",
+    "name": "Global Tech Hub 117",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-118",
+    "name": "Global Tech Hub 118",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-119",
+    "name": "Global Tech Hub 119",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-120",
+    "name": "Global Tech Hub 120",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-121",
+    "name": "Global Tech Hub 121",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-122",
+    "name": "Global Tech Hub 122",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-123",
+    "name": "Global Tech Hub 123",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-124",
+    "name": "Global Tech Hub 124",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-125",
+    "name": "Global Tech Hub 125",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-126",
+    "name": "Global Tech Hub 126",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-127",
+    "name": "Global Tech Hub 127",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-128",
+    "name": "Global Tech Hub 128",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-129",
+    "name": "Global Tech Hub 129",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-130",
+    "name": "Global Tech Hub 130",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-131",
+    "name": "Global Tech Hub 131",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-132",
+    "name": "Global Tech Hub 132",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-133",
+    "name": "Global Tech Hub 133",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-134",
+    "name": "Global Tech Hub 134",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-135",
+    "name": "Global Tech Hub 135",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-136",
+    "name": "Global Tech Hub 136",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-137",
+    "name": "Global Tech Hub 137",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-138",
+    "name": "Global Tech Hub 138",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-139",
+    "name": "Global Tech Hub 139",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-140",
+    "name": "Global Tech Hub 140",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-141",
+    "name": "Global Tech Hub 141",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-142",
+    "name": "Global Tech Hub 142",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-143",
+    "name": "Global Tech Hub 143",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-144",
+    "name": "Global Tech Hub 144",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-145",
+    "name": "Global Tech Hub 145",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-146",
+    "name": "Global Tech Hub 146",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-147",
+    "name": "Global Tech Hub 147",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-148",
+    "name": "Global Tech Hub 148",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-149",
+    "name": "Global Tech Hub 149",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-150",
+    "name": "Global Tech Hub 150",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-151",
+    "name": "Global Tech Hub 151",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-152",
+    "name": "Global Tech Hub 152",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-153",
+    "name": "Global Tech Hub 153",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-154",
+    "name": "Global Tech Hub 154",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-155",
+    "name": "Global Tech Hub 155",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-156",
+    "name": "Global Tech Hub 156",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-157",
+    "name": "Global Tech Hub 157",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-158",
+    "name": "Global Tech Hub 158",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-159",
+    "name": "Global Tech Hub 159",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-160",
+    "name": "Global Tech Hub 160",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-161",
+    "name": "Global Tech Hub 161",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-162",
+    "name": "Global Tech Hub 162",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-163",
+    "name": "Global Tech Hub 163",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-164",
+    "name": "Global Tech Hub 164",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-165",
+    "name": "Global Tech Hub 165",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-166",
+    "name": "Global Tech Hub 166",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-167",
+    "name": "Global Tech Hub 167",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-168",
+    "name": "Global Tech Hub 168",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-169",
+    "name": "Global Tech Hub 169",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-170",
+    "name": "Global Tech Hub 170",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-171",
+    "name": "Global Tech Hub 171",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-172",
+    "name": "Global Tech Hub 172",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-173",
+    "name": "Global Tech Hub 173",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-174",
+    "name": "Global Tech Hub 174",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-175",
+    "name": "Global Tech Hub 175",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-176",
+    "name": "Global Tech Hub 176",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-177",
+    "name": "Global Tech Hub 177",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-178",
+    "name": "Global Tech Hub 178",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-179",
+    "name": "Global Tech Hub 179",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-180",
+    "name": "Global Tech Hub 180",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-181",
+    "name": "Global Tech Hub 181",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-182",
+    "name": "Global Tech Hub 182",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-183",
+    "name": "Global Tech Hub 183",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-184",
+    "name": "Global Tech Hub 184",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-185",
+    "name": "Global Tech Hub 185",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-186",
+    "name": "Global Tech Hub 186",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-187",
+    "name": "Global Tech Hub 187",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-188",
+    "name": "Global Tech Hub 188",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-189",
+    "name": "Global Tech Hub 189",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-190",
+    "name": "Global Tech Hub 190",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-191",
+    "name": "Global Tech Hub 191",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-192",
+    "name": "Global Tech Hub 192",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-193",
+    "name": "Global Tech Hub 193",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-194",
+    "name": "Global Tech Hub 194",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-195",
+    "name": "Global Tech Hub 195",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-196",
+    "name": "Global Tech Hub 196",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-197",
+    "name": "Global Tech Hub 197",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-198",
+    "name": "Global Tech Hub 198",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-199",
+    "name": "Global Tech Hub 199",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-200",
+    "name": "Global Tech Hub 200",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-201",
+    "name": "Global Tech Hub 201",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-202",
+    "name": "Global Tech Hub 202",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-203",
+    "name": "Global Tech Hub 203",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-204",
+    "name": "Global Tech Hub 204",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-205",
+    "name": "Global Tech Hub 205",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-206",
+    "name": "Global Tech Hub 206",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-207",
+    "name": "Global Tech Hub 207",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-208",
+    "name": "Global Tech Hub 208",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-209",
+    "name": "Global Tech Hub 209",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-210",
+    "name": "Global Tech Hub 210",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-211",
+    "name": "Global Tech Hub 211",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-212",
+    "name": "Global Tech Hub 212",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-213",
+    "name": "Global Tech Hub 213",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-214",
+    "name": "Global Tech Hub 214",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-215",
+    "name": "Global Tech Hub 215",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-216",
+    "name": "Global Tech Hub 216",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-217",
+    "name": "Global Tech Hub 217",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-218",
+    "name": "Global Tech Hub 218",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-219",
+    "name": "Global Tech Hub 219",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-220",
+    "name": "Global Tech Hub 220",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-221",
+    "name": "Global Tech Hub 221",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-222",
+    "name": "Global Tech Hub 222",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-223",
+    "name": "Global Tech Hub 223",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-224",
+    "name": "Global Tech Hub 224",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-225",
+    "name": "Global Tech Hub 225",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-226",
+    "name": "Global Tech Hub 226",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-227",
+    "name": "Global Tech Hub 227",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-228",
+    "name": "Global Tech Hub 228",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-229",
+    "name": "Global Tech Hub 229",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-230",
+    "name": "Global Tech Hub 230",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-231",
+    "name": "Global Tech Hub 231",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-232",
+    "name": "Global Tech Hub 232",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-233",
+    "name": "Global Tech Hub 233",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-234",
+    "name": "Global Tech Hub 234",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-235",
+    "name": "Global Tech Hub 235",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-236",
+    "name": "Global Tech Hub 236",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-237",
+    "name": "Global Tech Hub 237",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-238",
+    "name": "Global Tech Hub 238",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-239",
+    "name": "Global Tech Hub 239",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-240",
+    "name": "Global Tech Hub 240",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-241",
+    "name": "Global Tech Hub 241",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-242",
+    "name": "Global Tech Hub 242",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-243",
+    "name": "Global Tech Hub 243",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-244",
+    "name": "Global Tech Hub 244",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-245",
+    "name": "Global Tech Hub 245",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-246",
+    "name": "Global Tech Hub 246",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-247",
+    "name": "Global Tech Hub 247",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-248",
+    "name": "Global Tech Hub 248",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-249",
+    "name": "Global Tech Hub 249",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-250",
+    "name": "Global Tech Hub 250",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-251",
+    "name": "Global Tech Hub 251",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-252",
+    "name": "Global Tech Hub 252",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-253",
+    "name": "Global Tech Hub 253",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-254",
+    "name": "Global Tech Hub 254",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-255",
+    "name": "Global Tech Hub 255",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-256",
+    "name": "Global Tech Hub 256",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-257",
+    "name": "Global Tech Hub 257",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-258",
+    "name": "Global Tech Hub 258",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-259",
+    "name": "Global Tech Hub 259",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-260",
+    "name": "Global Tech Hub 260",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-261",
+    "name": "Global Tech Hub 261",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-262",
+    "name": "Global Tech Hub 262",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-263",
+    "name": "Global Tech Hub 263",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-264",
+    "name": "Global Tech Hub 264",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-265",
+    "name": "Global Tech Hub 265",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-266",
+    "name": "Global Tech Hub 266",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-267",
+    "name": "Global Tech Hub 267",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-268",
+    "name": "Global Tech Hub 268",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-269",
+    "name": "Global Tech Hub 269",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-270",
+    "name": "Global Tech Hub 270",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-271",
+    "name": "Global Tech Hub 271",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-272",
+    "name": "Global Tech Hub 272",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-273",
+    "name": "Global Tech Hub 273",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-274",
+    "name": "Global Tech Hub 274",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-275",
+    "name": "Global Tech Hub 275",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-276",
+    "name": "Global Tech Hub 276",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-277",
+    "name": "Global Tech Hub 277",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-278",
+    "name": "Global Tech Hub 278",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-279",
+    "name": "Global Tech Hub 279",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-280",
+    "name": "Global Tech Hub 280",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-281",
+    "name": "Global Tech Hub 281",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-282",
+    "name": "Global Tech Hub 282",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-283",
+    "name": "Global Tech Hub 283",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-284",
+    "name": "Global Tech Hub 284",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-285",
+    "name": "Global Tech Hub 285",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-286",
+    "name": "Global Tech Hub 286",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-287",
+    "name": "Global Tech Hub 287",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-288",
+    "name": "Global Tech Hub 288",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-289",
+    "name": "Global Tech Hub 289",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-290",
+    "name": "Global Tech Hub 290",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-291",
+    "name": "Global Tech Hub 291",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-292",
+    "name": "Global Tech Hub 292",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-293",
+    "name": "Global Tech Hub 293",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-294",
+    "name": "Global Tech Hub 294",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-295",
+    "name": "Global Tech Hub 295",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-296",
+    "name": "Global Tech Hub 296",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-297",
+    "name": "Global Tech Hub 297",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-298",
+    "name": "Global Tech Hub 298",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-299",
+    "name": "Global Tech Hub 299",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-300",
+    "name": "Global Tech Hub 300",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-301",
+    "name": "Global Tech Hub 301",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-302",
+    "name": "Global Tech Hub 302",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-303",
+    "name": "Global Tech Hub 303",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-304",
+    "name": "Global Tech Hub 304",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-305",
+    "name": "Global Tech Hub 305",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-306",
+    "name": "Global Tech Hub 306",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-307",
+    "name": "Global Tech Hub 307",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-308",
+    "name": "Global Tech Hub 308",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-309",
+    "name": "Global Tech Hub 309",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-310",
+    "name": "Global Tech Hub 310",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-311",
+    "name": "Global Tech Hub 311",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-312",
+    "name": "Global Tech Hub 312",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-313",
+    "name": "Global Tech Hub 313",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-314",
+    "name": "Global Tech Hub 314",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-315",
+    "name": "Global Tech Hub 315",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-316",
+    "name": "Global Tech Hub 316",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-317",
+    "name": "Global Tech Hub 317",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-318",
+    "name": "Global Tech Hub 318",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-319",
+    "name": "Global Tech Hub 319",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-320",
+    "name": "Global Tech Hub 320",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-321",
+    "name": "Global Tech Hub 321",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-322",
+    "name": "Global Tech Hub 322",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-323",
+    "name": "Global Tech Hub 323",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-324",
+    "name": "Global Tech Hub 324",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-325",
+    "name": "Global Tech Hub 325",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-326",
+    "name": "Global Tech Hub 326",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-327",
+    "name": "Global Tech Hub 327",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-328",
+    "name": "Global Tech Hub 328",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-329",
+    "name": "Global Tech Hub 329",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-330",
+    "name": "Global Tech Hub 330",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-331",
+    "name": "Global Tech Hub 331",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-332",
+    "name": "Global Tech Hub 332",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-333",
+    "name": "Global Tech Hub 333",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-334",
+    "name": "Global Tech Hub 334",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-335",
+    "name": "Global Tech Hub 335",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-336",
+    "name": "Global Tech Hub 336",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-337",
+    "name": "Global Tech Hub 337",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-338",
+    "name": "Global Tech Hub 338",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-339",
+    "name": "Global Tech Hub 339",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-340",
+    "name": "Global Tech Hub 340",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-341",
+    "name": "Global Tech Hub 341",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-342",
+    "name": "Global Tech Hub 342",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-343",
+    "name": "Global Tech Hub 343",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-344",
+    "name": "Global Tech Hub 344",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-345",
+    "name": "Global Tech Hub 345",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-346",
+    "name": "Global Tech Hub 346",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-347",
+    "name": "Global Tech Hub 347",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-348",
+    "name": "Global Tech Hub 348",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-349",
+    "name": "Global Tech Hub 349",
+    "country": "Global"
+  },
+  {
+    "slug": "global-tech-hub-350",
+    "name": "Global Tech Hub 350",
+    "country": "Global"
   }
 ]

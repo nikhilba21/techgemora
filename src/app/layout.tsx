@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
+import StickyCTA from "@/components/StickyCTA";
 import Script from "next/script";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
@@ -122,6 +124,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <LeadCaptureModal />
+        <StickyCTA />
         <WhatsAppWidget />
       </body>
     </html>
