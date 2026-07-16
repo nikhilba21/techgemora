@@ -5,6 +5,8 @@ import techData from '@/data/tech.json';
 import industryData from '@/data/industry.json';
 import costData from '@/data/cost.json';
 import compareData from '@/data/compare.json';
+import gamingData from '@/data/gaming.json';
+import glossaryData from '@/data/glossary.json';
 
 const baseUrl = 'https://www.dexteroussoftech.com';
 
@@ -67,9 +69,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const industryRoutes = industryData.map((i: any) => ({ url: `${baseUrl}/industry/${i.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
   const costRoutes = costData.map((c: any) => ({ url: `${baseUrl}/cost/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
   const compareRoutes = compareData.map((c: any) => ({ url: `${baseUrl}/compare/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
+  const gamingRoutes = gamingData.map((g: any) => ({ url: `${baseUrl}/gaming/${g.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 }));
+  const glossaryRoutes = glossaryData.map((g: any) => ({ url: `${baseUrl}/glossary/${g.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 }));
 
   return [
     ...routes, ...pageRoutes, ...locationRoutes, ...blogRoutes, ...portfolioRoutes,
-    ...techRoutes, ...industryRoutes, ...costRoutes, ...compareRoutes
+    ...techRoutes, ...industryRoutes, ...costRoutes, ...compareRoutes,
+    ...gamingRoutes, ...glossaryRoutes
   ];
 }
