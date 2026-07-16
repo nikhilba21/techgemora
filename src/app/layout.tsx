@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.dexteroussoftech.com"),
   alternates: {
     canonical: "/",
+    languages: {
+      'en-US': '/',
+      'en-GB': '/',
+      'en-AU': '/',
+      'en-CA': '/',
+      'en-AE': '/',
+    },
   },
   openGraph: {
     title: "Software Development Company | AI, Web & Mobile Apps | Gemora Tech",

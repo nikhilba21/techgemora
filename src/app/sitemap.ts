@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getPages, getBlogs, getPortfolios } from '@/lib/db';
+import locationsData from '@/data/locations.json';
 
 const baseUrl = 'https://www.dexteroussoftech.com';
 
@@ -33,6 +34,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
+  // Geo-Targeted Location pages
+  const locationRoutes = locationsData.map((location) => ({
+    url: `${baseUrl}/services/${location.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   // Blog pages
   const blogRoutes = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
@@ -49,5 +58,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...routes, ...pageRoutes, ...blogRoutes, ...portfolioRoutes];
+  return [...routes, ...pageRoutes, ...locationRoutes, ...blogRoutes, ...portfolioRoutes];
 }
