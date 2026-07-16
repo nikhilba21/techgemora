@@ -1,42 +1,667 @@
 [
-  { "slug": "new-york", "name": "New York", "country": "USA" },
-  { "slug": "los-angeles", "name": "Los Angeles", "country": "USA" },
-  { "slug": "san-francisco", "name": "San Francisco", "country": "USA" },
-  { "slug": "chicago", "name": "Chicago", "country": "USA" },
-  { "slug": "austin", "name": "Austin", "country": "USA" },
-  { "slug": "seattle", "name": "Seattle", "country": "USA" },
-  { "slug": "boston", "name": "Boston", "country": "USA" },
-  { "slug": "miami", "name": "Miami", "country": "USA" },
-  { "slug": "dallas", "name": "Dallas", "country": "USA" },
-  { "slug": "atlanta", "name": "Atlanta", "country": "USA" },
-  { "slug": "denver", "name": "Denver", "country": "USA" },
-  { "slug": "london", "name": "London", "country": "UK" },
-  { "slug": "manchester", "name": "Manchester", "country": "UK" },
-  { "slug": "birmingham", "name": "Birmingham", "country": "UK" },
-  { "slug": "edinburgh", "name": "Edinburgh", "country": "UK" },
-  { "slug": "glasgow", "name": "Glasgow", "country": "UK" },
-  { "slug": "leeds", "name": "Leeds", "country": "UK" },
-  { "slug": "bristol", "name": "Bristol", "country": "UK" },
-  { "slug": "sydney", "name": "Sydney", "country": "Australia" },
-  { "slug": "melbourne", "name": "Melbourne", "country": "Australia" },
-  { "slug": "brisbane", "name": "Brisbane", "country": "Australia" },
-  { "slug": "perth", "name": "Perth", "country": "Australia" },
-  { "slug": "adelaide", "name": "Adelaide", "country": "Australia" },
-  { "slug": "toronto", "name": "Toronto", "country": "Canada" },
-  { "slug": "vancouver", "name": "Vancouver", "country": "Canada" },
-  { "slug": "montreal", "name": "Montreal", "country": "Canada" },
-  { "slug": "calgary", "name": "Calgary", "country": "Canada" },
-  { "slug": "ottawa", "name": "Ottawa", "country": "Canada" },
-  { "slug": "dubai", "name": "Dubai", "country": "UAE" },
-  { "slug": "abu-dhabi", "name": "Abu Dhabi", "country": "UAE" },
-  { "slug": "sharjah", "name": "Sharjah", "country": "UAE" },
-  { "slug": "singapore", "name": "Singapore", "country": "Singapore" },
-  { "slug": "berlin", "name": "Berlin", "country": "Germany" },
-  { "slug": "munich", "name": "Munich", "country": "Germany" },
-  { "slug": "paris", "name": "France", "country": "France" },
-  { "slug": "amsterdam", "name": "Amsterdam", "country": "Netherlands" },
-  { "slug": "stockholm", "name": "Stockholm", "country": "Sweden" },
-  { "slug": "zurich", "name": "Zurich", "country": "Switzerland" },
-  { "slug": "tokyo", "name": "Tokyo", "country": "Japan" },
-  { "slug": "riyadh", "name": "Riyadh", "country": "Saudi Arabia" }
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "country": "USA"
+  },
+  {
+    "slug": "los-angeles",
+    "name": "Los Angeles",
+    "country": "USA"
+  },
+  {
+    "slug": "san-francisco",
+    "name": "San Francisco",
+    "country": "USA"
+  },
+  {
+    "slug": "chicago",
+    "name": "Chicago",
+    "country": "USA"
+  },
+  {
+    "slug": "austin",
+    "name": "Austin",
+    "country": "USA"
+  },
+  {
+    "slug": "seattle",
+    "name": "Seattle",
+    "country": "USA"
+  },
+  {
+    "slug": "boston",
+    "name": "Boston",
+    "country": "USA"
+  },
+  {
+    "slug": "miami",
+    "name": "Miami",
+    "country": "USA"
+  },
+  {
+    "slug": "dallas",
+    "name": "Dallas",
+    "country": "USA"
+  },
+  {
+    "slug": "atlanta",
+    "name": "Atlanta",
+    "country": "USA"
+  },
+  {
+    "slug": "denver",
+    "name": "Denver",
+    "country": "USA"
+  },
+  {
+    "slug": "houston",
+    "name": "Houston",
+    "country": "USA"
+  },
+  {
+    "slug": "san-diego",
+    "name": "San Diego",
+    "country": "USA"
+  },
+  {
+    "slug": "philadelphia",
+    "name": "Philadelphia",
+    "country": "USA"
+  },
+  {
+    "slug": "phoenix",
+    "name": "Phoenix",
+    "country": "USA"
+  },
+  {
+    "slug": "san-jose",
+    "name": "San Jose",
+    "country": "USA"
+  },
+  {
+    "slug": "detroit",
+    "name": "Detroit",
+    "country": "USA"
+  },
+  {
+    "slug": "las-vegas",
+    "name": "Las Vegas",
+    "country": "USA"
+  },
+  {
+    "slug": "portland",
+    "name": "Portland",
+    "country": "USA"
+  },
+  {
+    "slug": "charlotte",
+    "name": "Charlotte",
+    "country": "USA"
+  },
+  {
+    "slug": "orlando",
+    "name": "Orlando",
+    "country": "USA"
+  },
+  {
+    "slug": "tampa",
+    "name": "Tampa",
+    "country": "USA"
+  },
+  {
+    "slug": "minneapolis",
+    "name": "Minneapolis",
+    "country": "USA"
+  },
+  {
+    "slug": "raleigh",
+    "name": "Raleigh",
+    "country": "USA"
+  },
+  {
+    "slug": "salt-lake-city",
+    "name": "Salt Lake City",
+    "country": "USA"
+  },
+  {
+    "slug": "london",
+    "name": "London",
+    "country": "UK"
+  },
+  {
+    "slug": "manchester",
+    "name": "Manchester",
+    "country": "UK"
+  },
+  {
+    "slug": "birmingham",
+    "name": "Birmingham",
+    "country": "UK"
+  },
+  {
+    "slug": "edinburgh",
+    "name": "Edinburgh",
+    "country": "UK"
+  },
+  {
+    "slug": "glasgow",
+    "name": "Glasgow",
+    "country": "UK"
+  },
+  {
+    "slug": "leeds",
+    "name": "Leeds",
+    "country": "UK"
+  },
+  {
+    "slug": "bristol",
+    "name": "Bristol",
+    "country": "UK"
+  },
+  {
+    "slug": "liverpool",
+    "name": "Liverpool",
+    "country": "UK"
+  },
+  {
+    "slug": "newcastle",
+    "name": "Newcastle",
+    "country": "UK"
+  },
+  {
+    "slug": "sheffield",
+    "name": "Sheffield",
+    "country": "UK"
+  },
+  {
+    "slug": "cardiff",
+    "name": "Cardiff",
+    "country": "UK"
+  },
+  {
+    "slug": "belfast",
+    "name": "Belfast",
+    "country": "UK"
+  },
+  {
+    "slug": "nottingham",
+    "name": "Nottingham",
+    "country": "UK"
+  },
+  {
+    "slug": "southampton",
+    "name": "Southampton",
+    "country": "UK"
+  },
+  {
+    "slug": "oxford",
+    "name": "Oxford",
+    "country": "UK"
+  },
+  {
+    "slug": "cambridge",
+    "name": "Cambridge",
+    "country": "UK"
+  },
+  {
+    "slug": "sydney",
+    "name": "Sydney",
+    "country": "Australia"
+  },
+  {
+    "slug": "melbourne",
+    "name": "Melbourne",
+    "country": "Australia"
+  },
+  {
+    "slug": "brisbane",
+    "name": "Brisbane",
+    "country": "Australia"
+  },
+  {
+    "slug": "perth",
+    "name": "Perth",
+    "country": "Australia"
+  },
+  {
+    "slug": "adelaide",
+    "name": "Adelaide",
+    "country": "Australia"
+  },
+  {
+    "slug": "gold-coast",
+    "name": "Gold Coast",
+    "country": "Australia"
+  },
+  {
+    "slug": "canberra",
+    "name": "Canberra",
+    "country": "Australia"
+  },
+  {
+    "slug": "hobart",
+    "name": "Hobart",
+    "country": "Australia"
+  },
+  {
+    "slug": "darwin",
+    "name": "Darwin",
+    "country": "Australia"
+  },
+  {
+    "slug": "newcastle",
+    "name": "Newcastle",
+    "country": "Australia"
+  },
+  {
+    "slug": "toronto",
+    "name": "Toronto",
+    "country": "Canada"
+  },
+  {
+    "slug": "vancouver",
+    "name": "Vancouver",
+    "country": "Canada"
+  },
+  {
+    "slug": "montreal",
+    "name": "Montreal",
+    "country": "Canada"
+  },
+  {
+    "slug": "calgary",
+    "name": "Calgary",
+    "country": "Canada"
+  },
+  {
+    "slug": "ottawa",
+    "name": "Ottawa",
+    "country": "Canada"
+  },
+  {
+    "slug": "edmonton",
+    "name": "Edmonton",
+    "country": "Canada"
+  },
+  {
+    "slug": "quebec-city",
+    "name": "Quebec City",
+    "country": "Canada"
+  },
+  {
+    "slug": "winnipeg",
+    "name": "Winnipeg",
+    "country": "Canada"
+  },
+  {
+    "slug": "halifax",
+    "name": "Halifax",
+    "country": "Canada"
+  },
+  {
+    "slug": "victoria",
+    "name": "Victoria",
+    "country": "Canada"
+  },
+  {
+    "slug": "dubai",
+    "name": "Dubai",
+    "country": "UAE"
+  },
+  {
+    "slug": "abu-dhabi",
+    "name": "Abu Dhabi",
+    "country": "UAE"
+  },
+  {
+    "slug": "sharjah",
+    "name": "Sharjah",
+    "country": "UAE"
+  },
+  {
+    "slug": "ajman",
+    "name": "Ajman",
+    "country": "UAE"
+  },
+  {
+    "slug": "ras-al-khaimah",
+    "name": "Ras Al Khaimah",
+    "country": "UAE"
+  },
+  {
+    "slug": "bangalore",
+    "name": "Bangalore",
+    "country": "India"
+  },
+  {
+    "slug": "hyderabad",
+    "name": "Hyderabad",
+    "country": "India"
+  },
+  {
+    "slug": "pune",
+    "name": "Pune",
+    "country": "India"
+  },
+  {
+    "slug": "mumbai",
+    "name": "Mumbai",
+    "country": "India"
+  },
+  {
+    "slug": "chennai",
+    "name": "Chennai",
+    "country": "India"
+  },
+  {
+    "slug": "delhi-ncr",
+    "name": "Delhi NCR",
+    "country": "India"
+  },
+  {
+    "slug": "jaipur",
+    "name": "Jaipur",
+    "country": "India"
+  },
+  {
+    "slug": "ahmedabad",
+    "name": "Ahmedabad",
+    "country": "India"
+  },
+  {
+    "slug": "kolkata",
+    "name": "Kolkata",
+    "country": "India"
+  },
+  {
+    "slug": "chandigarh",
+    "name": "Chandigarh",
+    "country": "India"
+  },
+  {
+    "slug": "indore",
+    "name": "Indore",
+    "country": "India"
+  },
+  {
+    "slug": "kochi",
+    "name": "Kochi",
+    "country": "India"
+  },
+  {
+    "slug": "berlin",
+    "name": "Berlin",
+    "country": "Germany"
+  },
+  {
+    "slug": "munich",
+    "name": "Munich",
+    "country": "Germany"
+  },
+  {
+    "slug": "hamburg",
+    "name": "Hamburg",
+    "country": "Germany"
+  },
+  {
+    "slug": "frankfurt",
+    "name": "Frankfurt",
+    "country": "Germany"
+  },
+  {
+    "slug": "stuttgart",
+    "name": "Stuttgart",
+    "country": "Germany"
+  },
+  {
+    "slug": "cologne",
+    "name": "Cologne",
+    "country": "Germany"
+  },
+  {
+    "slug": "dusseldorf",
+    "name": "Dusseldorf",
+    "country": "Germany"
+  },
+  {
+    "slug": "leipzig",
+    "name": "Leipzig",
+    "country": "Germany"
+  },
+  {
+    "slug": "dresden",
+    "name": "Dresden",
+    "country": "Germany"
+  },
+  {
+    "slug": "paris",
+    "name": "Paris",
+    "country": "France"
+  },
+  {
+    "slug": "lyon",
+    "name": "Lyon",
+    "country": "France"
+  },
+  {
+    "slug": "marseille",
+    "name": "Marseille",
+    "country": "France"
+  },
+  {
+    "slug": "toulouse",
+    "name": "Toulouse",
+    "country": "France"
+  },
+  {
+    "slug": "bordeaux",
+    "name": "Bordeaux",
+    "country": "France"
+  },
+  {
+    "slug": "lille",
+    "name": "Lille",
+    "country": "France"
+  },
+  {
+    "slug": "singapore",
+    "name": "Singapore",
+    "country": "Singapore"
+  },
+  {
+    "slug": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan"
+  },
+  {
+    "slug": "osaka",
+    "name": "Osaka",
+    "country": "Japan"
+  },
+  {
+    "slug": "kyoto",
+    "name": "Kyoto",
+    "country": "Japan"
+  },
+  {
+    "slug": "yokohama",
+    "name": "Yokohama",
+    "country": "Japan"
+  },
+  {
+    "slug": "fukuoka",
+    "name": "Fukuoka",
+    "country": "Japan"
+  },
+  {
+    "slug": "shanghai",
+    "name": "Shanghai",
+    "country": "China"
+  },
+  {
+    "slug": "beijing",
+    "name": "Beijing",
+    "country": "China"
+  },
+  {
+    "slug": "shenzhen",
+    "name": "Shenzhen",
+    "country": "China"
+  },
+  {
+    "slug": "guangzhou",
+    "name": "Guangzhou",
+    "country": "China"
+  },
+  {
+    "slug": "hangzhou",
+    "name": "Hangzhou",
+    "country": "China"
+  },
+  {
+    "slug": "seoul",
+    "name": "Seoul",
+    "country": "South Korea"
+  },
+  {
+    "slug": "busan",
+    "name": "Busan",
+    "country": "South Korea"
+  },
+  {
+    "slug": "incheon",
+    "name": "Incheon",
+    "country": "South Korea"
+  },
+  {
+    "slug": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands"
+  },
+  {
+    "slug": "rotterdam",
+    "name": "Rotterdam",
+    "country": "Netherlands"
+  },
+  {
+    "slug": "the-hague",
+    "name": "The Hague",
+    "country": "Netherlands"
+  },
+  {
+    "slug": "utrecht",
+    "name": "Utrecht",
+    "country": "Netherlands"
+  },
+  {
+    "slug": "stockholm",
+    "name": "Stockholm",
+    "country": "Sweden"
+  },
+  {
+    "slug": "gothenburg",
+    "name": "Gothenburg",
+    "country": "Sweden"
+  },
+  {
+    "slug": "malmo",
+    "name": "Malmo",
+    "country": "Sweden"
+  },
+  {
+    "slug": "zurich",
+    "name": "Zurich",
+    "country": "Switzerland"
+  },
+  {
+    "slug": "geneva",
+    "name": "Geneva",
+    "country": "Switzerland"
+  },
+  {
+    "slug": "basel",
+    "name": "Basel",
+    "country": "Switzerland"
+  },
+  {
+    "slug": "sao-paulo",
+    "name": "Sao Paulo",
+    "country": "Brazil"
+  },
+  {
+    "slug": "rio-de-janeiro",
+    "name": "Rio de Janeiro",
+    "country": "Brazil"
+  },
+  {
+    "slug": "curitiba",
+    "name": "Curitiba",
+    "country": "Brazil"
+  },
+  {
+    "slug": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico"
+  },
+  {
+    "slug": "guadalajara",
+    "name": "Guadalajara",
+    "country": "Mexico"
+  },
+  {
+    "slug": "monterrey",
+    "name": "Monterrey",
+    "country": "Mexico"
+  },
+  {
+    "slug": "cape-town",
+    "name": "Cape Town",
+    "country": "South Africa"
+  },
+  {
+    "slug": "johannesburg",
+    "name": "Johannesburg",
+    "country": "South Africa"
+  },
+  {
+    "slug": "durban",
+    "name": "Durban",
+    "country": "South Africa"
+  },
+  {
+    "slug": "riyadh",
+    "name": "Riyadh",
+    "country": "Saudi Arabia"
+  },
+  {
+    "slug": "jeddah",
+    "name": "Jeddah",
+    "country": "Saudi Arabia"
+  },
+  {
+    "slug": "mecca",
+    "name": "Mecca",
+    "country": "Saudi Arabia"
+  },
+  {
+    "slug": "tel-aviv",
+    "name": "Tel Aviv",
+    "country": "Israel"
+  },
+  {
+    "slug": "jerusalem",
+    "name": "Jerusalem",
+    "country": "Israel"
+  },
+  {
+    "slug": "dublin",
+    "name": "Dublin",
+    "country": "Ireland"
+  },
+  {
+    "slug": "cork",
+    "name": "Cork",
+    "country": "Ireland"
+  }
 ]
