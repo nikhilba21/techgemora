@@ -184,6 +184,17 @@ export default function Navbar() {
         { label: 'AWS Services', href: '/aws-development-services' },
       ]
     },
+    {
+      label: 'Blockchain',
+      dropdown: [
+        { label: 'Blockchain Development', href: '/blockchain-development-company' },
+        { label: 'Crypto Wallet Dev', href: '/crypto-wallet-development-company' },
+        { label: 'Crypto Coin Dev', href: '/crypto-coin-development-company' },
+        { label: 'Token Development', href: '/token-development-company' },
+        { label: 'Decentralized Exchange (DEX)', href: '/decentralized-exchange-development-company' },
+        { label: 'Centralized Exchange (CEX)', href: '/centralized-exchange-development-company' },
+      ]
+    },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Blog', href: '/blog' },
     {
