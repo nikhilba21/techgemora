@@ -198,20 +198,20 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white border-b border-slate-200 shadow-sm py-3' : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-4'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex flex-col justify-center group">
-            <div className="relative h-14 flex items-center justify-start">
+          <Link href="/" className="flex flex-col justify-center group mr-8 shrink-0">
+            <div className="relative h-12 flex items-center justify-start">
               <img src="/logo.png" alt="Gemora Tech Logo" className="h-full w-auto object-contain" />
             </div>
-            <span className="text-[9px] font-semibold text-slate-500 tracking-wider leading-none pl-1 mt-1">
+            <span className="text-[9px] font-semibold text-slate-500 tracking-wider leading-none pl-1 mt-0.5 whitespace-nowrap">
               (formerly Dexterous Softech)
             </span>
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-1 lg:space-x-2 flex-1 justify-center">
             {navItems.map((item) => (
               <div 
                 key={item.label} 
@@ -222,13 +222,13 @@ export default function Navbar() {
                 {item.href ? (
                   <Link 
                     href={item.href}
-                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center ${pathname === item.href ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
+                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center whitespace-nowrap ${pathname === item.href ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <button
-                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center gap-1 ${activeDropdown === item.label ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
+                    className={`px-3 py-2 text-[14px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center gap-1 whitespace-nowrap ${activeDropdown === item.label ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
@@ -313,10 +313,10 @@ export default function Navbar() {
           </nav>
 
           {/* Contact / CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3 ml-4 shrink-0">
              <Link 
               href="/ai-cost-estimator" 
-              className="bg-electric text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group"
+              className="bg-electric text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group whitespace-nowrap"
             >
               AI Cost Estimator
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -324,10 +324,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center gap-3">
+          <div className="xl:hidden flex items-center gap-3">
             <Link 
               href="/ai-cost-estimator" 
-              className="bg-electric text-white text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-electric/90 transition-colors"
+              className="bg-electric text-white text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-electric/90 transition-colors whitespace-nowrap"
             >
               AI Estimator
             </Link>
