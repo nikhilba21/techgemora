@@ -231,7 +231,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden 2xl:flex items-center space-x-0.5 flex-1 justify-center">
+          <nav className="hidden xl:flex items-center space-x-0.5 flex-1 justify-center">
             {navItems.map((item) => (
               <div 
                 key={item.label} 
@@ -335,7 +335,7 @@ export default function Navbar() {
 
 
           {/* Mobile Menu Button */}
-          <div className="2xl:hidden flex items-center gap-3">
+          <div className="xl:hidden flex items-center gap-3">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
