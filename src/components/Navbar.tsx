@@ -218,10 +218,10 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white border-b border-slate-200 shadow-sm py-2' : 'bg-white/95 backdrop-blur-md border-b border-slate-100 py-3'}`}>
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between gap-2">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
+        <div className="flex items-center gap-4">
           {/* Logo */}
-          <Link href="/" className="flex flex-col justify-center group shrink-0">
+          <Link href="/" className="flex flex-col justify-center group shrink-0 mr-2">
             <div className="relative h-10 flex items-center justify-start">
               <img src="/logo.png" alt="Gemora Tech Logo" className="h-full w-auto object-contain" />
             </div>
@@ -231,7 +231,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden xl:flex items-center space-x-0.5 flex-1 justify-center">
+          <nav className="hidden xl:flex items-center space-x-0.5">
             {navItems.map((item) => (
               <div 
                 key={item.label} 
@@ -242,13 +242,13 @@ export default function Navbar() {
                 {item.href ? (
                   <Link 
                     href={item.href}
-                    className={`px-2 py-1.5 text-[12px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center whitespace-nowrap ${pathname === item.href ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
+                    className={`px-2.5 py-1.5 text-[13px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center whitespace-nowrap ${pathname === item.href ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <button
-                    className={`px-2 py-1.5 text-[12px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center gap-0.5 whitespace-nowrap ${activeDropdown === item.label ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
+                    className={`px-2.5 py-1.5 text-[13px] font-semibold transition-colors duration-150 rounded-lg hover:bg-slate-100 hover:text-electric flex items-center gap-1 whitespace-nowrap ${activeDropdown === item.label ? 'text-electric bg-slate-50' : 'text-slate-700'}`}
                   >
                     {item.label}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
