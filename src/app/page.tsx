@@ -179,7 +179,7 @@ export default function HomePage() {
                 Gemora Tech (formerly Dexterous Softech) is a premier IT consulting company delivering enterprise software product development, AI automation, cross-platform mobile apps, SaaS, and hyper-targeted game development services globally.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
                 <Link 
                   href="/contact" 
                   className="bg-electric text-white text-center font-bold px-8 py-4 rounded-full hover:bg-electric/90 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
@@ -192,6 +192,13 @@ export default function HomePage() {
                   className="bg-white/10 border border-white/20 text-white text-center font-semibold px-8 py-4 rounded-full hover:bg-white/15 transition-all flex items-center justify-center gap-2"
                 >
                   Book Free Consultation
+                </Link>
+                <Link 
+                  href="/ai-cost-estimator" 
+                  className="bg-violet-600/20 border border-violet-500/40 text-violet-200 text-center font-semibold px-8 py-4 rounded-full hover:bg-violet-600/30 hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-950/40"
+                >
+                  <Cpu className="w-4 h-4 text-violet-400" />
+                  AI Cost Estimator
                 </Link>
               </div>
 
