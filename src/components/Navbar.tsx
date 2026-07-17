@@ -332,25 +332,10 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Contact / CTA Button */}
-          <div className="hidden xl:flex items-center gap-3 ml-4 shrink-0">
-             <Link 
-              href="/contact" 
-              className="bg-electric text-white text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-electric/90 transition-colors shadow-sm hover:shadow-md flex items-center gap-1.5 group whitespace-nowrap"
-            >
-              Contact Us
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-            </Link>
-          </div>
+
 
           {/* Mobile Menu Button */}
           <div className="xl:hidden flex items-center gap-3">
-            <Link 
-              href="/contact" 
-              className="bg-electric text-white text-[12px] font-bold px-3.5 py-2 rounded-full hover:bg-electric/90 transition-colors whitespace-nowrap"
-            >
-              Contact
-            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
