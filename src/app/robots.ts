@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/admin',
     },
-    sitemap: 'https://dexteroussoftech.com/sitemap.xml',
+    sitemap: 'https://www.dexteroussoftech.com/sitemap.xml',
   };
 }
