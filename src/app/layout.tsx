@@ -66,6 +66,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <head>
+        <meta name="msvalidate.01" content="3DAED813D3F9CC4C2BA0923034B7344C" />
         {/* Google Analytics */}
         <Script
           async
