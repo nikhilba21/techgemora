@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Cpu, Globe, Server, Settings, ShieldCheck, HeartPulse, CreditCard, ShoppingCart, Home, School, Truck, Factory, Compass, Users, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Cpu, Globe, Server, Settings, ShieldCheck, HeartPulse, CreditCard, ShoppingCart, Home, School, Truck, Factory, Compass, Users, ArrowRight, Layers, Code, Database, Zap, ArrowUpRight, Shield, BarChart2, Building2 } from 'lucide-react';
 
 interface NavItem {
   label: string;
@@ -187,12 +187,21 @@ export default function Navbar() {
     {
       label: 'Blockchain',
       dropdown: [
-        { label: 'Blockchain Development', href: '/blockchain-development-company' },
-        { label: 'Crypto Wallet Dev', href: '/crypto-wallet-development-company' },
-        { label: 'Crypto Coin Dev', href: '/crypto-coin-development-company' },
-        { label: 'Token Development', href: '/token-development-company' },
-        { label: 'Decentralized Exchange (DEX)', href: '/decentralized-exchange-development-company' },
-        { label: 'Centralized Exchange (CEX)', href: '/centralized-exchange-development-company' },
+        { label: 'Blockchain Development', href: '/blockchain-development-company', description: 'Full-suite blockchain engineering & dApp solutions.', icon: Globe },
+        { label: 'Custom Blockchain Dev', href: '/custom-blockchain-development', description: 'Private, public & consortium blockchain networks.', icon: Layers },
+        { label: 'Smart Contract Dev', href: '/smart-contract-development', description: 'Solidity, Rust & Move contract development & audits.', icon: Code },
+        { label: 'dApp Development', href: '/dapp-development-company', description: 'Web3 decentralized application development.', icon: Cpu },
+        { label: 'Token Development', href: '/cryptocurrency-token-development', description: 'ERC-20, BEP-20, NFT & governance token launch.', icon: CreditCard },
+        { label: 'NFT Development', href: '/nft-development-company', description: 'NFT marketplaces, minting platforms & gaming NFTs.', icon: ShoppingCart },
+        { label: 'DeFi Development', href: '/defi-development-company', description: 'DEX, lending, yield farming & staking platforms.', icon: Database },
+        { label: 'Blockchain Consulting', href: '/blockchain-consulting-services', description: 'Strategy, PoC, technology selection & architecture.', icon: Settings },
+        { label: 'Crypto Wallet Dev', href: '/crypto-wallet-development-company', description: 'Secure mobile, web & multi-chain wallets.', icon: Shield },
+        { label: 'Crypto Coin Dev', href: '/crypto-coin-development-company', description: 'Custom Layer 1 & 2 coin & mainnet launch.', icon: Zap },
+        { label: 'DEX Development', href: '/decentralized-exchange-development-company', description: 'AMM-based decentralized exchange platforms.', icon: ArrowUpRight },
+        { label: 'CEX Development', href: '/centralized-exchange-development-company', description: 'High-throughput centralized exchange platforms.', icon: BarChart2 },
+        { label: 'Enterprise Blockchain', href: '/enterprise-blockchain-solutions', description: 'Supply chain, healthcare & finance solutions.', icon: Building2 },
+        { label: 'Blockchain Security', href: '/blockchain-security-audit', description: 'Smart contract audits & penetration testing.', icon: ShieldCheck },
+        { label: 'Web3 Development', href: '/web3-development-company', description: 'DAO, DID, cross-chain & metaverse development.', icon: Globe },
       ]
     },
     { label: 'Portfolio', href: '/portfolio' },
