@@ -91,6 +91,13 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
                           {blog.category}
                         </span>
                       </div>
+                      {new Date().getTime() - new Date(blog.createdAt).getTime() < 48 * 60 * 60 * 1000 && (
+                        <div className="absolute top-4 right-4 z-20">
+                          <span className="bg-emerald-500 text-white text-[9px] font-black px-2.5 py-1 rounded-md shadow-xl uppercase tracking-wider">
+                            NEW
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Content Area */}
