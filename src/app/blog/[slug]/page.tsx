@@ -6,6 +6,7 @@ import { Calendar, User, ChevronRight, ArrowLeft, Mail, Phone, ExternalLink } fr
 import { getBlog, getBlogs } from '@/lib/db';
 import BlogFaq from '@/components/BlogFaq';
 import AuthorBio from '@/components/AuthorBio';
+import BlogLeadForm from '@/components/BlogLeadForm';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -226,22 +227,8 @@ export default async function BlogDetailPage({ params }: PageProps) {
           <AuthorBio />
         </article>
 
-        {/* Lead Capture Banner */}
-        <div className="bg-navy text-white p-6 md:p-8 rounded-2xl shadow-md bg-grid-pattern-dark flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="space-y-2">
-            <h3 className="text-lg font-bold">Scaling Your Custom Software Engineering?</h3>
-            <p className="text-xs text-slate-300 max-w-lg leading-relaxed">
-              Partner with Gemora Tech. We build high-performance web systems, HIPAA-compliant databases, and secure cross-platform solutions.
-            </p>
-          </div>
-          <Link 
-            href="/contact"
-            className="bg-electric hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-xs transition-colors shrink-0 flex items-center gap-1.5"
-          >
-            Get Free Estimation
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </div>
+        {/* Lead Capture Form */}
+        <BlogLeadForm blogTitle={blog.title} />
 
         {/* Related Posts */}
         {relatedBlogs.length > 0 && (

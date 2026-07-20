@@ -178,16 +178,47 @@ export default function AICostEstimatorPage() {
   };
 
   // Lead Submission
-  const handleLeadSubmit = (e: React.FormEvent) => {
+  const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmittingLead(true);
     
-    // Simulate submission to lead collection api
-    setTimeout(() => {
+    try {
+      const selectedFeaturesNames = selectedFeatures.length > 0 
+        ? featuresList[category].filter(f => selectedFeatures.includes(f.id)).map(f => f.name).join(', ')
+        : 'None';
+      
+      const message = `Project Category: ${categoryLabels[category]}
+Design Fidelity: ${designFidelity}
+Timeline Speed: ${timelineSpeed}
+Estimated Sprints: ${estimate.weeks} Weeks
+Estimated Cost: $${estimate.minCost.toLocaleString()} - $${estimate.maxCost.toLocaleString()}
+Features: ${selectedFeaturesNames}
+Company: ${leadInfo.company}
+Phone: ${leadInfo.phone}`;
+
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: leadInfo.email,
+          name: leadInfo.name,
+          message,
+          source: 'AI Cost Estimator'
+        })
+      });
+      
+      if (res.ok) {
+        setSubmitSuccess(true);
+        setProposalGenerated(true);
+      } else {
+        alert('Failed to submit. Please try again or contact us directly.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('An error occurred. Please try again.');
+    } finally {
       setSubmittingLead(false);
-      setSubmitSuccess(true);
-      setProposalGenerated(true);
-    }, 1500);
+    }
   };
 
   // Category labels map
