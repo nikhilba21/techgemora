@@ -16,19 +16,21 @@ export default function BlogClient({ initialBlogs }: BlogClientProps) {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const blogsPerPage = 4;
 
+  // Dynamically extract and sort unique categories from published blogs
   const categories = [
-    'All', 
-    'Software Development', 
-    'AI', 
-    'Mobile Apps', 
-    'Web Development', 
-    'SaaS', 
-    'Cloud', 
-    'Technology Trends', 
-    'Business Automation',
-    'Game Development',
-    'Mobile Gaming'
-  ];
+    'All',
+    ...Array.from(
+      new Set(
+        initialBlogs
+          .filter(b => b.published && b.category)
+          .map(b => b.category)
+      )
+    )
+  ].sort((a, b) => {
+    if (a === 'All') return -1;
+    if (b === 'All') return 1;
+    return a.localeCompare(b);
+  });
 
   const filteredBlogs = initialBlogs.filter(blog => {
     const matchesCategory = selectedCategory === 'All' || blog.category.toLowerCase() === selectedCategory.toLowerCase();

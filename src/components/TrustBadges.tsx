@@ -11,10 +11,10 @@ export default function TrustBadges() {
             Certified & Verified by Independent Authorities
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* DMCA Badge Mock */}
+            {/* GDPR Compliance Badge Mock */}
             <div className="flex items-center gap-2 font-bold text-slate-800">
-              <span className="w-6 h-6 bg-blue-600 text-white flex items-center justify-center rounded-full text-xs">✓</span>
-              DMCA Protected
+              <span className="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center rounded-full text-xs">✓</span>
+              GDPR Compliant
             </div>
             {/* GoodFirms Mock */}
             <div className="flex items-center gap-2 font-extrabold text-slate-800 text-lg">

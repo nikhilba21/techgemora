@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 
 interface FaqItem {
@@ -43,21 +43,16 @@ export default function BlogFaq({ faqs }: BlogFaqProps) {
               )}
             </button>
 
-            <AnimatePresence initial={false}>
-              {openIdx === idx && (
-                <motion.div
-                  initial={{ height: 0 }}
-                  animate={{ height: 'auto' }}
-                  exit={{ height: 0 }}
-                  transition={{ duration: 0.15 }}
-                  className="overflow-hidden"
-                >
-                  <div className="p-4 pt-0 border-t border-slate-100 text-xs text-slate-500 leading-relaxed">
-                    {faq.answer}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <motion.div
+              initial={false}
+              animate={{ height: openIdx === idx ? 'auto' : 0 }}
+              className="overflow-hidden"
+              transition={{ duration: 0.15 }}
+            >
+              <div className="p-4 pt-0 border-t border-slate-100 text-xs text-slate-500 leading-relaxed">
+                {faq.answer}
+              </div>
+            </motion.div>
           </div>
         ))}
       </div>
