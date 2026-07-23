@@ -167,6 +167,13 @@ Output only the raw JSON. Do not include markdown block markers like ```json ...
     article_data["published"] = True
     article_data["createdAt"] = datetime.utcnow().isoformat() + "Z"
     
+    # Dynamically interlink the new article content
+    try:
+        from interlink_blogs import interlink_text
+        article_data["content"] = interlink_text(article_data["content"], current_slug=article_data["slug"])
+    except Exception as e:
+        print(f"[WARNING] Dynamic interlinking failed for new article: {e}")
+        
     # Serialize FAQs back into JSON string to match db.json schema
     article_data["faqs"] = json.dumps(article_data["faqs"])
     
