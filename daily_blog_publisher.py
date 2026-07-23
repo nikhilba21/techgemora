@@ -128,7 +128,7 @@ Output only the raw JSON. Do not include markdown block markers like ```json ...
         ]
     }
     
-    url = f"/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    url = f"/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
     conn.request("POST", url, json.dumps(body), headers)
     response = conn.getresponse()
     
@@ -145,7 +145,16 @@ Output only the raw JSON. Do not include markdown block markers like ```json ...
         raw_text = raw_text[:-3]
     raw_text = raw_text.strip()
     
-    article_data = json.loads(raw_text)
+    # Sanitize invalid backslash escapes (e.g. raw \ in text or paths)
+    import re
+    sanitized_text = re.sub(r'\\(?![\\"/bfnrt]|u[0-9a-fA-F]{4})', r'\\\\', raw_text)
+    
+    try:
+        article_data = json.loads(sanitized_text)
+    except json.JSONDecodeError as e:
+        # Fallback to direct text parse if regex fails
+        print(f"[WARNING] JSON parsing error, trying raw loads: {e}")
+        article_data = json.loads(raw_text)
     
     # Attach category, slug and meta details
     article_data["category"] = category
@@ -164,7 +173,7 @@ Output only the raw JSON. Do not include markdown block markers like ```json ...
     return article_data
 
 def main():
-    print("🚀 Starting Daily Blog Auto-Publisher...")
+    print("[LOG] Starting Daily Blog Auto-Publisher...")
     
     # 1. Load API Key
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -179,13 +188,13 @@ def main():
                         break
                         
     if not api_key:
-        print("❌ Error: GEMINI_API_KEY not found in environment or .env file.")
+        print("[ERROR] GEMINI_API_KEY not found in environment or .env file.")
         print("Please set GEMINI_API_KEY inside your .env file in the root directory.")
         return
 
     db_path = os.path.join(os.path.dirname(__file__), "src", "data", "db.json")
     if not os.path.exists(db_path):
-        print(f"❌ Error: Database file not found at {db_path}")
+        print(f"[ERROR] Database file not found at {db_path}")
         return
         
     with open(db_path, "r", encoding="utf-8") as f:
@@ -197,7 +206,7 @@ def main():
     available_topics = [t for t in TOPICS if make_slug(t["topic"]) not in existing_slugs]
     
     if len(available_topics) < 3:
-        print("⚠️ Warning: Low on topics. Recycling or generating new topic bank...")
+        print("[WARNING] Low on topics. Recycling or generating new topic bank...")
         available_topics = TOPICS # Fallback to all if exhausted
         
     # 3. Pick 3 random topics to publish
@@ -205,16 +214,16 @@ def main():
     
     new_articles = []
     for t_info in selected_topics:
-        print(f"✍️ Generating article: \"{t_info['topic']}\" ({t_info['category']})...")
+        print(f"[LOG] Generating article: \"{t_info['topic']}\" ({t_info['category']})...")
         try:
             art = generate_article_with_gemini(api_key, t_info)
             new_articles.append(art)
-            print(f"✅ Generated slug: {art['slug']}")
+            print(f"[LOG] Generated slug: {art['slug']}")
         except Exception as e:
-            print(f"❌ Failed to generate \"{t_info['topic']}\": {e}")
+            print(f"[ERROR] Failed to generate \"{t_info['topic']}\": {e}")
 
     if not new_articles:
-        print("❌ No articles generated. Aborting update.")
+        print("[ERROR] No articles generated. Aborting update.")
         return
 
     # 4. Append to database
@@ -226,15 +235,15 @@ def main():
     with open(db_path, "w", encoding="utf-8") as f:
         json.dump(db, f, indent=2, ensure_ascii=False)
         
-    print(f"🎉 Successfully added {len(new_articles)} new blogs to db.json!")
+    print(f"[SUCCESS] Successfully added {len(new_articles)} new blogs to db.json!")
 
     # 5. Git Commit and Push to Production
-    print("🔄 Staging changes and pushing to GitHub...")
+    print("[LOG] Staging changes and pushing to GitHub...")
     os.system("git add src/data/db.json")
     commit_cmd = f'git commit -m "auto: daily blog publish - {datetime.now().strftime("%Y-%m-%d")}"'
     os.system(commit_cmd)
     os.system("git push origin main")
-    print("🚀 Auto-Publish Run Complete!")
+    print("[SUCCESS] Auto-Publish Run Complete!")
 
 if __name__ == "__main__":
     main()
