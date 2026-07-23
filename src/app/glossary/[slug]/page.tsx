@@ -17,7 +17,21 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: item.title,
     description: item.metaDescription,
-    alternates: { canonical: `/glossary/${item.slug}` }
+    alternates: {
+      canonical: `/glossary/${item.slug}`,
+    },
+    openGraph: {
+      title: item.title,
+      description: item.metaDescription,
+      url: `/glossary/${item.slug}`,
+      type: "article",
+      siteName: "Gemora Tech",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: item.title,
+      description: item.metaDescription,
+    }
   };
 }
 

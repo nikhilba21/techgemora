@@ -20,9 +20,27 @@ export async function generateMetadata({ params }: Props) {
   
   if (!location) return {};
 
+  const title = `Top Software & Game Development Company in ${location.name}, ${location.country} | Gemora Tech`;
+  const description = `Looking for top-tier software and game development in ${location.name}? Gemora Tech delivers enterprise AI, Web3, and Mobile App solutions in ${location.name}, ${location.country}.`;
+
   return {
-    title: `Top Software & Game Development Company in ${location.name}, ${location.country} | Gemora Tech`,
-    description: `Looking for top-tier software and game development in ${location.name}? Gemora Tech delivers enterprise AI, Web3, and Mobile App solutions in ${location.name}, ${location.country}.`,
+    title,
+    description,
+    alternates: {
+      canonical: `/services/${location.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/services/${location.slug}`,
+      type: "website",
+      siteName: "Gemora Tech",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    }
   };
 }
 

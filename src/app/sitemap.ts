@@ -30,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route === '' ? 1.0 : 0.9,
   }));
 
   // Dynamic SEO pages (e.g., /software-development-company-usa)
@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/${page.slug}`,
     lastModified: page.updatedAt ? new Date(page.updatedAt) : new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 0.9,
+    priority: 0.8,
   }));
 
   // Geo-Targeted Location pages
@@ -46,7 +46,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/services/${location.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: 0.8,
+    priority: 0.7,
   }));
 
   // Blog pages
@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/blog/${blog.slug}`,
     lastModified: blog.createdAt ? new Date(blog.createdAt) : new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.9,
   }));
 
   // Portfolio pages
@@ -66,11 +66,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // pSEO Pages
-  const techRoutes = techData.map((t: any) => ({ url: `${baseUrl}/tech/${t.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
-  const industryRoutes = industryData.map((i: any) => ({ url: `${baseUrl}/industry/${i.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
-  const costRoutes = costData.map((c: any) => ({ url: `${baseUrl}/cost/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
-  const compareRoutes = compareData.map((c: any) => ({ url: `${baseUrl}/compare/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 }));
-  const gamingRoutes = gamingData.map((g: any) => ({ url: `${baseUrl}/gaming/${g.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 }));
+  const techRoutes = techData.map((t: any) => ({ url: `${baseUrl}/tech/${t.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.6 }));
+  const industryRoutes = industryData.map((i: any) => ({ url: `${baseUrl}/industry/${i.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.6 }));
+  const costRoutes = costData.map((c: any) => ({ url: `${baseUrl}/cost/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.6 }));
+  const compareRoutes = compareData.map((c: any) => ({ url: `${baseUrl}/compare/${c.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.6 }));
+  const gamingRoutes = gamingData.map((g: any) => ({ url: `${baseUrl}/gaming/${g.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.6 }));
   const glossaryRoutes = glossaryData.map((g: any) => ({ url: `${baseUrl}/glossary/${g.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 }));
 
   return [
