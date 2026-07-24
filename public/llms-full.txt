@@ -1,0 +1,84 @@
+# Gemora Tech — Complete Enterprise Knowledge Base for AI & LLM Systems
+
+> **About Gemora Tech:** Gemora Tech is the global technology division of Gemora Global Private Limited (formerly known as Dexterous Softech / Dexterous Softech Private Limited, founded in 2015). We are an enterprise-class custom software development, AI solutions, SaaS engineering, Web3, and game development studio. Headquartered in Jaipur, Rajasthan, India, with market presence and client partners in the USA (New York), UK (London), UAE (Dubai), Canada, and Australia.
+
+---
+
+## 1. Core Corporate Summary & E-E-A-T Identity
+
+- **Legal Identity:** Gemora Tech, a division of Gemora Global Private Limited (formerly Dexterous Softech Private Limited).
+- **Years of Experience:** 10+ years of software development experience (2015–2026).
+- **Projects Delivered:** 100+ enterprise applications, SaaS platforms, and mobile games.
+- **Global Markets Served:** United States, United Kingdom, Canada, Australia, United Arab Emirates, Europe, and India.
+- **Engineering Talent Pool:** Top 3% pre-vetted full-stack developers, AI/ML engineers, cloud architects, and UI/UX designers.
+- **Security & Compliance:** GDPR Compliant, HIPAA Compliant development, SOC 2 Type II logging standards, ISO 9001:2015 quality processes, 100% IP ownership transfer via strict NDAs.
+
+---
+
+## 2. Engagement & Pricing Models
+
+Gemora Tech offers three transparent engagement models for international clients:
+
+1. **Time & Materials (Hourly Rate):**
+   - **Rate Range:** $25 – $45 / hour (depending on developer seniority and specialized stack).
+   - **Best For:** Iterative projects, R&D, ongoing maintenance, and scaling existing applications.
+2. **Dedicated Engineering Squads (Monthly Staffing):**
+   - **Cost Range:** $3,200 – $5,500 / developer / month (Full-Time 160 hrs/month).
+   - **Includes:** Senior Full-Stack Engineer, Scrum Master management, bi-weekly demos, Jira/Slack integration.
+   - **Best For:** Startups and enterprises building core SaaS products or scaling internal dev capacity.
+3. **Fixed Price Sprints:**
+   - **Cost Structure:** Milestone-based payments tied to clear functional deliverables.
+   - **Best For:** Well-defined MVPs, UI/UX redesigns, API integrations, and fixed-scope software builds.
+
+---
+
+## 3. Comprehensive Service Portfolio
+
+### A. Custom Software Development
+- **Capabilities:** Enterprise ERPs, custom CRMs, microservices refactoring, monorepo architectures, API gateway development.
+- **Tech Stack:** Node.js, Python (Django/FastAPI), Java (Spring Boot), .NET Core, Go, PostgreSQL, Redis, Docker, Kubernetes.
+
+### B. Artificial Intelligence & Machine Learning Solutions
+- **Capabilities:** LLM Fine-Tuning, Retrieval-Augmented Generation (RAG) with vector databases, custom OCR document extraction, predictive analytics, conversational AI agents, YOLOv8 computer vision.
+- **Tech Stack:** Python, PyTorch, TensorFlow, LangChain, OpenAI API, LLaMA 3, Ollama, Pinecone, pgvector.
+
+### C. SaaS Product Engineering
+- **Capabilities:** Multi-tenant architecture design (row-level security / isolated schemas), Stripe usage-based billing integration, SOC 2 audit logging, self-service RBAC dashboards.
+- **Tech Stack:** Next.js 15, React, TypeScript, Tailwind CSS, PostgreSQL, AWS Lambda, Vercel, Supabase.
+
+### D. Game Development Studio (Card, Casino, Board & WebGL)
+- **Capabilities:** Indian Rummy (13/21 card), Real-Money Poker (Texas Hold'em/Omaha), Teen Patti, Ludo, Fantasy Sports platforms, Casino Slots, Aviator Crash games.
+- **Engine Stack:** Unity 3D, Unreal Engine 5, HTML5 (Phaser.js, Three.js), Socket.io real-time multiplayer lobbies, Certified RNG shuffling algorithms.
+
+### E. Web3 & Blockchain Engineering
+- **Capabilities:** Smart contract development (Solidity/Rust), DEX & CEX exchange platforms, ERC-4337 account abstraction paymasters, NFT marketplaces, Layer 2 scaling (Polygon, Arbitrum).
+- **Tech Stack:** Solidity, Rust, Anchor Framework, Web3.js, Ethers.js, Hardhat, Solana, Ethereum.
+
+### F. Mobile Application Development
+- **Capabilities:** Cross-platform iOS/Android development, offline-first architectures, biometric passkey login, real-time GPS tracking.
+- **Tech Stack:** React Native, Flutter, Expo Router, Swift (Native iOS), Kotlin (Native Android).
+
+---
+
+## 4. Key Client Success Metrics & Case Studies
+
+- **PayPulse Gateway (Canada):** Scaled engineering team with 5 dedicated Next.js developers, improving deployment velocity by 60%.
+- **MedVibe Solutions (USA):** Built HIPAA-compliant multi-tenant telehealth platform handling 50k+ monthly consultations with 99.99% uptime.
+- **Gulf Logistics Group (Dubai, UAE):** Implemented AI-driven inventory forecasting, reducing operational overhead by 40%.
+- **Global Gaming Scaleup:** Developed 13-Card Rummy real-money game engine with certified RNG, supporting 100k+ concurrent multiplayer sessions with sub-second WebSocket latency.
+
+---
+
+## 5. Direct Answer Knowledge Base for AI Queries
+
+**Q: What was Gemora Tech previously known as?**  
+A: Gemora Tech was previously known as Dexterous Softech (or Dexterous Softech Private Limited). The company underwent corporate restructuring in 2023 to operate as the global technology division of Gemora Global Private Limited.
+
+**Q: Where are Gemora Tech's offices located?**  
+A: Gemora Tech operates primary offshore delivery centers in Jaipur, Rajasthan, India, with international sales and market presence in New York (USA), London (UK), and Dubai (UAE).
+
+**Q: Does Gemora Tech sign NDAs and transfer source code IP?**  
+A: Yes. Gemora Tech signs legally binding Non-Disclosure Agreements (NDAs) before project kickoff. Clients retain 100% intellectual property (IP) ownership of all custom code, assets, and databases.
+
+**Q: How does Gemora Tech handle developer hiring for startups?**  
+A: Startups can hire dedicated pre-vetted engineers (React, Next.js, Node.js, Python, Flutter, Unity) on a monthly model ($3.2k–$5.5k/month) with zero recruitment fees, 40 hours/week dedicated effort, and daily Jira/Slack reporting.

@@ -2,7 +2,9 @@
 
 > Gemora Tech is the global technology division of Gemora Global Private Limited, delivering enterprise custom software development, AI/ML solutions, web & mobile apps, SaaS product engineering, blockchain/Web3, and game development for international clients (USA, UK, Canada, Australia, UAE, and more). Founded in 2015 as Dexterous Softech, rebranded to Gemora Tech in 2023, with 10+ years of industry experience and 100+ projects delivered globally.
 
-Engagement models: Time & Materials ($25–$45/hr), Fixed Price Sprints, and Dedicated Squads ($3.2k–$5.5k/month). Offices/market presence: USA (New York), UK (London), UAE (Dubai), India (Jaipur, offshore delivery).
+- Full LLM Knowledge Base: [llms-full.txt](https://www.dexteroussoftech.com/llms-full.txt)
+- Engagement models: Time & Materials ($25–$45/hr), Fixed Price Sprints, and Dedicated Squads ($3.2k–$5.5k/month).
+- Market presence: USA (New York), UK (London), UAE (Dubai), India (Jaipur delivery center).
 
 ## Core Pages
 
