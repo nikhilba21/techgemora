@@ -1,0 +1,38 @@
+name: Daily Cloud Blog Auto-Publisher
+
+on:
+  schedule:
+    # Runs every day at 03:30 UTC (09:00 AM IST)
+    - cron: '30 3 * * *'
+  workflow_dispatch: # Allows manual one-click trigger anytime from GitHub UI
+
+jobs:
+  auto-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Auto Publisher Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python daily_blog_publisher.py
+
+      - name: Commit and Push Changes to Main
+        run: |
+          git config --global user.name "Gemora Tech Automation Bot"
+          git config --global user.email "bot@dexteroussoftech.com"
+          git add src/data/db.json
+          git status
+          if ! git diff --staged --quiet; then
+            git commit -m "auto: daily blog publish via GitHub Cloud - $(date +'%Y-%m-%d')"
+            git push origin main
+          else
+            echo "No changes in db.json to commit."
+          fi
