@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const blog = await getBlog(slug);
   
-  if (!blog) {
+  if (!blog || !blog.published || new Date(blog.createdAt) > new Date()) {
     return {
       title: "Article Not Found | Gemora Tech",
       description: "The requested resource could not be found."
@@ -52,7 +52,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const blog = await getBlog(slug);
 
-  if (!blog) {
+  if (!blog || !blog.published || new Date(blog.createdAt) > new Date()) {
     notFound();
   }
 

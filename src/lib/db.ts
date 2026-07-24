@@ -313,10 +313,11 @@ export async function deletePage(slug: string): Promise<void> {
   }
 }
 
-export async function getBlogs(): Promise<Blog[]> {
+export async function getBlogs(visibleOnly: boolean = true): Promise<Blog[]> {
+  let blogs: Blog[] = [];
   if (pool) {
     const res = await pool.query("SELECT * FROM blogs ORDER BY created_at DESC");
-    return res.rows.map(row => ({
+    blogs = res.rows.map(row => ({
       slug: row.slug,
       title: row.title,
       metaTitle: row.meta_title || '',
@@ -330,8 +331,15 @@ export async function getBlogs(): Promise<Blog[]> {
       createdAt: row.created_at
     }));
   } else {
-    return readLocalDb().blogs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    blogs = readLocalDb().blogs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }
+
+  if (visibleOnly) {
+    const now = new Date();
+    return blogs.filter(b => b.published && new Date(b.createdAt) <= now);
+  }
+
+  return blogs;
 }
 
 export async function getBlog(slug: string): Promise<Blog | null> {
