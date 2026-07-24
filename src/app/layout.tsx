@@ -88,7 +88,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Gemora Tech",
+              "alternateName": "Dexterous Softech",
               "url": "https://www.dexteroussoftech.com",
+              "logo": "https://www.dexteroussoftech.com/images/hero-bg.jpg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "sales",

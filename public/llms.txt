@@ -324,13 +324,19 @@ Engagement models: Time & Materials ($25–$45/hr), Fixed Price Sprints, and Ded
 
 ## Glossary
 
-Two glossary series exist for technical term definitions:
-- Named terms, e.g. [Continuous Deployment](https://www.dexteroussoftech.com/glossary/continuous-deployment), [Continuous Integration](https://www.dexteroussoftech.com/glossary/continuous-integration), [Microservices](https://www.dexteroussoftech.com/glossary/microservices), [RESTful API](https://www.dexteroussoftech.com/glossary/restful-api), [GraphQL](https://www.dexteroussoftech.com/glossary/graphql), [Serverless Architecture](https://www.dexteroussoftech.com/glossary/serverless-architecture), [Docker Container](https://www.dexteroussoftech.com/glossary/docker-container), [Kubernetes Cluster](https://www.dexteroussoftech.com/glossary/kubernetes-cluster)
-- A large programmatic set at `/glossary/software-term-0` through `/glossary/software-term-249` (250 pages) and `/glossary/tech-protocol-1` through `/glossary/tech-protocol-742` (742 pages) — auto-generated definition stubs, not individually listed here.
+Technical term definitions:
+- [Continuous Deployment](https://www.dexteroussoftech.com/glossary/continuous-deployment)
+- [Continuous Integration](https://www.dexteroussoftech.com/glossary/continuous-integration)
+- [Microservices](https://www.dexteroussoftech.com/glossary/microservices)
+- [RESTful API](https://www.dexteroussoftech.com/glossary/restful-api)
+- [GraphQL](https://www.dexteroussoftech.com/glossary/graphql)
+- [Serverless Architecture](https://www.dexteroussoftech.com/glossary/serverless-architecture)
+- [Docker Container](https://www.dexteroussoftech.com/glossary/docker-container)
+- [Kubernetes Cluster](https://www.dexteroussoftech.com/glossary/kubernetes-cluster)
 
 ## Location Landing Pages
 
-The site publishes local SEO landing pages at `/services/{city}` for ~90 named cities across North America, UK, Australia, Canada, UAE, India, Germany, France, East Asia, Netherlands, Nordics, Latin America, Africa, Middle East, and Europe (e.g. [New York](https://www.dexteroussoftech.com/services/new-york), [London](https://www.dexteroussoftech.com/services/london), [Dubai](https://www.dexteroussoftech.com/services/dubai), [Bangalore](https://www.dexteroussoftech.com/services/bangalore), [Singapore](https://www.dexteroussoftech.com/services/singapore), [Sydney](https://www.dexteroussoftech.com/services/sydney)), plus a further ~260 generic placeholder pages at `/services/global-tech-hub-1` through `/services/global-tech-hub-350` — not individually listed here.
+The site publishes verified local SEO landing pages at `/services/{city}` for top international tech hubs (e.g. [New York](https://www.dexteroussoftech.com/services/new-york), [London](https://www.dexteroussoftech.com/services/london), [Dubai](https://www.dexteroussoftech.com/services/dubai), [Bangalore](https://www.dexteroussoftech.com/services/bangalore), [Singapore](https://www.dexteroussoftech.com/services/singapore), [Sydney](https://www.dexteroussoftech.com/services/sydney)).
 
 ## Industry Landing Pages (alternate path)
 
