@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       'en-AU': '/',
       'en-CA': '/',
       'en-AE': '/',
+      'x-default': '/',
     },
   },
   openGraph: {
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
         alt: "Gemora Tech - Enterprise Software Development",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Enterprise Custom Software & Game Development Company | Gemora Tech",
     description: "Gemora Tech is a global software development company specializing in custom software, AI models, web & mobile apps, SaaS, and dedicated developer teams.",
-    images: ["/images/hero-bg.jpg"],
+    images: ["https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop"],
   }
 };
 

@@ -23,27 +23,43 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const rawTitle = `${blog.title} | Gemora Tech`;
+  const alignedTitle = rawTitle.length > 58 ? `${rawTitle.substring(0, 55)}...` : rawTitle;
+  const alignedDescription = blog.metaDescription 
+    ? (blog.metaDescription.length > 155 ? `${blog.metaDescription.substring(0, 152)}...` : blog.metaDescription)
+    : "Read enterprise software engineering tutorials, AI architecture guides, and cloud scaling insights by Gemora Tech.";
+
+  const canonicalUrl = `https://www.dexteroussoftech.com/blog/${blog.slug}`;
+  const imageUrl = blog.featuredImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop';
+
   return {
-    title: `${blog.title} | Gemora Tech Insights`,
-    description: blog.metaDescription,
+    title: alignedTitle,
+    description: alignedDescription,
     alternates: {
-      canonical: `/blog/${blog.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: blog.title,
-      description: blog.metaDescription,
-      url: `/blog/${blog.slug}`,
+      title: alignedTitle,
+      description: alignedDescription,
+      url: canonicalUrl,
       type: "article",
+      siteName: "Gemora Tech",
       publishedTime: blog.createdAt,
       authors: [blog.author],
       images: [
         {
-          url: blog.featuredImage || 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600&auto=format&fit=crop',
-          width: 800,
-          height: 600,
+          url: imageUrl,
+          width: 1200,
+          height: 630,
           alt: blog.title,
         }
       ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: alignedTitle,
+      description: alignedDescription,
+      images: [imageUrl],
     }
   };
 }

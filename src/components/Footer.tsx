@@ -247,6 +247,8 @@ export default function Footer() {
             <span>|</span>
             <Link href="/terms-of-service" className="hover:text-slate-400">Terms of Service</Link>
             <span>|</span>
+            <Link href="/sitemap-index" className="hover:text-slate-400">HTML Sitemap</Link>
+            <span>|</span>
             <Link href="/sitemap.xml" className="hover:text-slate-400">XML Sitemap</Link>
           </div>
         </div>

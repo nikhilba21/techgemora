@@ -22,25 +22,40 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const alignedTitle = page.h1 ? `${page.h1} | Gemora Tech` : page.title;
+  const rawTitle = page.h1 ? `${page.h1} | Gemora Tech` : page.title;
+  const alignedTitle = rawTitle.length > 58 ? `${rawTitle.substring(0, 55)}...` : rawTitle;
+  const alignedDescription = page.metaDescription 
+    ? (page.metaDescription.length > 155 ? `${page.metaDescription.substring(0, 152)}...` : page.metaDescription)
+    : "Gemora Tech is a global custom software development company delivering enterprise AI solutions, SaaS, and dedicated developer teams.";
+
+  const canonicalUrl = `https://www.dexteroussoftech.com/${page.slug}`;
 
   return {
     title: alignedTitle,
-    description: page.metaDescription,
+    description: alignedDescription,
     alternates: {
-      canonical: `/${page.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: alignedTitle,
-      description: page.metaDescription,
-      url: `/${page.slug}`,
+      description: alignedDescription,
+      url: canonicalUrl,
       type: "website",
       siteName: "Gemora Tech",
+      images: [
+        {
+          url: "https://www.dexteroussoftech.com/images/hero-bg.jpg",
+          width: 1200,
+          height: 630,
+          alt: alignedTitle,
+        }
+      ]
     },
     twitter: {
       card: "summary_large_image",
       title: alignedTitle,
-      description: page.metaDescription,
+      description: alignedDescription,
+      images: ["https://www.dexteroussoftech.com/images/hero-bg.jpg"],
     }
   };
 }
@@ -76,11 +91,11 @@ export default async function DynamicSeoPage({ params }: PageProps) {
   let bannerImage = "/images/software-dev-banner.png";
   const lowerSlug = page.slug.toLowerCase();
   if (lowerSlug.includes('game') || lowerSlug.includes('slots') || lowerSlug.includes('poker') || lowerSlug.includes('blackjack') || lowerSlug.includes('rummy')) {
-    bannerImage = "/images/gaming-banner.png";
+    bannerImage = "/images/game-dev-banner.png";
   } else if (lowerSlug.includes('mobile') || lowerSlug.includes('app') || lowerSlug.includes('ios') || lowerSlug.includes('android')) {
     bannerImage = "/images/mobile-app-banner.png";
   } else if (lowerSlug.includes('ai') || lowerSlug.includes('machine') || lowerSlug.includes('big-data') || lowerSlug.includes('voice') || lowerSlug.includes('metaverse') || lowerSlug.includes('reality')) {
-    bannerImage = "/images/ai-banner.png";
+    bannerImage = "/images/ai-bigdata-banner.png";
   }
 
   // Define Schema Markup
