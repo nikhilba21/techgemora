@@ -49,7 +49,29 @@ TOPICS = [
     {"topic": "How Much Does it Cost to Build an On-Demand Service App (UrbanClap Clone)?", "category": "Mobile Apps"},
     {"topic": "Flutter vs React Native Development Cost: Which Framework Saves More Budget?", "category": "Mobile Apps"},
     {"topic": "The True Cost of Developing a HIPAA-Compliant Telehealth App in 2026", "category": "Mobile Apps"},
-    {"topic": "Building a Food Delivery or Taxi Booking App: Architecture & API Pricing", "category": "Mobile Apps"}
+    {"topic": "Building a Food Delivery or Taxi Booking App: Architecture & API Pricing", "category": "Mobile Apps"},
+
+    # Popular B2C Application Blueprints (App Clone & Similar App Guides)
+    {"topic": "How Much Does it Cost to Build an App Like Uber? (Taxi Booking Architecture)", "category": "B2C App Blueprints"},
+    {"topic": "How to Build an App Like Airbnb: Multi-Vendor Rental Marketplace Cost & Tech Stack", "category": "B2C App Blueprints"},
+    {"topic": "How Much Does it Cost to Build a Quick-Commerce App Like Zepto or Blinkit?", "category": "B2C App Blueprints"},
+    {"topic": "How to Build an Astrology App Like Astrotalk: Live Consultation & Wallet System", "category": "B2C App Blueprints"},
+    {"topic": "How Much Does it Cost to Build a Telehealth App Like Teladoc or Zocdoc in 2026?", "category": "B2C App Blueprints"},
+    {"topic": "How to Build a Fitness & Workout Tracking App Like Strava or MyFitnessPal", "category": "B2C App Blueprints"},
+    {"topic": "How Much Does it Cost to Build a Food Delivery App Like UberEats or DoorDash?", "category": "B2C App Blueprints"},
+    {"topic": "How to Build a Dating App Like Tinder or Bumble: Matching Algorithms & Security", "category": "B2C App Blueprints"},
+    {"topic": "How Much Does it Cost to Build a Multigaming App Like WinZO or MPL?", "category": "B2C App Blueprints"},
+    {"topic": "How to Build a Maid Booking App Like Pronto: Architecture & Dispatch Blueprint", "category": "B2C App Blueprints"},
+
+    # Popular B2B Enterprise Application Blueprints (Enterprise Intent)
+    {"topic": "How to Build a B2B SaaS CRM App Like Salesforce or HubSpot from Scratch", "category": "B2B App Blueprints"},
+    {"topic": "How Much Does it Cost to Build an Enterprise ERP System Like SAP or NetSuite?", "category": "B2B App Blueprints"},
+    {"topic": "How to Build a B2B Team Collaboration App Like Slack or Microsoft Teams", "category": "B2B App Blueprints"},
+    {"topic": "How Much Does it Cost to Build a Real Estate App Like Zillow with MLS/IDX Integration?", "category": "B2B App Blueprints"},
+    {"topic": "How to Build a Supply Chain & Freight Logistics Tracking Platform Like Flexport", "category": "B2B App Blueprints"},
+    {"topic": "How Much Does it Cost to Build an E-Learning LMS Platform Like Coursera or Udemy?", "category": "B2B App Blueprints"},
+    {"topic": "How to Build a FinTech Ledger & Invoice Automation Platform Like Stripe or Ramp", "category": "B2B App Blueprints"},
+    {"topic": "How Much Does it Cost to Build an Enterprise Document System Like DocuSign?", "category": "B2B App Blueprints"}
 ]
 
 # Curated Unsplash images for premium visual presentation
@@ -83,6 +105,22 @@ CATEGORY_IMAGES = {
         "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?q=80&w=800&auto=format&fit=crop"
+    ],
+    "Hiring Guide": [
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
+    ],
+    "B2C App Blueprints": [
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1556742049-0a6756574f9d?q=80&w=800&auto=format&fit=crop"
+    ],
+    "B2B App Blueprints": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
+    ],
+    "Mobile Apps": [
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop"
     ]
 }
 
