@@ -5,63 +5,62 @@ from datetime import datetime, timedelta
 from daily_blog_publisher import generate_article_with_gemini, make_slug
 
 TOPICS_100 = [
-    # Group 1 (July 25)
-    {"topic": "Building High-Throughput Real-Time Event Pipelines with Apache Kafka and Go", "category": "Cloud"},
-    {"topic": "How to Secure Microservices Architecture with Istio Service Mesh and Mutual TLS", "category": "Cloud"},
-    {"topic": "Designing Multi-Region Active-Active PostgreSQL Clusters for Zero Downtime", "category": "Software Development"},
+    # Group 1 (Buyer Intent: Developer Hiring & Costs)
+    {"topic": "How Much Does it Cost to Hire Dedicated Next.js Developers in 2026?", "category": "Hiring Guide"},
+    {"topic": "Staff Augmentation vs Dedicated Engineering Squads: Cost & TCO Comparison", "category": "Hiring Guide"},
+    {"topic": "How US Startups Save 50% by Renting Dedicated Developer Teams at $3.2k/Month", "category": "Hiring Guide"},
 
-    # Group 2 (July 26)
-    {"topic": "Evaluating LLM Fine-Tuning vs RAG Architectures for Enterprise Knowledge Search", "category": "AI"},
-    {"topic": "Building Production-Ready AI Agents with LangChain and Custom Tool Integrations", "category": "AI"},
-    {"topic": "How Vector Indexes (HNSW vs IVFFlat) Impact Query Latency in Semantic Search", "category": "AI"},
+    # Group 2 (Buyer Intent: Custom SaaS Costs & Blueprints)
+    {"topic": "How Much Does it Cost to Build a Custom SaaS Platform in 2026?", "category": "SaaS"},
+    {"topic": "Building an MVP for a B2B SaaS Startup Under $30,000 in 60 Days", "category": "SaaS"},
+    {"topic": "Custom Software vs Off-the-Shelf SaaS: Calculating the 5-Year Enterprise TCO", "category": "SaaS"},
 
-    # Group 3 (July 27)
-    {"topic": "Unity vs Unreal Engine for 3D Real-Money Multiplayer Game Development in 2026", "category": "Game Development"},
-    {"topic": "How to Build Anti-Fraud and Collusion Detection Systems for Online Card Games", "category": "Game Development"},
-    {"topic": "Optimizing WebGL Render Loops for Smooth 60FPS Mobile Browser Games", "category": "Game Development"},
+    # Group 3 (Buyer Intent: Real-Money & Card Game Development Costs)
+    {"topic": "How Much Does it Cost to Build a Real-Money Rummy Game App in 2026?", "category": "Game Development"},
+    {"topic": "Developing a Real-Money Poker App: Licensing, RNG Certification, and Cost", "category": "Game Development"},
+    {"topic": "Top 10 Game Development Studios in India for Real-Money & Casino Apps", "category": "Game Development"},
 
-    # Group 4 (July 28)
-    {"topic": "Flutter vs React Native in 2026: Cross-Platform Performance and Native Bridge Benchmarks", "category": "Mobile Apps"},
-    {"topic": "Architecting Offline-First Mobile Apps with WatermelonDB and Background Sync", "category": "Mobile Apps"},
-    {"topic": "Implementing Biometric Passkeys and WebAuthn for Frictionless Mobile Login", "category": "Mobile Apps"},
+    # Group 4 (Buyer Intent: Mobile App Development Costs)
+    {"topic": "How Much Does it Cost to Build an On-Demand Service App (UrbanClap Clone)?", "category": "Mobile Apps"},
+    {"topic": "Flutter vs React Native Development Cost: Which Framework Saves More Budget?", "category": "Mobile Apps"},
+    {"topic": "The True Cost of Developing a HIPAA-Compliant Telehealth App in 2026", "category": "Mobile Apps"},
 
-    # Group 5 (July 29)
-    {"topic": "Layer 2 Rollups: Optimistic vs Zero-Knowledge Proofs for Scalable Web3 dApps", "category": "Web3 & Blockchain"},
-    {"topic": "How Smart Contract Formal Verification Prevents Multi-Million Dollar DeFi Exploits", "category": "Web3 & Blockchain"},
-    {"topic": "Building Gasless Web3 Transactions Using ERC-4337 Account Abstraction Paymasters", "category": "Web3 & Blockchain"},
+    # Group 5 (Buyer Intent: Offshore Outsourcing & ODC Setup)
+    {"topic": "How to Build an Offshore Dedicated Development Center (ODC) in India", "category": "Hiring Guide"},
+    {"topic": "Fixed Price vs Time and Materials: Which Contract Model Delivers Better ROI?", "category": "Hiring Guide"},
+    {"topic": "Top 10 Software Development Companies in India for US Startups (2026 Rating)", "category": "Hiring Guide"},
 
-    # Group 6 (July 30)
-    {"topic": "SaaS Multi-Tenancy Patterns: Row-Level Security vs Isolated Tenant Schemas", "category": "SaaS"},
-    {"topic": "Designing Subscription Billing Systems with Usage-Based Metering and Tier Upgrades", "category": "SaaS"},
-    {"topic": "How to Build a Compliant Audit Log Engine for SOC 2 Type II Accreditation", "category": "SaaS"},
+    # Group 6 (Buyer Intent: Enterprise AI & Cloud Costs)
+    {"topic": "How Much Does it Cost to Build a Custom Enterprise AI Model in 2026?", "category": "AI"},
+    {"topic": "Building a Custom Enterprise ChatGPT & RAG Search Engine for Private Data", "category": "AI"},
+    {"topic": "How AWS Cloud Optimization Audits Reduce Monthly EC2 & RDS Spend by 35%", "category": "Cloud"},
 
-    # Group 7 (July 31)
-    {"topic": "Zero Trust Security Architecture: Implementing Identity-Aware Proxies in DevOps", "category": "DevOps"},
-    {"topic": "Automating Infrastructure as Code (IaC) Validation via Terraform and Sentinel", "category": "DevOps"},
-    {"topic": "How GitOps with ArgoCD Simplifies Kubernetes Multi-Cluster Continuous Delivery", "category": "DevOps"},
+    # Group 7 (Buyer Intent: Card & Casual Game App Pricing)
+    {"topic": "Ludo & Teen Patti Game App Development: Features, Tech Stack, and Pricing", "category": "Game Development"},
+    {"topic": "How to Start an Online Casino & Aviator Crash Game Platform in 2026", "category": "Game Development"},
+    {"topic": "Unity vs Unreal Engine for Mobile Game Development: Cost and Time-to-Market", "category": "Game Development"},
 
-    # Group 8 (August 01)
-    {"topic": "Building High-Concurrency Ludo Game Servers Using Node.js and Redis Clusters", "category": "Game Development"},
-    {"topic": "How RNG Certification (iTech Labs / GLI) Ensures Fair Play in Digital Casino Games", "category": "Game Development"},
-    {"topic": "Architecting Poker Game Engine Rules: Side Pots, Hand Evaluators, and Deck Shuffling", "category": "Game Development"},
+    # Group 8 (Buyer Intent: Specialized Tech Staffing)
+    {"topic": "How Much Does it Cost to Hire Dedicated React.js Engineers in 2026?", "category": "Hiring Guide"},
+    {"topic": "How Much Does it Cost to Hire Senior Python & FastAPI Backend Developers?", "category": "Hiring Guide"},
+    {"topic": "How to Hire Pre-Vetted Senior Flutter Developers in 48 Hours", "category": "Hiring Guide"},
 
-    # Group 9 (August 02)
-    {"topic": "Migrating Monolithic Legacy Applications to Serverless AWS Lambda Microservices", "category": "Cloud"},
-    {"topic": "Designing Cost-Optimized Kubernetes Auto-Scaling (Karpenter vs Cluster Autoscaler)", "category": "Cloud"},
-    {"topic": "Building Cloud-Native Observability Dashboards with Grafana and Prometheus", "category": "Cloud"},
+    # Group 9 (Buyer Intent: Enterprise Migration & Modernization)
+    {"topic": "How to Migrate a Legacy Enterprise Monolith to Next.js 15 and Microservices", "category": "SaaS"},
+    {"topic": "Designing Multi-Tenant SaaS Architectures for Enterprise Security Compliance", "category": "SaaS"},
+    {"topic": "Stripe Billing & Metered Usage Integration Guide for Scaling B2B SaaS", "category": "SaaS"},
 
-    # Group 10 (August 03)
-    {"topic": "How Generative AI Is Transforming Automated Code Reviews and Refactoring Workflows", "category": "AI"},
-    {"topic": "Architecting Local AI Models with Ollama and GGML Quantization for Data Privacy", "category": "AI"},
-    {"topic": "Building Autonomous Customer Service Agents with Multi-Turn Conversation Memory", "category": "AI"},
+    # Group 10 (Buyer Intent: App Clone Blueprints)
+    {"topic": "Building a Food Delivery or Taxi Booking App: Architecture & API Pricing", "category": "Mobile Apps"},
+    {"topic": "How to Build an Astrology App like Astrotalk: Features, Cost, and Architecture", "category": "Mobile Apps"},
+    {"topic": "How to Build a Crypto Wallet & Exchange App: Security & Budget Blueprint", "category": "Web3 & Blockchain"},
 
-    # Group 11 (August 04)
+    # Group 11 (Buyer Intent: FinTech & Compliance)
     {"topic": "FinTech Payment Gateway Integration: Handling Webhooks, Idempotency, and Refunds", "category": "FinTech"},
     {"topic": "PCI-DSS 4.0 Compliance Guide for Custom E-Commerce and SaaS Platforms", "category": "FinTech"},
     {"topic": "Designing Real-Time Fraud Score Calculation Systems for Instant Payouts", "category": "FinTech"},
 
-    # Group 12 (August 05)
-    {"topic": "Next.js 15 Server Actions vs REST API Controllers: Performance and Developer Ergonomics", "category": "Web Development"},
+    # Group 12 (Web Development)
     {"topic": "How to Achieve 100/100 Core Web Vitals (LCP, INP, CLS) on Modern Web Platforms", "category": "Web Development"},
     {"topic": "Building Headless E-Commerce Frontends with Next.js, Shopify Storefront API, and Tailwind", "category": "Web Development"},
 

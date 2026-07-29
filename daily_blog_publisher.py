@@ -8,56 +8,48 @@ from datetime import datetime
 # ─────────────────────────────────────────────
 # 1. Topic Bank (120+ High-Intent B2B Topics)
 # ─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# 1. High Buyer-Intent Topic Bank (Commercial & Transactional B2B Queries)
+# ─────────────────────────────────────────────
 TOPICS = [
-    # AI & Machine Learning
-    {"topic": "How Fine-Tuning LLMs Reduces API Costs for Enterprise SaaS", "category": "AI"},
-    {"topic": "Implementing Vector Databases (Pinecone/pgvector) for Cognitive Search", "category": "AI"},
-    {"topic": "A Guide to OCR Document Analysis and Structural Metadata Extraction", "category": "AI"},
-    {"topic": "Building Automated Machine Learning Retraining Pipelines on Kubernetes", "category": "AI"},
-    {"topic": "How to Build Context-Aware AI Chatbots Using Semantic Routing", "category": "AI"},
-    {"topic": "The ROI of AI Agent Automation in Supply Chain Operations", "category": "AI"},
-    {"topic": "Predictive Forecasting Models: Regression vs Neural Networks for Retail", "category": "AI"},
-    {"topic": "Security Best Practices for Deploying AI Models in Production", "category": "AI"},
+    # Dedicated Developer Hiring & Staffing (High Commercial Intent)
+    {"topic": "How Much Does it Cost to Hire Dedicated Next.js Developers in 2026?", "category": "Hiring Guide"},
+    {"topic": "Staff Augmentation vs Dedicated Engineering Squads: Cost & TCO Comparison", "category": "Hiring Guide"},
+    {"topic": "How US & European Startups Save 50% by Renting Dedicated Developer Teams at $3.2k/Month", "category": "Hiring Guide"},
+    {"topic": "Top 10 Full-Stack Software Development Companies for US Startups (2026 Ratings)", "category": "Hiring Guide"},
+    {"topic": "How to Build an Offshore Dedicated Development Center (ODC) in India", "category": "Hiring Guide"},
+    {"topic": "Fixed Price vs Time and Materials: Which Contract Model Delivers Better ROI?", "category": "Hiring Guide"},
+    {"topic": "How to Hire Pre-Vetted Senior React and Node.js Engineers in 48 Hours", "category": "Hiring Guide"},
+    {"topic": "Offshore vs Nearshore Software Development: 2026 Cost & Quality Benchmark", "category": "Hiring Guide"},
     
-    # Web3 & Blockchain
-    {"topic": "Choosing the Right Layer 2 Scaling Solution: Polygon vs Arbitrum vs Optimism", "category": "Web3 & Blockchain"},
-    {"topic": "How to Secure Smart Contracts Against Reentrancy and Flash Loan Attacks", "category": "Web3 & Blockchain"},
-    {"topic": "Understanding Concentrated Liquidity Models in AMM DEX Development", "category": "Web3 & Blockchain"},
-    {"topic": "ERC-721A vs Standard ERC-721: Gas-Optimized NFT Minting Sprints", "category": "Web3 & Blockchain"},
-    {"topic": "Building Multi-Chain Crypto Wallets with Secure Enclave Key Protection", "category": "Web3 & Blockchain"},
-    {"topic": "The Future of Account Abstraction (ERC-4337) in Web3 App UX", "category": "Web3 & Blockchain"},
-    {"topic": "DAO Governance Frameworks: Token-Weighted vs Quadratic Voting Models", "category": "Web3 & Blockchain"},
-    {"topic": "Cross-Chain Bridges: Architecting Secure Asset Relays via LayerZero", "category": "Web3 & Blockchain"},
-    {"topic": "Tokenomics Engineering: Supply Caps, Vesting Schedules and Cliff Models", "category": "Web3 & Blockchain"},
+    # Custom SaaS & Web Application Cost & Blueprints (High Buyer Intent)
+    {"topic": "How Much Does it Cost to Build a Custom SaaS Platform in 2026?", "category": "SaaS"},
+    {"topic": "Building an MVP for a B2B SaaS Startup Under $30,000 in 60 Days", "category": "SaaS"},
+    {"topic": "Custom Software vs Off-the-Shelf SaaS: Calculating the 5-Year Enterprise TCO", "category": "SaaS"},
+    {"topic": "How to Migrate a Legacy Enterprise Monolith to Next.js 15 and Microservices", "category": "SaaS"},
+    {"topic": "Designing Multi-Tenant SaaS Architectures for Enterprise Security Compliance", "category": "SaaS"},
+    {"topic": "Stripe Billing & Metered Usage Integration Guide for Scaling B2B SaaS", "category": "SaaS"},
+
+    # Real-Money Gaming & Card Games Development (High Buyer Intent)
+    {"topic": "How Much Does it Cost to Build a Real-Money Rummy Game App in 2026?", "category": "Game Development"},
+    {"topic": "Developing a Real-Money Poker App: Licensing, RNG Certification, and Cost", "category": "Game Development"},
+    {"topic": "Top 10 Game Development Studios in India for Real-Money & Casino Apps", "category": "Game Development"},
+    {"topic": "Ludo & Teen Patti Game App Development: Features, Tech Stack, and Pricing", "category": "Game Development"},
+    {"topic": "How to Start an Online Casino & Aviator Crash Game Platform in 2026", "category": "Game Development"},
+    {"topic": "Unity vs Unreal Engine for Mobile Game Development: Cost and Time-to-Market", "category": "Game Development"},
+
+    # AI & Enterprise Cloud Solutions (High Buyer Intent)
+    {"topic": "How Much Does it Cost to Build a Custom Enterprise AI Model in 2026?", "category": "AI"},
+    {"topic": "Building a Custom Enterprise ChatGPT & RAG Search Engine for Private Data", "category": "AI"},
+    {"topic": "The ROI of AI Agent Automation: Reducing Operational Overhead by 40%", "category": "AI"},
+    {"topic": "How AWS Cloud Optimization Audits Reduce Monthly EC2 & RDS Spend by 35%", "category": "Cloud"},
+    {"topic": "Zero Downtime Cloud Migration Guide: AWS vs Azure vs Google Cloud", "category": "Cloud"},
     
-    # SaaS & Cloud Engineering
-    {"topic": "Multi-Tenant Database Architectures: Logical Partitioning vs Isolated DBs", "category": "SaaS"},
-    {"topic": "Implementing Stripe Billing: Subscriptions, Tiers and Seat Upgrades", "category": "SaaS"},
-    {"topic": "Designing Activity Audit Logs for Security Compliance (SOC 2 Type II)", "category": "SaaS"},
-    {"topic": "How to Scale WebSockets for Real-Time Multi-User Collaboration", "category": "SaaS"},
-    {"topic": "Architecting Event-Driven Microservices Using Kafka and RabbitMQ", "category": "Cloud"},
-    {"topic": "Zero Downtime Deployments: Blue-Green vs Canary Releases", "category": "Cloud"},
-    {"topic": "How to Optimize AWS EC2 and RDS Instances to Cut Cloud Bills by 40%", "category": "Cloud"},
-    {"topic": "Serverless vs Containers: When to Use Lambda vs ECS/Kubernetes", "category": "Cloud"},
-    
-    # Software Development & DevOps
-    {"topic": "Building Resilient CI/CD Pipelines with GitHub Actions and Docker", "category": "Software Development"},
-    {"topic": "A Guide to API Rate Limiting and DDoS Protection in Microservices", "category": "Software Development"},
-    {"topic": "Why Your Enterprise Needs a Monorepo Architecture: Lerna vs Turborepo", "category": "Software Development"},
-    {"topic": "Test-Driven Development (TDD) Best Practices for Next.js 15 Apps", "category": "Software Development"},
-    {"topic": "Implementing OpenTelemetry for Distributed Tracing and Logging", "category": "Software Development"},
-    {"topic": "How to Migrate a Legacy Monolith to Next.js and Micro-Frontends", "category": "Software Development"},
-    {"topic": "Securing Your Software Supply Chain: Dependency Scanning and SBOMs", "category": "Software Development"},
-    
-    # Game Development
-    {"topic": "Choosing a Game Engine: Unity C# vs Unreal Engine C++ for Startups", "category": "Game Development"},
-    {"topic": "How to Optimize 2D WebGL Rendering for Mobile HTML5 Gaming", "category": "Game Development"},
-    {"topic": "Implementing Fair Matchmaking Systems Using Elo Rating Algorithms", "category": "Game Development"},
-    {"topic": "Server-Side Game State Validation: Preventing Hacks in Multiplayer Games", "category": "Game Development"},
-    {"topic": "The Mathematics of Slot Game RNGs and RTP Verification Models", "category": "Game Development"},
-    {"topic": "How to Integrate Rummy and Card Game Multi-Room Lobbies via WebSockets", "category": "Game Development"},
-    {"topic": "Mobile Game Performance: Texture Compression and Memory Optimization", "category": "Game Development"},
-    {"topic": "Designing Dynamic NFTs for Evolving Character Stats in Web3 Gaming", "category": "Game Development"}
+    # Mobile App Development Cost & Blueprints (High Buyer Intent)
+    {"topic": "How Much Does it Cost to Build an On-Demand Service App (UrbanClap Clone)?", "category": "Mobile Apps"},
+    {"topic": "Flutter vs React Native Development Cost: Which Framework Saves More Budget?", "category": "Mobile Apps"},
+    {"topic": "The True Cost of Developing a HIPAA-Compliant Telehealth App in 2026", "category": "Mobile Apps"},
+    {"topic": "Building a Food Delivery or Taxi Booking App: Architecture & API Pricing", "category": "Mobile Apps"}
 ]
 
 # Curated Unsplash images for premium visual presentation
