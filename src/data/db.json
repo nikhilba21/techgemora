@@ -7491,6 +7491,116 @@
       ],
       "clientCountry": "Singapore",
       "published": true
+    },
+    {
+      "slug": "logitrack-ai-freight-supply-chain-platform",
+      "name": "LogiTrack AI Freight & Supply Chain Platform",
+      "industry": "Logistics & Supply Chain",
+      "description": "AI-powered freight tracking and route optimization platform handling 100k+ daily shipments across North America & Middle East.",
+      "technology": [
+        "Next.js 15",
+        "Python",
+        "FastAPI",
+        "YOLOv8 Vision",
+        "PostgreSQL",
+        "AWS Lambda"
+      ],
+      "challenge": "Legacy GPS tracking suffered 15% location drift and lacked automated ETA forecasting for fleet operators.",
+      "solution": "Engineered a real-time IoT telemetry ingest pipeline with predictive ML route adjustment and automated carrier billing.",
+      "results": "Reduced operational delays by 42% and saved .2M in annual fuel overhead for enterprise logistics clients.",
+      "images": [
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
+      ],
+      "clientCountry": "USA & UAE",
+      "published": true
+    },
+    {
+      "slug": "zillonest-real-estate-mls-idx-marketplace",
+      "name": "ZilloNest Real Estate MLS/IDX Marketplace",
+      "industry": "Real Estate",
+      "description": "Multi-listing IDX/RETS real estate search engine processing 500k+ property listings with sub-second spatial queries.",
+      "technology": [
+        "React",
+        "Node.js",
+        "Elasticsearch",
+        "PostGIS",
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "challenge": "Syncing millions of MLS property photos and price changes in real time without degrading web search performance.",
+      "solution": "Built an event-driven RESO Web API sync architecture with dynamic vector map search and automated mortgage calculators.",
+      "results": "Achieved 99.99% uptime, 0.4s average search latency, and a 3.5x increase in organic lead generation.",
+      "images": [
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
+      ],
+      "clientCountry": "Canada & USA",
+      "published": true
+    },
+    {
+      "slug": "royalrummy-real-money-card-gaming-engine",
+      "name": "RoyalRummy Real-Money Card Gaming Engine",
+      "industry": "Gaming & iGaming",
+      "description": "High-concurrency 13-Card Rummy real-money game platform supporting 100k+ concurrent multiplayer sessions.",
+      "technology": [
+        "Unity 3D",
+        "Node.js",
+        "Socket.io",
+        "Redis Cluster",
+        "Certified RNG",
+        "PostgreSQL"
+      ],
+      "challenge": "Handling high-concurrency WebSocket card dealing and anti-collusion fraud checks with sub-50ms latency.",
+      "solution": "Developed a custom server-side game state engine with GLI-certified Random Number Generator (RNG) and instant UPI/Stripe payouts.",
+      "results": "Processed over  in secure game transactions with zero fraud breaches and sub-second room joining.",
+      "images": [
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop"
+      ],
+      "clientCountry": "India & UAE",
+      "published": true
+    },
+    {
+      "slug": "skilllearn-b2b-enterprise-lms-platform",
+      "name": "SkillLearn B2B Enterprise LMS Platform",
+      "industry": "Education & SaaS",
+      "description": "Multi-tenant corporate learning management platform serving 200+ enterprise clients and 250k active employees.",
+      "technology": [
+        "Next.js 15",
+        "TypeScript",
+        "GraphQL",
+        "AWS S3",
+        "Stripe Billing",
+        "PostgreSQL"
+      ],
+      "challenge": "Scaling video bandwidth and SCORM compliant course tracking for global enterprise workforces across timezones.",
+      "solution": "Architected a multi-tenant SaaS architecture with HLS adaptive video streaming and automated employee skill certifications.",
+      "results": "Scaled to 250k+ active learners with 60% lower video CDN costs and SOC 2 Type II compliance.",
+      "images": [
+        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop"
+      ],
+      "clientCountry": "UK & Australia",
+      "published": true
+    },
+    {
+      "slug": "signvault-enterprise-document-signature-platform",
+      "name": "SignVault Enterprise Document Signature Platform",
+      "industry": "LegalTech & SaaS",
+      "description": "eIDAS & ESIGN Act compliant digital signature and document workflow engine for legal & financial firms.",
+      "technology": [
+        "React",
+        "Node.js",
+        "PKI Encryption",
+        "PDF.js",
+        "Redis",
+        "AWS KMS"
+      ],
+      "challenge": "Ensuring tamper-evident audit trails and cryptographic key hashing for high-value legal contracts.",
+      "solution": "Implemented SHA-256 document hashing, biometric signer authentication, and dynamic field placement canvas.",
+      "results": "Accelerated document execution speed by 75% while maintaining 100% legal compliance across US & EU jurisdictions.",
+      "images": [
+        "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop"
+      ],
+      "clientCountry": "USA & Germany",
+      "published": true
     }
   ],
   "leads": [],
