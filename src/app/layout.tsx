@@ -108,9 +108,16 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Gemora Tech",
+              "alternateName": "Dexterous Softech",
               "@id": "https://www.dexteroussoftech.com",
               "url": "https://www.dexteroussoftech.com",
-              "priceRange": "$$$",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+              },
               "areaServed": [
                 { "@type": "Country", "name": "United States" },
                 { "@type": "Country", "name": "United Kingdom" },
@@ -118,6 +125,22 @@ export default function RootLayout({
                 { "@type": "Country", "name": "United Arab Emirates" },
                 { "@type": "Country", "name": "Canada" }
               ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Gemora Tech",
+              "url": "https://www.dexteroussoftech.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.dexteroussoftech.com/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
             })
           }}
         />
