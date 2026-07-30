@@ -12,7 +12,7 @@ import type { SEOPage, Portfolio, Blog } from '@/lib/db';
 import TrustBadges from '@/components/TrustBadges';
 
 export default function HomePage() {
-  const [activeTechTab, setActiveTechTab] = useState<'frontend' | 'backend' | 'mobile' | 'cloud'>('frontend');
+  const [activeTechTab, setActiveTechTab] = useState<'ai' | 'frontend' | 'backend' | 'mobile' | 'cloud'>('ai');
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -40,10 +40,10 @@ export default function HomePage() {
   }, []);
 
   const stats = [
-    { value: '10+ Years', label: 'Industry Experience' },
-    { value: '100+ Projects', label: 'Delivered Globally' },
-    { value: '99.8%', label: 'SLA Client Retention' },
-    { value: '24/7', label: 'Overlapping Support' }
+    { value: '550+ Projects', label: 'Delivered Globally' },
+    { value: '400+ Clients', label: 'Across 30+ Countries' },
+    { value: '$25–$45/hr', label: 'Flexible Hourly Staffing' },
+    { value: '99.8%', label: 'SLA Client Retention' }
   ];
 
   const services = [
@@ -59,6 +59,13 @@ export default function HomePage() {
   ];
 
   const technologies = {
+    ai: [
+      { name: 'OpenAI / GPT-4o', desc: 'LLM Fine-Tuning & Custom RAG Pipelines', level: 'Expert' },
+      { name: 'Claude 3.5 Sonnet', desc: 'Anthropic Autonomous AI Agent Systems', level: 'Expert' },
+      { name: 'Google Gemini API', desc: 'Multimodal Vision & Cognitive Workflows', level: 'Expert' },
+      { name: 'LangChain & LLaMA 3', desc: 'Private Local LLMs & Context Routing', level: 'Expert' },
+      { name: 'Pinecone & pgvector', desc: 'High-Scale Vector Embeddings', level: 'Expert' }
+    ],
     frontend: [
       { name: 'React.js', desc: 'Component UI library', level: 'Expert' },
       { name: 'Next.js', desc: 'Server-side framework', level: 'Expert' },
@@ -361,13 +368,13 @@ export default function HomePage() {
           {/* Tabs header */}
           <div className="flex justify-center border-b border-slate-200 mb-12 overflow-x-auto">
             <div className="flex space-x-6 pb-px">
-              {(['frontend', 'backend', 'mobile', 'cloud'] as const).map((tab) => (
+              {(['ai', 'frontend', 'backend', 'mobile', 'cloud'] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTechTab(tab)}
-                  className={`py-3 px-4 text-sm font-semibold capitalize border-b-2 transition-all shrink-0 ${activeTechTab === tab ? 'border-electric text-electric font-bold' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
+                  className={`py-3 px-4 text-sm font-semibold uppercase border-b-2 transition-all shrink-0 ${activeTechTab === tab ? 'border-electric text-electric font-bold' : 'border-transparent text-slate-500 hover:text-slate-800'}`}
                 >
-                  {tab}
+                  {tab === 'ai' ? 'AI & GenAI' : tab}
                 </button>
               ))}
             </div>
@@ -391,10 +398,10 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4 pt-3 border-t border-slate-250/60">
                   <Link 
-                    href={`/hire-${tech.name.toLowerCase().replace(/\.js/g, 'js').replace(/\s+/g, '-')}-developers`}
+                    href={activeTechTab === 'ai' ? '/ai-development-company' : `/hire-${tech.name.toLowerCase().replace(/\.js/g, 'js').replace(/[^a-z0-9]/g, '-')}-developers`}
                     className="text-[11px] font-bold text-electric hover:text-navy flex items-center gap-1.5"
                   >
-                    Hire {tech.name} Squad
+                    {activeTechTab === 'ai' ? 'Explore AI Solutions' : `Hire ${tech.name} Squad`}
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
