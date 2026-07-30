@@ -8,7 +8,10 @@ import Link from 'next/link';
 export default function LeadCaptureModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [projectType, setProjectType] = useState('Dedicated Developers');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -26,14 +29,14 @@ export default function LeadCaptureModal() {
       }
     };
 
-    // Trigger after 45 seconds as a fallback
+    // Trigger after 18 seconds as a fallback
     const timer = setTimeout(() => {
       if (!hasTriggered) {
         setIsOpen(true);
         setHasTriggered(true);
         sessionStorage.setItem('gemora_lead_modal', 'true');
       }
-    }, 45000);
+    }, 18000);
 
     document.addEventListener('mouseleave', handleMouseLeave);
 
@@ -50,7 +53,13 @@ export default function LeadCaptureModal() {
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: 'Exit-Intent Modal' })
+        body: JSON.stringify({ 
+          name, 
+          email, 
+          phone, 
+          projectType, 
+          source: 'High-Intent Exit & Timer Modal' 
+        })
       });
       if (res.ok) {
         setIsSuccess(true);
@@ -103,35 +112,65 @@ export default function LeadCaptureModal() {
               </p>
             </div>
 
-            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+            <form className="mt-6 space-y-3 text-left" onSubmit={handleSubmit}>
               {isSuccess ? (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-4 rounded-xl text-center text-sm font-bold animate-pulse">
-                  Success! A Senior Architect will email you shortly.
+                <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-5 rounded-2xl text-center text-sm font-bold space-y-1">
+                  <p className="text-base">🚀 Request Submitted!</p>
+                  <p className="text-xs font-normal text-slate-600">A Senior Solutions Architect will contact you via WhatsApp / Email within 2 hours.</p>
                 </div>
               ) : (
                 <>
-                  <div className="space-y-3">
+                  <div className="space-y-2.5">
                     <input 
-                      type="email" 
-                      placeholder="Enter your work email..." 
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm text-slate-700 focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-all"
+                      type="text" 
+                      placeholder="Your Name *" 
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-electric transition-all"
                       required
                     />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      <input 
+                        type="email" 
+                        placeholder="Work Email *" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-electric transition-all"
+                        required
+                      />
+                      <input 
+                        type="tel" 
+                        placeholder="Phone / WhatsApp Number *" 
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-electric transition-all"
+                        required
+                      />
+                    </div>
+                    <select
+                      value={projectType}
+                      onChange={(e) => setProjectType(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-3 text-xs text-slate-800 focus:outline-none focus:border-electric cursor-pointer font-medium"
+                    >
+                      <option value="Dedicated Developers">Hire Dedicated Squad ($25-$45/hr)</option>
+                      <option value="Custom SaaS Product">Build Custom SaaS / Web App</option>
+                      <option value="Mobile App Development">Build iOS / Android App</option>
+                      <option value="Game Development">Build Rummy / Casino / 3D Game</option>
+                      <option value="AI / ML Solution">Build Custom AI / LLM Solution</option>
+                    </select>
                   </div>
                   <button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-electric hover:bg-cyan text-white text-sm font-bold px-6 py-4 rounded-xl transition-colors flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(33,147,176,0.3)] hover:shadow-[0_0_30px_rgba(33,147,176,0.5)] disabled:opacity-70"
+                    className="w-full bg-electric hover:bg-[#e04f00] text-white text-xs font-extrabold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 group shadow-lg shadow-electric/25 disabled:opacity-70 cursor-pointer mt-2"
                   >
-                    {isSubmitting ? 'Securing Session...' : 'Claim My Free Strategy Session'}
-                    <Send className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                    {isSubmitting ? 'Securing Session...' : 'Claim My Free Architecture & Cost Proposal'}
+                    <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </button>
                 </>
               )}
-              <p className="text-center text-[10px] text-slate-400 mt-4 uppercase tracking-wider">
-                100% Confidential. NDA Protected.
+              <p className="text-center text-[10px] text-slate-400 mt-2 uppercase tracking-wider font-semibold">
+                100% Confidential • NDA Protected • Zero Commitment
               </p>
             </form>
           </div>

@@ -16,11 +16,29 @@ export default function QuickConsultationForm() {
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate API request
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', phone: '', requirements: '' });
-    }, 1200);
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.requirements,
+          source: 'Quick Consultation Sidebar'
+        })
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', requirements: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error('Failed to submit consultation form:', err);
+      setStatus('error');
+    }
   };
 
   if (status === 'success') {
