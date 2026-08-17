@@ -58,6 +58,7 @@ export interface Lead {
   budget: string;
   timeline: string;
   message: string;
+  source?: string;
   createdAt: string;
 }
 
