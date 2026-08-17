@@ -1,6 +1,7 @@
 import { Pool } from 'pg';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 
 // Define DB Models
 export interface SEOPage {
@@ -521,47 +522,114 @@ export async function deletePortfolio(slug: string): Promise<void> {
 }
 
 export async function getLeads(): Promise<Lead[]> {
+  let leads: Lead[] = [];
+  
+  // 1. Fetch from Postgres DB if pool is connected
   if (pool) {
-    const res = await pool.query("SELECT * FROM leads ORDER BY created_at DESC");
-    return res.rows.map(row => ({
-      id: row.id,
-      name: row.name,
-      email: row.email,
-      phone: row.phone || '',
-      company: row.company || '',
-      country: row.country || '',
-      projectType: row.project_type || '',
-      budget: row.budget || '',
-      timeline: row.timeline || '',
-      message: row.message || '',
-      createdAt: row.created_at
-    }));
-  } else {
-    return readLocalDb().leads.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    try {
+      const res = await pool.query("SELECT * FROM leads ORDER BY created_at DESC");
+      leads = res.rows.map(row => ({
+        id: row.id,
+        name: row.name,
+        email: row.email,
+        phone: row.phone || '',
+        company: row.company || '',
+        country: row.country || '',
+        projectType: row.project_type || '',
+        budget: row.budget || '',
+        timeline: row.timeline || '',
+        message: row.message || '',
+        source: row.source || 'Direct Web Form',
+        createdAt: row.created_at
+      }));
+    } catch (e) {
+      console.error("PG getLeads query error:", e);
+    }
   }
+
+  // 2. Fetch from /tmp writable serverless storage on Vercel
+  try {
+    const tmpPath = path.join(os.tmpdir(), 'gemora_leads.json');
+    if (fs.existsSync(tmpPath)) {
+      const raw = fs.readFileSync(tmpPath, 'utf8');
+      if (raw) {
+        const tmpLeads: Lead[] = JSON.parse(raw);
+        if (Array.isArray(tmpLeads)) {
+          const existingIds = new Set(leads.map(l => l.id));
+          for (const l of tmpLeads) {
+            if (!existingIds.has(l.id)) {
+              leads.push(l);
+            }
+          }
+        }
+      }
+    }
+  } catch (tmpErr) {
+    console.warn("Failed to read tmp leads:", tmpErr);
+  }
+
+  // 3. Fallback merge from local JSON DB
+  try {
+    const localLeads = readLocalDb().leads || [];
+    const existingIds = new Set(leads.map(l => l.id));
+    for (const l of localLeads) {
+      if (!existingIds.has(l.id)) {
+        leads.push(l);
+      }
+    }
+  } catch (localErr) {
+    console.warn("Failed to read local leads:", localErr);
+  }
+
+  return leads.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
 export async function saveLead(lead: Lead): Promise<void> {
+  // 1. Save to Postgres DB if pool is connected
   if (pool) {
-    await pool.query(`
-      INSERT INTO leads (id, name, email, phone, company, country, project_type, budget, timeline, message, created_at)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, NOW())
-    `, [
-      lead.id,
-      lead.name,
-      lead.email,
-      lead.phone,
-      lead.company,
-      lead.country,
-      lead.projectType,
-      lead.budget,
-      lead.timeline,
-      lead.message
-    ]);
-  } else {
+    try {
+      await pool.query(`
+        INSERT INTO leads (id, name, email, phone, company, country, project_type, budget, timeline, message, created_at)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, NOW())
+      `, [
+        lead.id,
+        lead.name,
+        lead.email,
+        lead.phone,
+        lead.company,
+        lead.country,
+        lead.projectType,
+        lead.budget,
+        lead.timeline,
+        lead.message
+      ]);
+    } catch (e) {
+      console.error("PG saveLead error:", e);
+    }
+  }
+
+  // 2. Save to /tmp writable serverless storage on Vercel
+  try {
+    const tmpPath = path.join(os.tmpdir(), 'gemora_leads.json');
+    let tmpLeads: Lead[] = [];
+    if (fs.existsSync(tmpPath)) {
+      const raw = fs.readFileSync(tmpPath, 'utf8');
+      if (raw) tmpLeads = JSON.parse(raw);
+    }
+    tmpLeads.unshift(lead);
+    fs.writeFileSync(tmpPath, JSON.stringify(tmpLeads, null, 2), 'utf8');
+  } catch (tmpErr) {
+    console.warn("Failed to write tmp lead:", tmpErr);
+  }
+
+  // 3. Fallback to local DB file if permitted
+  try {
     const db = readLocalDb();
-    db.leads.push(lead);
+    if (!db.leads) db.leads = [];
+    db.leads.unshift(lead);
     writeLocalDb(db);
+  } catch (err) {
+    console.warn("Skipped local db write:", err);
   }
 }
 
