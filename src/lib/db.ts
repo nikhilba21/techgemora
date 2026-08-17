@@ -100,8 +100,12 @@ function readLocalDb(): { pages: SEOPage[]; blogs: Blog[]; portfolios: Portfolio
 }
 
 function writeLocalDb(data: any) {
-  initLocalDb();
-  fs.writeFileSync(JSON_DB_PATH, JSON.stringify(data, null, 2), 'utf8');
+  try {
+    initLocalDb();
+    fs.writeFileSync(JSON_DB_PATH, JSON.stringify(data, null, 2), 'utf8');
+  } catch (err) {
+    console.warn("Local DB write skipped (read-only serverless environment):", err);
+  }
 }
 
 // Database Connection Manager
